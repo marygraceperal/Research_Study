@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Research Methodology Workbook</title>
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --accent-primary: #1e40af;
+            --accent-hover: #1d4ed8;
+            --accent-light: #eff6ff;
+            --border-color: #e2e8f0;
+            --highlight-bg: #f1f5f9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        header h1 {
+            color: var(--accent-primary);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .controls-bar {
+            position: sticky;
+            top: 1rem;
+            z-index: 100;
+            background: var(--card-bg);
+            padding: 0.75rem 1.25rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .controls-info {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .btn-group button {
+            background-color: var(--accent-light);
+            color: var(--accent-primary);
+            border: 1px solid var(--accent-primary);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-left: 0.5rem;
+        }
+
+        .btn-group button:hover {
+            background-color: var(--accent-primary);
+            color: #ffffff;
+        }
+
+        .module-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .module-title {
+            background-color: var(--highlight-bg);
+            padding: 1rem 1.25rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        details {
+            border-bottom: 1px solid var(--border-color);
+            transition: background-color 0.2s ease;
+        }
+
+        details:last-child {
+            border-bottom: none;
+        }
+
+        details[open] {
+            background-color: #fafafa;
+        }
+
+        summary {
+            padding: 1rem 1.25rem;
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            user-select: none;
+            color: var(--text-main);
+        }
+
+        summary:hover {
+            background-color: var(--accent-light);
+            color: var(--accent-hover);
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: "+";
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            transition: transform 0.2s ease;
+        }
+
+        details[open] > summary::after {
+            content: "−";
+        }
+
+        .content-body {
+            padding: 1rem 1.5rem 1.25rem 1.5rem;
+            color: #334155;
+            font-size: 0.95rem;
+            border-top: 1px dashed var(--border-color);
+            background-color: #ffffff;
+        }
+
+        .content-body p {
+            margin-bottom: 0.75rem;
+        }
+
+        .content-body ul {
+            margin-left: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .content-body li {
+            margin-bottom: 0.25rem;
+        }
+
+        .takeaway-box {
+            background-color: var(--accent-light);
+            border-left: 4px solid var(--accent-primary);
+            padding: 0.75rem 1rem;
+            margin-top: 0.75rem;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.9rem;
+        }
+
+        .takeaway-box strong {
+            color: var(--accent-primary);
+        }
+
+        /* Nested Accordion Styling */
+        .nested-details {
+            margin: 0.5rem 0 0.5rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+        }
+
+        .nested-details summary {
+            font-size: 0.9rem;
+            padding: 0.6rem 0.8rem;
+            background-color: #f8fafc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Academic Research Methodology Interactive Workbook</h1>
+        <p>Click on any section or topic outline below to expand detailed explanations, methods, and practical key takeaways.</p>
+    </header>
+
+    <div class="controls-bar">
+        <span class="controls-info">Interactive Outline Controls:</span>
+        <div class="btn-group">
+            <button onclick="toggleAll(true)">Expand All</button>
+            <button onclick="toggleAll(false)">Collapse All</button>
+        </div>
+    </div>
+
+    <!-- MODULE 1 -->
+    <div class="module-card">
+        <div class="module-title">Module 1: Foundations of Research</div>
+
+        <details>
+            <summary>1.1 What is Academic Research?</summary>
+            <div class="content-body">
+                <p>Academic research is a systematic, empirical, and critical investigation into a specific problem, phenomenon, or question. Its purpose is to discover new facts, revise existing theories, or establish practical applications.</p>
+                <ul>
+                    <li><strong>Systematic:</strong> Follows structured, logical procedures rather than guesswork.</li>
+                    <li><strong>Empirical:</strong> Anchored in verifiable evidence gathered through direct observation or experimentation.</li>
+                    <li><strong>Critical:</strong> Subjects processes and results to continuous scrutiny and peer evaluation.</li>
+                </ul>
+                <div class="takeaway-box">
+                    <strong>Key Takeaway:</strong> Research is not merely compiling information; it requires generating new, validated knowledge through structured inquiry.
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>1.2 Epistemology & Paradigms</summary>
+            <div class="content-body">
+                <p>Research paradigms dictate how researchers view reality (ontology) and how knowledge is acquired (epistemology):</p>
+                <ul>
+                    <li><strong>Positivism:</strong> Assumes an objective reality exists independent of human perception. Relies heavily on quantitative measurement and testing hypothesis.</li>
+                    <li><strong>Interpretivism (Constructivism):</strong> Assumes reality is socially constructed and subjective. Focuses on context, deep understanding, and qualitative perspectives.</li>
+                    <li><strong>Pragmatism:</strong> Prioritizes actionable solutions to research problems over philosophical purity, often utilizing mixed-methods frameworks.</li>
+                </ul>
+                <div class="takeaway-box">
+                    <strong>Key Takeaway:</strong> Your paradigm determines your methodology—choose Positivism for measuring variables, and Interpretivism for understanding lived experiences.
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>1.3 Research Ethics & Compliance</summary>
+            <div class="content-body">
+                <p>Ethical research safeguards human rights and ensures intellectual integrity:</p>
+                <ul>
+                    <li><strong>Institutional Review Board (IRB):</strong> Institutional bodies that review proposals to ensure human subject protection.</li>
+                    <li><strong>Informed Consent:</strong> Subjects must voluntarily participate with full awareness of risks, benefits, and rights to withdraw.</li>
+                    <li><strong>Academic Integrity:</strong> Avoiding plagiarism, data falsification, and reporting conflicts of interest.</li>
+                </ul>
+                <div class="takeaway-box">
+                    <strong>Key Takeaway:</strong> Ethical clearance must always be secured <em>before</em> initiating data collection involving human participants.
+                </div>
+            </div>
+        </details>
+    </div>
+
+    <!-- MODULE 2 -->
+    <div class="module-card">
+        <div class="module-title">Module 2: Formulating the Study</div>
+
+        <details>
+            <summary>2.1 Identifying the Problem Statement</summary>
+            <div class="content-body">
+                <p>A research problem identifies a specific "gap" in current knowledge or a real-world issue that demands investigation.</p>
+                <ul>
+                    <li>Clear identification of the ideal situation vs. the practical reality.</li>
+                    <li>Demonstration of why the problem matters (academic or practical significance).</li>
+                    <li>Assessment of feasibility regarding time, budget, and access to data.</li>
+                </ul>
+                <div class="takeaway-box">
+                    <strong>Key Takeaway:</strong> A good problem statement defines <em>what</em> is missing and <em>why</em> addressing it matters.
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>2.2 Research Questions & Hypotheses</summary>
+            <div class="content-body">
+                <p>Research questions frame what the study seeks to answer, while hypotheses offer testable predictions (primarily in quantitative research):</p>
+                <ul>
+                    <li><strong>Null Hypothesis (H₀):</strong> States no significant relationship or effect exists between variables.</li>
+                    <li><strong>Alternative Hypothesis (H₁):</strong> States a statistically significant effect or relationship exists.</li>
+                    <li><strong>Directional vs. Non-directional:</strong> Specifies either the exact direction of an effect (e.g., increase) or simply that a difference exists.</li>
+                </ul>
+                <div class="takeaway-box">
+                    <strong>Key Takeaway:</strong> Hypotheses must be testable, falsifiable, and directly aligned with research questions.
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>2.3 Conducting a Literature Review</summary>
+            <div class="content-body">
+                <p>A literature review contextualizes a study within existing scholarly works, establishing theoretical framework foundations:</p>
+                <ul>
+                    <li><strong>Primary Sources:</strong> Original research reports, empirical studies, and peer-reviewed journal articles.</li>
+                    <li><strong>Secondary Sources:</strong> Literature reviews, meta-analyses, and textbook summaries.</li>
+                    <li><strong>Synthesis over Summarizing:</strong> Grouping studies by themes, debates, and methodological approaches rather than summarizing article-by-article.</li>
+                </ul>
+                <div class="takeaway-box">
+                    <strong>Key Takeaway:</strong> Synthesize literature to justify your study's novelty rather than providing a passive list of summaries.
+                </div>
+            </div>
+        </details>
+    </div>
+
+    <!-- MODULE 3 -->
+    <div class="module-card">
+        <div class="module-title">Module 3: Research Methodologies & Designs</div>
+
+        <details>
+            <summary>3.1 Quantitative Approaches</summary>
+            <div class="content-body">
+                <p>Quantitative research focuses on numerical measurements and statistical analysis:</p>
+                <ul>
+                    <li><strong>Experimental:</strong> Manipulates an independent variable with random assignment to measure causal relationships.</li>
+                    <li><strong>Quasi-Experimental:</strong> Examines causal effects without random assignment (e.g., existing classroom groups).</li>
+                    <li><strong>Correlational:</strong> Evaluates non-causal statistical relationships between variables.</li>
+                    <li><strong>Survey Design:</strong> Cross-sectional or longitudinal quantitative assessments of populations.</li>
+                </ul>
+                <div class="takeaway-box">
+                    <strong>Key Takeaway:</strong> Use experimental designs when establishing strict cause-and-effect relationships is required.
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>3.2 Qualitative Approaches</summary>
+            <div class="content-body">
+                <p>Qualitative research explores underlying meanings, lived experiences, and contextual behaviors:</p>
+                <ul>
+                    <li><strong>Phenomenology:</strong> Explores the lived experiences of individuals regarding a specific phenomenon.</li>
+                    <li><strong>Grounded Theory:</strong> Derives inductive theoretical models grounded directly in participant data.</li>
+                    <li><strong>Ethnography:</strong> Immerses in a community or culture to observe socio-cultural behaviors over extended periods.</li>
+                    <li><strong>Case Study:</strong> In-depth exploration of a bounded system (e.g., single organization, event, or school).</li>
+                </ul>
+                <div class="takeaway-box">
+                    <strong>Key Takeaway:</strong> Qualitative methodologies prioritize depth and context over generalizability.
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>3.3 Mixed-Methods Frameworks</summary>
+            <div class="content-body">
+                <p>Combines quantitative and qualitative approaches to address research questions comprehensively:</p>
+                <ul>
+                    <li><strong>Explanatory Sequential (QUAN → qual):</strong> Quantitative data collected first, followed by qualitative inquiry to explain statistical findings.</li>
+                    <li><strong>Exploratory Sequential (QUAL → quan):</strong> Qualitative exploration first to build instruments or hypotheses, followed by quantitative testing.</li>
+                    <li><strong>Convergent Parallel (QUAN + QUAL):</strong> Quantitative and qualitative data gathered simultaneously and integrated during analysis.</li>
+                </ul>
+                <div class="takeaway-box">
+                    <strong>Key Takeaway:</strong> Mixed methods leverage the strengths of both numerical precision and contextual depth.
+                </div>
+            </div>
+        </details>
+    </div>
+
+    <!-- MODULE 4 -->
+    <div class="module-card">
+        <div class="module-title">Module 4: Sampling & Data Collection</div>
+
+        <details>
+            <summary>4.1 Sampling Techniques</summary>
+            <div class="content-body">
+                <p>Methods for selecting representative sub-groups from a larger target population:</p>
+                <details class="nested-details">
+                    <summary>Probability Sampling (Statistical Generalizability)</summary>
+                    <div style="padding: 0.5rem 1rem;">
+                        <ul>
+                            <li><strong>Simple Random:</strong> Equal selection probability for every member.</li>
+                            <li><strong>Stratified Random:</strong> Population divided into sub-groups (strata), with random samples drawn from each.</li>
+                            <li><strong>Cluster:</strong> Population divided into geographical or natural units randomly sampled as wholes.</li>
+                        </ul>
+                    </div>
+                </details>
+                <details class="nested-details">
+                    <summary>Non-Probability Sampling (Contextual Focus)</summary>
+                    <div style="padding: 0.5rem 1rem;">
+                        <ul>
+                            <li><strong>Purposive:</strong> Participants selected explicitly based on specific characteristics or knowledge.</li>
+                            <li><strong>Snowball:</strong> Existing participants recruit future subjects (useful for hard-to-reach populations).</li>
+                            <li><strong>Convenience:</strong> Selection based on ease of access.</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+        </details>
+
+        <details>
+            <summary>4.2 Validity, Reliability & Trustworthiness</summary>
+            <div class="content-body">
+                <p>Ensuring data collection processes yield sound, defensible evidence:</p>
+                <ul>
+                    <li><strong>Reliability:</strong> Consistency and repeatability of measurement results over time and across tools.</li>
+                    <li><strong>Internal Validity:</strong> Assurance that changes in dependent variables result strictly from independent variables.</li>
+                    <li><strong>External Validity:</strong> Extent to which findings generalize to broader contexts and populations.</li>
+                    <li><strong>Qualitative Trustworthiness:</strong> Evaluated via Credibility (triangulation), Transferability, Dependability, and Confirmability.</li>
+                </ul>
+                <div class="takeaway-box">
+                    <strong>Key Takeaway:</strong> High reliability is necessary, but invalid instruments can still yield consistently wrong results.
+                </div>
+            </div>
+        </details>
+    </div>
+
+    <!-- MODULE 5 -->
+    <div class="module-card">
+        <div class="module-title">Module 5: Data Analysis & Software Tools</div>
+
+        <details>
+            <summary>5.1 Quantitative Analysis Techniques</summary>
+            <div class="content-body">
+                <p>Processing numeric data using statistical methodologies:</p>
+                <ul>
+                    <li><strong>Descriptive Statistics:</strong> Summarizes baseline parameters (Mean, Median, Standard Deviation, Percentiles).</li>
+                    <li><strong>Inferential Statistics:</strong> Tests hypotheses and draws population conclusions (t-tests, ANOVA, Chi-Square, Multiple Regression).</li>
+                    <li><strong>Software Tools:</strong> IBM SPSS, R, Python (Pandas/Statsmodels), and Stata.</li>
+                </ul>
+                <div class="takeaway-box">
+                    <strong>Key Takeaway:</strong> Choose descriptive statistics to summarize data, and inferential tests to evaluate relationships or differences.
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>5.2 Qualitative Analysis Techniques</summary>
+            <div class="content-body">
+                <p>Interpreting textual, audio, or visual qualitative datasets:</p>
+                <ul>
+                    <li><strong>Thematic Analysis:</strong> Systematic coding to identify recurring patterns and core themes across transcripts.</li>
+                    <li><strong>Content Analysis:</strong> Quantifying and analyzing the presence and meanings of specific words, concepts, or images.</li>
+                    <li><strong>Software Tools:</strong> NVivo, MAXQDA, Dedoose, and ATLAS.ti.</li>
+                </ul>
+                <div class="takeaway-box">
+                    <strong>Key Takeaway:</strong> Qualitative coding progresses from open codes to broad categories, arriving at core interpretive themes.
+                </div>
+            </div>
+        </details>
+    </div>
+
+    <!-- MODULE 6 -->
+    <div class="module-card">
+        <div class="module-title">Module 6: Publication & Dissemination</div>
+
+        <details>
+            <summary>6.1 Academic Writing & Formatting</summary>
+            <div class="content-body">
+                <p>Structuring research reports for scholarly review using standard conventions:</p>
+                <ul>
+                    <li><strong>IMRAD Structure:</strong> Introduction, Methodology, Results, And Discussion framework.</li>
+                    <li><strong>Citation Style Guides:</strong> Adhering to field specific guidelines (APA for social sciences, IEEE for technical/engineering fields, MLA for humanities).</li>
+                </ul>
+                <div class="takeaway-box">
+                    <strong>Key Takeaway:</strong> Adhere strictly to institutional or target journal formatting guidelines before submission.
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>6.2 Peer Review & Journal Metrics</summary>
+            <div class="content-body">
+                <p>Navigating journal submissions and evaluating publication impact:</p>
+                <ul>
+                    <li><strong>Double-Blind Peer Review:</strong> Anonymized evaluation process where reviewers and authors remain unknown to each other.</li>
+                    <li><strong>Impact Factor (IF):</strong> Metric reflecting annual average citations of articles published in a specific journal.</li>
+                    <li><strong>h-index:</strong> Individual or journal metric measuring productivity and citation impact of published work.</li>
+                </ul>
+                <div class="takeaway-box">
+                    <strong>Key Takeaway:</strong> Target reputable, indexed journals and avoid predatory publishers that bypass peer review.
+                </div>
+            </div>
+        </details>
+    </div>
+</div>
+
+<script>
+    function toggleAll(shouldOpen) {
+        const detailsElements = document.querySelectorAll('details');
+        detailsElements.forEach(detail => {
+            detail.open = shouldOpen;
+        });
+    }
+</script>
+
+</body>
+</html>

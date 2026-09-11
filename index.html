@@ -4,1258 +4,731 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>
-Complete Reusable Action Research Researcher's Manual
-</title>
-
-<meta name="description"
-content="A reusable, evidence-based classroom Action Research Researcher's Manual based on the planned ordinary annuities study.">
+<title>Complete Reusable Action Research System v2.1</title>
 
 <style>
-
 :root{
-    --navy:#17365D;
-    --blue:#2F75B5;
-    --teal:#168A8A;
-    --gold:#C9A227;
-    --green:#3B9560;
-    --ink:#203040;
-    --muted:#657789;
-    --bg:#F3F6F9;
-    --card:#FFFFFF;
-    --line:#D6E0E8;
-    --soft:#EDF4FA;
-    --warning:#FFF7DF;
-    --danger:#FFF0F0;
-    --success:#EAF7EE;
+  --navy:#17365d;
+  --blue:#2f75b5;
+  --teal:#168a8a;
+  --gold:#c9a227;
+  --ink:#203040;
+  --muted:#657789;
+  --bg:#f3f6f9;
+  --card:#ffffff;
+  --line:#d6e0e8;
+  --soft:#edf4fa;
+  --good:#eaf7ee;
+  --warn:#fff7df;
+  --danger:#fff0f0;
 }
 
-*{
-    box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 html{
-    scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
-    margin:0;
-    font-family:
-        "Segoe UI",
-        Arial,
-        sans-serif;
-    color:var(--ink);
-    background:var(--bg);
-    line-height:1.6;
+  margin:0;
+  font-family:"Segoe UI",Arial,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.6;
 }
 
-/* =========================
-   HEADER
-========================= */
-
-.hero{
-    background:
-        linear-gradient(
-            135deg,
-            var(--navy),
-            var(--blue)
-        );
-    color:white;
-    padding:55px 5%;
-    text-align:center;
+header{
+  background:linear-gradient(135deg,var(--navy),var(--blue));
+  color:#fff;
+  padding:48px 5%;
+  text-align:center;
 }
 
-.hero h1{
-    font-size:
-        clamp(28px,4vw,48px);
-    line-height:1.12;
-    margin:0 auto 15px;
-    max-width:1100px;
+header h1{
+  font-size:clamp(28px,5vw,48px);
+  line-height:1.15;
+  margin:0 auto 14px;
+  max-width:1100px;
 }
 
-.hero p{
-    max-width:950px;
-    margin:10px auto;
-    font-size:17px;
+header p{
+  max-width:950px;
+  margin:8px auto;
+  font-size:17px;
 }
-
-.hero .tag{
-    display:inline-block;
-    background:rgba(255,255,255,.15);
-    border:1px solid rgba(255,255,255,.3);
-    padding:7px 13px;
-    border-radius:20px;
-    margin:5px;
-    font-size:13px;
-}
-
-/* =========================
-   NAVIGATION
-========================= */
 
 .toolbar{
-    position:sticky;
-    top:0;
-    z-index:100;
-    background:white;
-    border-bottom:1px solid var(--line);
-    padding:10px 5%;
-    display:flex;
-    gap:8px;
-    flex-wrap:wrap;
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  padding:9px 5%;
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
 }
 
-.toolbar a,
-.toolbar button{
-    border:1px solid #C7D4DF;
-    background:white;
-    color:var(--navy);
-    padding:9px 13px;
-    border-radius:8px;
-    font-weight:700;
-    cursor:pointer;
-    text-decoration:none;
-    font-size:14px;
+button,.btn{
+  border:1px solid #c7d4df;
+  background:#fff;
+  color:var(--navy);
+  padding:9px 13px;
+  border-radius:8px;
+  font-weight:700;
+  cursor:pointer;
+  text-decoration:none;
 }
 
-.toolbar a:hover,
-.toolbar button:hover{
-    background:var(--soft);
+button:hover,.btn:hover{
+  background:var(--soft);
 }
 
-/* =========================
-   MAIN
-========================= */
-
-.container{
-    max-width:1250px;
-    margin:auto;
-    padding:25px;
+.wrap{
+  max-width:1250px;
+  margin:auto;
+  padding:22px;
 }
 
 .card{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:15px;
-    margin:18px 0;
-    box-shadow:
-        0 4px 15px rgba(30,60,90,.06);
-    overflow:hidden;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:15px;
+  margin:16px 0;
+  box-shadow:0 4px 15px rgba(30,60,90,.06);
+  overflow:hidden;
 }
 
-.card-title{
-    margin:0;
-    padding:19px 23px;
-    background:#F8FAFC;
-    color:var(--navy);
-    border-bottom:1px solid var(--line);
+.card>h2{
+  margin:0;
+  padding:18px 22px;
+  background:#f8fafc;
+  color:var(--navy);
+  border-bottom:1px solid var(--line);
 }
 
 .content{
-    padding:23px;
+  padding:22px;
 }
 
-/* =========================
-   GRID
-========================= */
-
 .grid{
-    display:grid;
-    grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(270px,1fr)
-        );
-    gap:15px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+  gap:14px;
 }
 
 .panel{
-    border:1px solid var(--line);
-    border-radius:11px;
-    padding:17px;
-    background:white;
+  border:1px solid var(--line);
+  border-radius:11px;
+  padding:16px;
+  background:#fff;
 }
 
 .panel h3{
-    margin-top:0;
-    color:var(--navy);
+  margin-top:0;
+  color:var(--navy);
 }
 
-/* =========================
-   CALLOUTS
-========================= */
-
 .callout{
-    padding:16px 18px;
-    border-left:5px solid var(--teal);
-    background:#EDF8F8;
-    border-radius:8px;
-    margin:15px 0;
+  padding:16px 18px;
+  border-left:5px solid var(--teal);
+  background:#edf8f8;
+  border-radius:8px;
+  margin:14px 0;
 }
 
 .assumption{
-    background:var(--warning);
-    border-left:5px solid var(--gold);
-}
-
-.warning{
-    background:var(--danger);
-    border-left:5px solid #B34B4B;
+  background:var(--warn);
+  border-left-color:var(--gold);
 }
 
 .evidence{
-    background:var(--success);
-    border-left:5px solid var(--green);
+  background:var(--good);
+  border-left-color:#3b9560;
 }
 
-/* =========================
-   BADGES
-========================= */
-
-.badge{
-    display:inline-block;
-    background:#E9F1F8;
-    color:var(--navy);
-    padding:4px 9px;
-    border-radius:12px;
-    font-size:11px;
-    font-weight:800;
+.warning{
+  background:var(--danger);
+  border-left-color:#b34b4b;
 }
-
-/* =========================
-   FORMULAS
-========================= */
-
-.formula{
-    font-family:Georgia,serif;
-    font-size:21px;
-    background:#F5F8FB;
-    padding:13px;
-    border-radius:8px;
-    text-align:center;
-    margin:10px 0;
-}
-
-/* =========================
-   WORKFLOW
-========================= */
 
 .workflow{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    align-items:center;
-    gap:7px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  gap:7px;
 }
 
 .node{
-    background:white;
-    border:1px solid var(--line);
-    border-radius:9px;
-    padding:9px 11px;
-    font-weight:700;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:9px;
+  padding:9px 11px;
+  font-weight:700;
 }
 
 .arrow{
-    color:var(--blue);
-    font-weight:800;
+  color:var(--blue);
+  font-weight:800;
 }
-
-/* =========================
-   TABLES
-========================= */
-
-table{
-    width:100%;
-    border-collapse:collapse;
-    margin:15px 0;
-    background:white;
-}
-
-th,
-td{
-    border:1px solid var(--line);
-    padding:10px;
-    vertical-align:top;
-    text-align:left;
-}
-
-th{
-    background:var(--navy);
-    color:white;
-}
-
-tr:nth-child(even){
-    background:#FAFCFE;
-}
-
-/* =========================
-   STEP CARDS
-========================= */
-
-.step{
-    scroll-margin-top:75px;
-}
-
-.step-header{
-    display:flex;
-    gap:14px;
-    align-items:center;
-    padding:18px 21px;
-    background:#F9FBFD;
-    border-bottom:1px solid var(--line);
-}
-
-.step-number{
-    width:48px;
-    height:48px;
-    min-width:48px;
-    border-radius:50%;
-    background:var(--navy);
-    color:white;
-    display:grid;
-    place-items:center;
-    font-weight:900;
-}
-
-.step-header h2{
-    margin:4px 0 0;
-    color:var(--navy);
-}
-
-/* =========================
-   CHECKLIST
-========================= */
-
-.check{
-    display:block;
-    margin:8px 0;
-}
-
-.check input{
-    margin-right:8px;
-}
-
-/* =========================
-   PROGRESS NAV
-========================= */
 
 .progress{
-    display:flex;
-    gap:5px;
-    overflow-x:auto;
-    padding:12px 0;
+  display:flex;
+  gap:5px;
+  overflow-x:auto;
+  padding:12px 0;
 }
 
 .progress a{
-    min-width:43px;
-    text-align:center;
-    background:#E3EDF6;
-    color:var(--navy);
-    border-radius:20px;
-    padding:6px;
-    text-decoration:none;
-    font-weight:800;
+  min-width:42px;
+  text-align:center;
+  background:#e3edf6;
+  color:var(--navy);
+  border-radius:20px;
+  padding:6px;
+  text-decoration:none;
+  font-weight:800;
 }
 
-/* =========================
-   TEMPLATE CARDS
-========================= */
-
-.template{
-    min-height:145px;
+.step{
+  scroll-margin-top:80px;
 }
 
-/* =========================
-   CODE / ARCHIVE
-========================= */
+.stephead{
+  display:flex;
+  gap:13px;
+  align-items:center;
+  padding:18px 20px;
+  background:#f9fbfd;
+  border-bottom:1px solid var(--line);
+}
+
+.num{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:var(--navy);
+  color:#fff;
+  display:grid;
+  place-items:center;
+  font-weight:900;
+  flex-shrink:0;
+}
+
+.stephead h2{
+  margin:3px 0 0;
+  color:var(--navy);
+}
+
+.badge{
+  display:inline-block;
+  background:#e9f1f8;
+  color:var(--navy);
+  padding:4px 8px;
+  border-radius:12px;
+  font-size:11px;
+  font-weight:800;
+}
+
+.check{
+  display:block;
+  margin:7px 0;
+}
+
+/* =====================================================
+   MOBILE-FRIENDLY TABLE SYSTEM
+   ===================================================== */
+
+.table-wrap{
+  width:100%;
+  max-width:100%;
+  overflow-x:auto;
+  overflow-y:hidden;
+  -webkit-overflow-scrolling:touch;
+  margin:15px 0;
+  border-radius:10px;
+  background:#fff;
+  box-shadow:inset -12px 0 12px -12px rgba(30,60,90,.28);
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin:0;
+  background:#fff;
+}
+
+th,td{
+  border:1px solid var(--line);
+  padding:10px;
+  vertical-align:top;
+  text-align:left;
+
+  /* Prevent Form -> Form/ula */
+  word-break:normal;
+  overflow-wrap:normal;
+  hyphens:none;
+}
+
+th{
+  background:var(--navy);
+  color:#fff;
+  font-weight:700;
+}
+
+.table-wide{
+  min-width:760px;
+}
+
+.table-medium{
+  min-width:600px;
+}
+
+.nowrap{
+  white-space:nowrap;
+}
+
+/* =====================================================
+   FORMULAS
+   ===================================================== */
+
+.formula-box{
+  width:100%;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  margin:15px 0;
+  padding:15px;
+  border-radius:10px;
+  background:#f5f8fb;
+  border:1px solid var(--line);
+}
+
+.formula{
+  min-width:max-content;
+  white-space:nowrap;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:21px;
+  text-align:center;
+}
+
+/* =====================================================
+   OTHER ELEMENTS
+   ===================================================== */
+
+.small{
+  font-size:13px;
+  color:var(--muted);
+}
 
 pre{
-    background:#F4F7FA;
-    padding:16px;
-    border-radius:9px;
-    overflow:auto;
+  background:#f4f7fa;
+  padding:16px;
+  border-radius:9px;
+  overflow:auto;
 }
 
-/* =========================
-   FOOTER
-========================= */
+code{
+  font-family:Consolas,monospace;
+}
+
+.status{
+  display:inline-block;
+  padding:5px 9px;
+  border-radius:15px;
+  font-size:12px;
+  font-weight:800;
+  background:#eaf7ee;
+}
 
 footer{
-    background:var(--navy);
-    color:white;
-    padding:40px 5%;
-    margin-top:35px;
+  background:var(--navy);
+  color:#fff;
+  padding:35px 5%;
+  margin-top:30px;
 }
 
 footer a{
-    color:white;
+  color:#fff;
 }
 
-/* =========================
-   MOBILE
-========================= */
+.hidden{
+  display:none;
+}
 
 @media(max-width:700px){
 
-    .container{
-        padding:11px;
-    }
+  header{
+    padding:35px 18px;
+  }
 
-    .content{
-        padding:15px;
-    }
+  header p{
+    font-size:15px;
+  }
 
-    .step-header{
-        padding:14px;
-    }
+  .wrap{
+    padding:11px;
+  }
 
-    table{
-        font-size:13px;
-        display:block;
-        overflow-x:auto;
-    }
+  .content{
+    padding:15px;
+  }
 
-    .panel{
-        padding:14px;
-    }
+  .stephead{
+    padding:14px;
+  }
 
+  .table-wrap{
+    width:100%;
+    max-width:100%;
+    overflow-x:auto;
+  }
+
+  table{
+    font-size:13px;
+  }
+
+  .table-wide{
+    min-width:760px;
+  }
+
+  .table-medium{
+    min-width:600px;
+  }
+
+  th,td{
+    padding:8px;
+  }
+
+  .panel{
+    padding:13px;
+  }
+
+  .formula{
+    font-size:19px;
+    text-align:left;
+  }
 }
 
-/* =========================
-   PRINT
-========================= */
+@media(max-width:420px){
+
+  .table-wide{
+    min-width:720px;
+  }
+
+  .formula{
+    font-size:18px;
+  }
+}
 
 @media print{
 
-    body{
-        background:white;
-    }
+  body{
+    background:#fff;
+  }
 
-    .toolbar,
-    .progress,
-    button{
-        display:none !important;
-    }
+  .toolbar,
+  .progress,
+  button{
+    display:none!important;
+  }
 
-    .hero{
-        background:white;
-        color:black;
-        border-bottom:2px solid black;
-        padding:20px;
-    }
+  header{
+    background:#fff;
+    color:#000;
+    border-bottom:2px solid #000;
+    padding:20px;
+  }
 
-    .card{
-        box-shadow:none;
-        break-inside:avoid;
-    }
+  .card{
+    box-shadow:none;
+    break-inside:avoid;
+  }
 
-    .container{
-        max-width:none;
-        padding:0;
-    }
+  .content{
+    padding:14px;
+  }
 
+  .wrap{
+    max-width:none;
+    padding:0;
+  }
 }
-/* =========================================================
-   MOBILE-FRIENDLY RESPONSIVE DESIGN
-========================================================= */
-
-/* Prevent horizontal overflow on the entire page */
-html,
-body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-/* Make all major containers responsive */
-.container,
-.main-content,
-.content,
-section,
-.step-section,
-.reference-section {
-    max-width: 100%;
-    box-sizing: border-box;
-}
-
-/* =========================================================
-   RESPONSIVE FORMULAS
-========================================================= */
-
-.formula {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-
-    margin: 1.25rem auto;
-    padding: 1rem 0.75rem;
-
-    text-align: center;
-
-    font-family:
-        "Cambria Math",
-        "STIX Two Math",
-        "Latin Modern Math",
-        "Times New Roman",
-        serif;
-
-    font-size: clamp(1rem, 4.5vw, 1.35rem);
-    line-height: 1.8;
-
-    overflow-x: auto;
-    overflow-y: hidden;
-
-    white-space: normal;
-    overflow-wrap: normal;
-    word-break: normal;
-
-    background: #f8fafc;
-    border: 1px solid #dbe4ee;
-    border-radius: 14px;
-
-    -webkit-overflow-scrolling: touch;
-
-    scrollbar-width: thin;
-}
-
-/* Large formulas */
-.formula.large {
-    font-size: clamp(1.05rem, 5vw, 1.5rem);
-    padding: 1.25rem 0.75rem;
-}
-
-/* Never allow mathematical expressions to break
-   in the middle of symbols */
-.formula sup,
-.formula sub {
-    line-height: 0;
-}
-
-/* Keep equation components together */
-.formula .fraction,
-.formula .bracket {
-    display: inline-flex;
-    vertical-align: middle;
-    align-items: center;
-}
-
-/* =========================================================
-   FRACTION — MOBILE SAFE
-========================================================= */
-
-.fraction {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-
-    vertical-align: middle;
-
-    margin: 0 0.15em;
-
-    line-height: 1.15;
-
-    white-space: nowrap;
-}
-
-.fraction > span:first-child {
-    display: block;
-
-    padding: 0 0.25em 0.15em;
-
-    border-bottom: 1.5px solid currentColor;
-
-    white-space: nowrap;
-}
-
-.fraction > span:last-child {
-    display: block;
-
-    padding: 0.15em 0.25em 0;
-
-    white-space: nowrap;
-}
-
-/* =========================================================
-   FORMULA COMPONENTS
-========================================================= */
-
-.formula .formula-line {
-    display: block;
-
-    width: max-content;
-    max-width: 100%;
-
-    margin: 0 auto;
-
-    white-space: nowrap;
-}
-
-.formula .operator {
-    display: inline-block;
-    margin: 0 0.15em;
-}
-
-.formula .variable {
-    font-style: italic;
-}
-
-/* =========================================================
-   MOBILE FORMULA DISPLAY
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .formula {
-        font-size: 1.05rem;
-
-        padding: 0.9rem 0.5rem;
-
-        margin: 1rem 0;
-
-        border-radius: 12px;
-
-        text-align: center;
-    }
-
-    .formula.large {
-        font-size: 1.1rem;
-
-        padding: 1rem 0.5rem;
-    }
-
-    /* Allow the formula itself to scroll horizontally
-       rather than forcing it to break apart */
-    .formula .formula-line {
-        width: max-content;
-        max-width: none;
-
-        margin-left: 50%;
-        transform: translateX(-50%);
-    }
-
-    /* Keep fractions intact */
-    .fraction {
-        flex-shrink: 0;
-    }
-}
-
-/* =========================================================
-   VERY SMALL PHONES
-========================================================= */
-
-@media (max-width: 420px) {
-
-    .formula {
-        font-size: 0.98rem;
-
-        padding: 0.75rem 0.4rem;
-    }
-
-    .formula.large {
-        font-size: 1rem;
-    }
-
-    .formula .formula-line {
-        font-size: 0.98rem;
-    }
-}
-
-/* =========================================================
-   PHONE-SAFE TABLES
-========================================================= */
-
-.table-wrap {
-    width: 100%;
-    max-width: 100%;
-
-    overflow-x: auto;
-    overflow-y: hidden;
-
-    -webkit-overflow-scrolling: touch;
-
-    margin-bottom: 1rem;
-}
-
-.table-wrap table {
-    min-width: 620px;
-}
-
-/* Tables without .table-wrap should also remain usable */
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-@media (max-width: 768px) {
-
-    table {
-        font-size: 0.85rem;
-    }
-
-    th,
-    td {
-        padding: 0.55rem 0.5rem;
-    }
-}
-
-/* =========================================================
-   MOBILE CARDS
-========================================================= */
-
-.card,
-.form-card,
-.scenario,
-.hypothesis,
-.important-box,
-.warning-box,
-.gate-box {
-    max-width: 100%;
-    box-sizing: border-box;
-
-    overflow-wrap: break-word;
-}
-
-@media (max-width: 768px) {
-
-    .card-grid,
-    .two-column,
-    .scenario-grid,
-    .qc-grid {
-        grid-template-columns: 1fr !important;
-    }
-
-    .card,
-    .form-card,
-    .scenario {
-        padding: 1rem;
-    }
-}
-
-/* =========================================================
-   MOBILE HEADINGS
-========================================================= */
-
-@media (max-width: 768px) {
-
-    h1 {
-        font-size: 1.65rem;
-        line-height: 1.2;
-    }
-
-    h2 {
-        font-size: 1.4rem;
-        line-height: 1.25;
-    }
-
-    h3 {
-        font-size: 1.15rem;
-        line-height: 1.3;
-    }
-
-    h4 {
-        font-size: 1rem;
-    }
-
-    p,
-    li {
-        font-size: 0.95rem;
-        line-height: 1.65;
-    }
-}
-
-/* =========================================================
-   MOBILE NAVIGATION
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .side-nav {
-        position: relative;
-
-        width: 100%;
-        height: auto;
-
-        margin-bottom: 1rem;
-
-        overflow-x: auto;
-        overflow-y: hidden;
-
-        white-space: nowrap;
-
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .side-nav a {
-        display: inline-block;
-
-        padding: 0.65rem 0.8rem;
-
-        font-size: 0.85rem;
-    }
-
-}
-
-/* =========================================================
-   MOBILE PROCESS / FLOW
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .process-flow,
-    .cycle,
-    .audit-chain,
-    .design-flow {
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        gap: 0.5rem;
-
-        width: 100%;
-    }
-
-    .process-flow > div,
-    .cycle > span,
-    .audit-chain > span,
-    .design-flow > div {
-        width: 100%;
-
-        box-sizing: border-box;
-
-        text-align: center;
-    }
-}
-
-/* =========================================================
-   MOBILE FOOTER
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .site-footer {
-        text-align: center;
-
-        padding: 1.5rem 1rem;
-    }
-
-    .footer-meta {
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 0.4rem;
-    }
-}
-
-/* =========================================================
-   TOUCH-FRIENDLY CONTROLS
-========================================================= */
-
-button,
-input,
-textarea,
-select {
-    max-width: 100%;
-    box-sizing: border-box;
-}
-
-button {
-    min-height: 44px;
-}
-
-input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-
-    flex-shrink: 0;
-}
-
-textarea {
-    width: 100%;
-    min-height: 120px;
-
-    resize: vertical;
-
-    font-size: 1rem;
-}
-
-/* =========================================================
-   MOBILE SAFE IMAGES
-========================================================= */
-
-img,
-svg,
-video {
-    max-width: 100%;
-    height: auto;
-}
-
-/* =========================================================
-   PREVENT LONG WORDS / URLS FROM BREAKING THE PAGE
-========================================================= */
-
-p,
-li,
-td,
-th,
-.card,
-.form-card {
-    overflow-wrap: anywhere;
-}
-
-/* But mathematical expressions should remain intact */
-.formula,
-.formula * {
-    overflow-wrap: normal;
-    word-break: normal;
-        }
 </style>
 </head>
 
 <body>
 
-<header class="hero">
+<header>
+  <h1>Complete Reusable Action Research Researcher’s Manual & System</h1>
 
-<h1>
-Complete Reusable Action Research
-Researcher's Manual & System
-</h1>
+  <p>
+    A step-by-step classroom-based action research system with methodology,
+    templates, safeguards, data analysis, reflection, action planning,
+    and replication procedures.
+  </p>
 
-<p>
-Actual methodology architecture, worked exemplar,
-templates, assumptions, safeguards,
-completion evidence, analysis, reflection,
-and replication framework.
-</p>
-
-<div>
-
-<span class="tag">
-Classroom-Based Action Research
-</span>
-
-<span class="tag">
-Counterbalanced Within-Subject Design
-</span>
-
-<span class="tag">
-Grade 11 General Mathematics
-</span>
-
-<span class="tag">
-Ordinary Annuities
-</span>
-
-</div>
-
-<p>
-<strong>
-Worked Exemplar:
-</strong><br>
-
-Comparing Formula-Based and Spreadsheet-Based
-Instruction in Students’ Problem-Solving Performance
-and Conceptual Understanding of Ordinary Annuities
-</p>
-
+  <p>
+    <strong>Worked Exemplar:</strong><br>
+    Comparing Formula-Based and Spreadsheet-Based Instruction in Students’
+    Problem-Solving Performance and Conceptual Understanding of Ordinary Annuities
+  </p>
 </header>
 
-<nav class="toolbar">
+<div class="toolbar">
+  <button onclick="window.print()">🖨 Print / Save PDF</button>
+  <button onclick="showSteps(true)">＋ Show All</button>
+  <button onclick="showSteps(false)">− Collapse All</button>
+  <a class="btn" href="#templates">📁 Templates</a>
+  <a class="btn" href="#status">📊 Status</a>
+</div>
 
-<a href="#overview">
-Overview
-</a>
+<div class="wrap">
 
-<a href="#design">
-Design
-</a>
-
-<a href="#assessment">
-Assessment
-</a>
-
-<a href="#steps">
-14 Steps
-</a>
-
-<a href="#templates">
-Templates
-</a>
-
-<a href="#analysis">
-Analysis
-</a>
-
-<a href="#replication">
-Replication
-</a>
-
-<a href="#audit">
-Audit
-</a>
-
-<button onclick="window.print()">
-🖨 Print
-</button>
-
-<button onclick="expandAll()">
-＋ Show All
-</button>
-
-<button onclick="collapseAll()">
-− Collapse All
-</button>
-
-</nav>
-
-<main class="container">
-<section class="card" id="overview">
-
-<h2 class="card-title">
-1. The Research We Actually Planned
-</h2>
-
+<div class="card">
+<h2>Researcher Navigation</h2>
 <div class="content">
 
-<div class="callout">
-
-<strong>
-Classroom Observation:
-</strong>
-
-Students experienced difficulty solving
-financial/ordinary annuity problems using
-formulas, while they appeared able to obtain
-answers using spreadsheets.
-
+<div class="progress">
+<a href="#s1">1</a>
+<a href="#s2">2</a>
+<a href="#s3">3</a>
+<a href="#s4">4</a>
+<a href="#s5">5</a>
+<a href="#s6">6</a>
+<a href="#s7">7</a>
+<a href="#s8">8</a>
+<a href="#s9">9</a>
+<a href="#s10">10</a>
+<a href="#s11">11</a>
+<a href="#s12">12</a>
+<a href="#s13">13</a>
+<a href="#s14">14</a>
+<a href="#templates">T</a>
 </div>
-
-<div class="grid">
-
-<div class="panel">
-
-<h3>
-Research Problem
-</h3>
-
-<p>
-The classroom concern is not simply whether
-students can obtain a numerical answer.
-The deeper concern is whether the method used
-supports genuine mathematical problem-solving
-and conceptual understanding.
-</p>
-
-</div>
-
-<div class="panel">
-
-<h3>
-Research Gap
-</h3>
-
-<p>
-Does obtaining a correct spreadsheet answer
-demonstrate genuine conceptual understanding
-and mathematical reasoning?
-</p>
-
-</div>
-
-<div class="panel">
-
-<h3>
-Central Research Question
-</h3>
-
-<p>
-How do formula-based and spreadsheet-based
-instructional approaches differ in developing
-students' problem-solving performance and
-conceptual understanding in financial
-applications of ordinary annuities?
-</p>
-
-</div>
-
-</div>
-
-<div class="warning">
-
-<strong>
-Evidence Boundary:
-</strong>
-
-Earlier informal classroom experiences
-motivated this research but are not automatically
-formal research data. Formal research evidence
-begins with the approved research procedure
-and actual data collection.
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="card">
-
-<h2 class="card-title">
-2. Research Logic
-</h2>
-
-<div class="content">
 
 <div class="workflow">
-
-<span class="node">Observation</span>
-<span class="arrow">→</span>
-
-<span class="node">Problem</span>
-<span class="arrow">→</span>
-
-<span class="node">Gap</span>
-<span class="arrow">→</span>
-
-<span class="node">Research Questions</span>
-<span class="arrow">→</span>
-
-<span class="node">Variables</span>
-<span class="arrow">→</span>
-
-<span class="node">Design</span>
-<span class="arrow">→</span>
-
-<span class="node">TOS</span>
-<span class="arrow">→</span>
-
-<span class="node">Instruments</span>
-<span class="arrow">→</span>
-
-<span class="node">Validation</span>
-<span class="arrow">→</span>
-
-<span class="node">Ethics</span>
-<span class="arrow">→</span>
-
-<span class="node">Randomization</span>
-<span class="arrow">→</span>
-
-<span class="node">Pretest</span>
-<span class="arrow">→</span>
-
-<span class="node">Intervention</span>
-<span class="arrow">→</span>
-
-<span class="node">Assessment</span>
-<span class="arrow">→</span>
-
-<span class="node">Data</span>
-<span class="arrow">→</span>
-
-<span class="node">Analysis</span>
-<span class="arrow">→</span>
-
-<span class="node">Reflection</span>
-<span class="arrow">→</span>
-
-<span class="node">Action Plan</span>
-
-</div>
-
-<div class="callout">
-
-<strong>
-Action Research Cycle:
-</strong>
-
-PLAN → ACT → OBSERVE → ANALYZE →
-REFLECT → IMPROVE
-
+<div class="node">Observation</div>
+<div class="arrow">→</div>
+<div class="node">Problem</div>
+<div class="arrow">→</div>
+<div class="node">Research Gap</div>
+<div class="arrow">→</div>
+<div class="node">Questions</div>
+<div class="arrow">→</div>
+<div class="node">Variables</div>
+<div class="arrow">→</div>
+<div class="node">Design</div>
+<div class="arrow">→</div>
+<div class="node">Instruments</div>
+<div class="arrow">→</div>
+<div class="node">Data</div>
+<div class="arrow">→</div>
+<div class="node">Analysis</div>
+<div class="arrow">→</div>
+<div class="node">Reflection</div>
+<div class="arrow">→</div>
+<div class="node">Action Plan</div>
 </div>
 
 </div>
+</div>
 
-</section>
 
+<!-- STEP 1 -->
 
-<section class="card" id="design">
+<section class="card step" id="s1">
 
-<h2 class="card-title">
-3. Research Design
-</h2>
+<div class="stephead">
+<div class="num">1</div>
+<div>
+<span class="badge">START</span>
+<h2>Identify the Classroom Problem</h2>
+</div>
+</div>
 
 <div class="content">
 
-<div class="grid">
+<div class="callout">
+<strong>Classroom observation:</strong>
+Students experienced difficulty solving financial and ordinary annuity
+problems using mathematical formulas, while some could obtain answers
+through spreadsheets.
+</div>
+
+<p>
+The central research curiosity is not simply whether students can obtain
+a correct answer. The deeper question is whether a spreadsheet-generated
+answer reflects genuine mathematical understanding.
+</p>
 
 <div class="panel">
+<h3>Important methodological rule</h3>
 
-<h3>
-Research Type
-</h3>
+<p>
+Informal experiences and previous classroom observations may motivate the
+research problem, but they must not automatically be treated as formal
+research data.
+</p>
+
+<p>
+Formal research data begin with the approved research procedure and
+formal data-collection point.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- STEP 2 -->
+
+<section class="card step" id="s2">
+
+<div class="stephead">
+<div class="num">2</div>
+<div>
+<span class="badge">FRAME</span>
+<h2>Define the Research Problem and Gap</h2>
+</div>
+</div>
+
+<div class="content">
+
+<h3>Research problem</h3>
+
+<p>
+Students may experience difficulty with formula-based ordinary annuity
+problem solving, while spreadsheet tools may make numerical calculation
+easier.
+</p>
+
+<h3>Research gap</h3>
+
+<p>
+The unresolved classroom uncertainty is whether differences between
+formula-based and spreadsheet-based approaches are associated with
+differences in problem-solving performance and conceptual understanding.
+</p>
+
+<div class="callout">
+<strong>Key idea:</strong>
+Getting the answer is not necessarily the same as understanding the mathematics.
+</div>
+
+</div>
+</section>
+
+
+<!-- STEP 3 -->
+
+<section class="card step" id="s3">
+
+<div class="stephead">
+<div class="num">3</div>
+<div>
+<span class="badge">QUESTIONS</span>
+<h2>Research Questions and Hypotheses</h2>
+</div>
+</div>
+
+<div class="content">
+
+<h3>Main Research Question</h3>
 
 <p>
 <strong>
-Classroom-Based Action Research
+How do formula-based and spreadsheet-based instructional approaches
+differ in developing students' problem-solving performance and conceptual
+understanding in financial applications of ordinary annuities?
 </strong>
 </p>
 
+<h3>Specific Questions</h3>
+
+<ol>
+<li>What is the level of students' problem-solving performance and conceptual understanding before the instructional intervention?</li>
+<li>What is the level of students' problem-solving performance following formula-based instruction?</li>
+<li>What is the level of students' problem-solving performance following spreadsheet-based instruction?</li>
+<li>Is there a significant difference in problem-solving performance between formula-based and spreadsheet-based instruction?</li>
+<li>Is there a significant difference in conceptual understanding between formula-based and spreadsheet-based instruction?</li>
+<li>What instructional implications can be drawn from the findings?</li>
+</ol>
+
+<h3>Hypotheses</h3>
+
+<div class="table-wrap">
+<table class="table-medium">
+<tr>
+<th>Outcome</th>
+<th>Null Hypothesis</th>
+<th>Alternative Hypothesis</th>
+</tr>
+
+<tr>
+<td>PSP</td>
+<td>
+There is no significant difference in students’ problem-solving
+performance between formula-based and spreadsheet-based instruction.
+</td>
+<td>
+There is a significant difference.
+</td>
+</tr>
+
+<tr>
+<td>CU</td>
+<td>
+There is no significant difference in students’ conceptual understanding
+between formula-based and spreadsheet-based instruction.
+</td>
+<td>
+There is a significant difference.
+</td>
+</tr>
+</table>
 </div>
 
-<div class="panel">
+<div class="warning callout">
+Do not assume before analysis that spreadsheet-based instruction will be
+better. The research should test the difference.
+</div>
 
-<h3>
-Design
-</h3>
+</div>
+</section>
+
+
+<!-- STEP 4 -->
+
+<section class="card step" id="s4">
+
+<div class="stephead">
+<div class="num">4</div>
+<div>
+<span class="badge">DESIGN</span>
+<h2>Research Design</h2>
+</div>
+</div>
+
+<div class="content">
+
+<h3>Recommended Design</h3>
 
 <p>
 <strong>
-Counterbalanced Within-Subject /
-Repeated-Measures Design
+Classroom-Based Action Research using a Counterbalanced Within-Subject Design
 </strong>
 </p>
 
-</div>
-
-<div class="panel">
-
-<h3>
-Primary Outcomes
-</h3>
-
 <p>
-Problem-Solving Performance (PSP)
-<br>
-Conceptual Understanding (CU)
+Every learner experiences both instructional approaches.
+The order is counterbalanced so that some learners experience formula-based
+instruction first and others experience spreadsheet-based instruction first.
 </p>
 
-</div>
-
-<div class="panel">
-
-<h3>
-Supporting Evidence
-</h3>
-
-<p>
-Spreadsheet–Mathematics Reasoning (SMR)
-</p>
-
-</div>
-
-</div>
-
-<h3>
-Counterbalanced Sequence
-</h3>
-
-<table>
-
+<div class="table-wrap">
+<table class="table-wide">
+<thead>
 <tr>
 <th>Group</th>
 <th>Planning N*</th>
@@ -1264,737 +737,677 @@ Counterbalanced Sequence
 <th>Second Instruction</th>
 <th>Second Form</th>
 </tr>
+</thead>
+
+<tbody>
 
 <tr>
-<td>G1</td>
-<td>9</td>
+<td class="nowrap">G1</td>
+<td class="nowrap">9</td>
 <td>Formula</td>
-<td>A</td>
+<td class="nowrap">A</td>
 <td>Spreadsheet</td>
-<td>B</td>
+<td class="nowrap">B</td>
 </tr>
 
 <tr>
-<td>G2</td>
-<td>9</td>
+<td class="nowrap">G2</td>
+<td class="nowrap">9</td>
 <td>Formula</td>
-<td>B</td>
+<td class="nowrap">B</td>
 <td>Spreadsheet</td>
-<td>A</td>
+<td class="nowrap">A</td>
 </tr>
 
 <tr>
-<td>G3</td>
-<td>8</td>
+<td class="nowrap">G3</td>
+<td class="nowrap">8</td>
 <td>Spreadsheet</td>
-<td>A</td>
+<td class="nowrap">A</td>
 <td>Formula</td>
-<td>B</td>
+<td class="nowrap">B</td>
 </tr>
 
 <tr>
-<td>G4</td>
-<td>8</td>
+<td class="nowrap">G4</td>
+<td class="nowrap">8</td>
 <td>Spreadsheet</td>
-<td>B</td>
+<td class="nowrap">B</td>
 <td>Formula</td>
-<td>A</td>
+<td class="nowrap">A</td>
 </tr>
 
+</tbody>
 </table>
+</div>
 
-<p class="small">
-*34 learners and the 9/9/8/8 allocation are
-planning assumptions. Actual allocation must
-follow eligibility, approval, and documented
-randomization.
+<div class="assumption callout">
+<strong>Planning assumption:</strong>
+34 learners and the 9/9/8/8 allocation are planning assumptions.
+Actual allocation must follow the approved procedure and documented
+random assignment.
+</div>
+
+<h3>Important Limitation</h3>
+
+<p>
+Because each learner receives both conditions, carryover and practice
+effects remain possible. This should be acknowledged when interpreting
+the findings.
 </p>
+
+</div>
+</section>
+
+
+<!-- STEP 5 -->
+
+<section class="card step" id="s5">
+
+<div class="stephead">
+<div class="num">5</div>
+<div>
+<span class="badge">VARIABLES</span>
+<h2>Define Variables and Indicators</h2>
+</div>
+</div>
+
+<div class="content">
 
 <div class="grid">
 
 <div class="panel">
+<h3>Independent / Instructional Condition</h3>
 
-<h3>
-Why Within-Subject?
-</h3>
-
-<p>
-Every learner experiences both instructional
-approaches, allowing the learner's performance
-under one condition to be compared with the
-same learner's performance under the other.
-</p>
-
+<ul>
+<li>Formula-Based Instruction</li>
+<li>Spreadsheet-Based Instruction</li>
+</ul>
 </div>
 
 <div class="panel">
-
-<h3>
-Why Counterbalance?
-</h3>
+<h3>Primary Outcome 1</h3>
 
 <p>
-It balances Formula-first and Spreadsheet-first
-instructional order and balances Form A/B
-exposure.
+<strong>Problem-Solving Performance (PSP)</strong>
 </p>
 
+<ul>
+<li>Problem comprehension</li>
+<li>Relevant information</li>
+<li>Variable identification</li>
+<li>Strategy/model selection</li>
+<li>Mathematical execution</li>
+<li>Computation accuracy</li>
+<li>Interpretation</li>
+<li>Error diagnosis</li>
+</ul>
 </div>
 
 <div class="panel">
-
-<h3>
-Remaining Limitation
-</h3>
+<h3>Primary Outcome 2</h3>
 
 <p>
-Carryover, practice, period, and possible form
-effects cannot be assumed to disappear.
-They must be documented as limitations and
-examined descriptively.
+<strong>Conceptual Understanding (CU)</strong>
 </p>
 
+<ul>
+<li>Time value of money</li>
+<li>Ordinary annuity</li>
+<li>Payment timing</li>
+<li>Variable meaning</li>
+<li>Periodic rate</li>
+<li>Number of periods</li>
+<li>Formula meaning</li>
+<li>Variable relationships</li>
+<li>Result interpretation</li>
+<li>Error analysis</li>
+</ul>
+</div>
+
+<div class="panel">
+<h3>Supporting Evidence</h3>
+
+<p>
+<strong>Spreadsheet–Mathematics Reasoning (SMR)</strong>
+</p>
+
+<ul>
+<li>Mathematical variable identification</li>
+<li>Rate-period correspondence</li>
+<li>Spreadsheet mapping</li>
+<li>Reasonableness checking</li>
+<li>Mathematical interpretation</li>
+</ul>
 </div>
 
 </div>
 
 </div>
-
 </section>
-<section class="card">
 
-<h2 class="card-title">
-4. Constructs & Operational Definitions
-</h2>
+
+<!-- STEP 6 -->
+
+<section class="card step" id="s6">
+
+<div class="stephead">
+<div class="num">6</div>
+<div>
+<span class="badge">CONTENT</span>
+<h2>Financial Mathematics Content</h2>
+</div>
+</div>
 
 <div class="content">
 
-<table>
+<h3>Future Value of an Ordinary Annuity</h3>
 
+<div class="formula-box">
+<div class="formula">
+FV = PMT × [(1 + i)<sup>n</sup> − 1] / i
+</div>
+</div>
+
+<p>
+Used to determine the accumulated value of equal periodic payments made
+at the end of each period.
+</p>
+
+<h3>Present Value of an Ordinary Annuity</h3>
+
+<div class="formula-box">
+<div class="formula">
+PV = PMT × [1 − (1 + i)<sup>−n</sup>] / i
+</div>
+</div>
+
+<p>
+Used to determine the present value supported by a series of future
+periodic payments.
+</p>
+
+<h3>Required Periodic Payment</h3>
+
+<div class="formula-box">
+<div class="formula">
+PMT = PV × i / [1 − (1 + i)<sup>−n</sup>]
+</div>
+</div>
+
+<h3>Critical Rate and Period Relationship</h3>
+
+<div class="formula-box">
+<div class="formula">
+i = r / m
+&nbsp;&nbsp;&nbsp;&nbsp;
+n = mt
+</div>
+</div>
+
+<p>
+The annual interest rate must correspond to the number of compounding
+periods, and the number of periods must correspond to the payment/
+compounding schedule.
+</p>
+
+</div>
+</section>
+
+
+<!-- STEP 7 -->
+
+<section class="card step" id="s7">
+
+<div class="stephead">
+<div class="num">7</div>
+<div>
+<span class="badge">ASSESSMENT</span>
+<h2>Assessment Blueprint</h2>
+</div>
+</div>
+
+<div class="content">
+
+<div class="table-wrap">
+<table class="table-wide">
+
+<thead>
 <tr>
+<th>Task</th>
 <th>Construct</th>
-<th>Operational Definition</th>
-<th>Indicators</th>
-<th>Role</th>
+<th>Content</th>
+<th>Cognitive Demand</th>
+<th>Format</th>
 </tr>
+</thead>
 
-<tr>
+<tbody>
 
-<td>
-<strong>PSP</strong>
-</td>
+<tr><td>1</td><td>CU</td><td>Financial series</td><td>Understand</td><td>MCQ</td></tr>
+<tr><td>2</td><td>CU</td><td>Time value</td><td>Understand</td><td>MCQ</td></tr>
+<tr><td>3</td><td>CU</td><td>Ordinary annuity</td><td>Understand</td><td>MCQ</td></tr>
+<tr><td>4</td><td>CU</td><td>Payment timing</td><td>Understand</td><td>MCQ</td></tr>
+<tr><td>5</td><td>CU</td><td>Payment timing</td><td>Analyze</td><td>Short response</td></tr>
+<tr><td>6</td><td>CU</td><td>FV meaning</td><td>Understand</td><td>MCQ</td></tr>
+<tr><td>7</td><td>PSP</td><td>FV</td><td>Apply</td><td>Structured problem</td></tr>
+<tr><td>8</td><td>PSP</td><td>FV</td><td>Apply</td><td>Structured problem</td></tr>
+<tr><td>9</td><td>CU</td><td>FV variables</td><td>Analyze</td><td>Short response</td></tr>
+<tr><td>10</td><td>PSP</td><td>FV interpretation</td><td>Analyze</td><td>Structured response</td></tr>
+<tr><td>11</td><td>CU</td><td>PV meaning</td><td>Understand</td><td>MCQ</td></tr>
+<tr><td>12</td><td>PSP</td><td>PV</td><td>Apply</td><td>Structured problem</td></tr>
+<tr><td>13</td><td>PSP</td><td>PV</td><td>Apply</td><td>Structured problem</td></tr>
+<tr><td>14</td><td>CU</td><td>PV relationships</td><td>Analyze</td><td>Short response</td></tr>
+<tr><td>15</td><td>PSP</td><td>PV interpretation</td><td>Analyze</td><td>Structured response</td></tr>
+<tr><td>16</td><td>CU</td><td>Required payment</td><td>Understand</td><td>MCQ</td></tr>
+<tr><td>17</td><td>PSP</td><td>Required payment</td><td>Apply</td><td>Structured problem</td></tr>
+<tr><td>18</td><td>PSP</td><td>Payment interpretation</td><td>Analyze</td><td>Structured response</td></tr>
+<tr><td>19</td><td>SMR</td><td>Spreadsheet–math connection</td><td>Analyze</td><td>Performance task</td></tr>
+<tr><td>20</td><td>SMR</td><td>Evaluation/reasoning</td><td>Analyze</td><td>Performance task</td></tr>
 
-<td>
-Students’ ability to comprehend a financial
-problem, identify relevant information and
-variables, select an appropriate mathematical
-model, perform required calculations, and
-interpret the resulting financial value.
-</td>
-
-<td>
-Problem comprehension;<br>
-relevant information;<br>
-variables;<br>
-strategy/model selection;<br>
-procedure;<br>
-computation accuracy;<br>
-interpretation;<br>
-error diagnosis.
-</td>
-
-<td>
-Primary Outcome
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-<strong>CU</strong>
-</td>
-
-<td>
-Students’ ability to explain and demonstrate
-understanding of the mathematical meanings,
-relationships, variables, payment timing,
-rate-period relationships, formulas, and
-financial interpretations underlying ordinary
-annuity problems.
-</td>
-
-<td>
-Time value of money;<br>
-ordinary annuity;<br>
-payment timing;<br>
-variable meaning;<br>
-periodic rate;<br>
-number of periods;<br>
-formula meaning;<br>
-relationships;<br>
-interpretation;<br>
-error analysis;<br>
-spreadsheet-mathematics connection.
-</td>
-
-<td>
-Primary Outcome
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-<strong>SMR</strong>
-</td>
-
-<td>
-Evidence that spreadsheet use is connected to
-mathematical reasoning rather than merely
-producing an answer.
-</td>
-
-<td>
-PMT;<br>
-periodic i;<br>
-n;<br>
-financial application;<br>
-variable mapping;<br>
-reasonableness checking;<br>
-evaluation.
-</td>
-
-<td>
-Supporting Evidence
-</td>
-
-</tr>
-
+</tbody>
 </table>
-
-<div class="callout">
-
-<strong>
-Central Principle:
-</strong>
-
-Getting the answer is not necessarily the
-same as understanding the mathematics.
-
 </div>
 
-</div>
+<h3>Construct Totals</h3>
 
-</section>
-
-
-<section class="card">
-
-<h2 class="card-title">
-5. Financial Mathematics Content
-</h2>
-
-<div class="content">
-
-<div class="grid">
-
-<div class="panel">
-
-<h3>
-Future Value of an Ordinary Annuity
-</h3>
-
-<div class="formula">
-
-FV =
-PMT
-[
-((1+i)<sup>n</sup> − 1) / i
-]
-
-</div>
-
-<p>
-Used to calculate the total accumulated value
-of equal end-of-period payments.
-</p>
-
-</div>
-
-
-<div class="panel">
-
-<h3>
-Present Value of an Ordinary Annuity
-</h3>
-
-<div class="formula">
-
-PV =
-PMT
-[
-(1 − (1+i)<sup>−n</sup>) / i
-]
-
-</div>
-
-<p>
-Used to calculate the current value of equal
-future payments, such as the principal of a loan.
-</p>
-
-</div>
-
-
-<div class="panel">
-
-<h3>
-Required Periodic Payment
-</h3>
-
-<div class="formula">
-
-PMT =
-PV
-[
-i / (1 − (1+i)<sup>−n</sup>)
-]
-
-</div>
-
-<p>
-Used to determine the periodic payment required
-to settle a loan over the stated number of periods.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="callout">
-
-<strong>
-Critical Period-Matching Rule:
-</strong>
-
-The annual interest rate must be converted to
-the interest rate per payment/compounding period,
-and the time must be converted to the corresponding
-number of periods.
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="card" id="assessment">
-
-<h2 class="card-title">
-6. Assessment Blueprint
-</h2>
-
-<div class="content">
-
-<table>
-
+<div class="table-wrap">
+<table class="table-medium">
 <tr>
 <th>Construct</th>
 <th>Tasks</th>
-<th>Maximum Score</th>
-<th>Role</th>
+<th>Maximum</th>
 </tr>
 
 <tr>
 <td>Conceptual Understanding</td>
-<td>
-1, 2, 3, 4, 5, 6, 9, 11, 14, 16
-</td>
+<td>1,2,3,4,5,6,9,11,14,16</td>
 <td>16</td>
-<td>Primary</td>
 </tr>
 
 <tr>
 <td>Problem-Solving Performance</td>
-<td>
-7, 8, 10, 12, 13, 15, 17, 18
-</td>
+<td>7,8,10,12,13,15,17,18</td>
 <td>105</td>
-<td>Primary</td>
 </tr>
 
 <tr>
 <td>Spreadsheet–Mathematics Reasoning</td>
-<td>
-19, 20
-</td>
+<td>19,20</td>
 <td>12</td>
-<td>Supporting</td>
 </tr>
-
 </table>
-
-<div class="grid">
-
-<div class="panel">
-
-<h3>
-CU Percentage
-</h3>
-
-<div class="formula">
-
-CU% =
-CU / 16 × 100
-
 </div>
-
-</div>
-
-<div class="panel">
-
-<h3>
-PSP Percentage
-</h3>
-
-<div class="formula">
-
-PSP% =
-PSP / 105 × 100
-
-</div>
-
-</div>
-
-<div class="panel">
-
-<h3>
-SMR Percentage
-</h3>
-
-<div class="formula">
-
-SMR% =
-SMR / 12 × 100
-
-</div>
-
-</div>
-
-</div>
-
-<div class="warning">
-
-<strong>
-Important:
-</strong>
-
-Do not use the combined 133-point score as
-the primary research outcome. PSP and CU
-represent different constructs and must remain
-analytically separate.
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="card">
-
-<h2 class="card-title">
-7. Testing Time & Administration
-</h2>
-
-<div class="content">
-
-<table>
-
-<tr>
-<th>Assessment</th>
-<th>Purpose</th>
-<th>Maximum Time</th>
-</tr>
-
-<tr>
-<td>Form P</td>
-<td>Formal baseline/pretest</td>
-<td>60 minutes</td>
-</tr>
-
-<tr>
-<td>Form A</td>
-<td>Post-condition assessment</td>
-<td>60 minutes</td>
-</tr>
-
-<tr>
-<td>Form B</td>
-<td>Post-condition assessment</td>
-<td>60 minutes</td>
-</tr>
-
-</table>
 
 <div class="callout">
-
-<strong>
-Practical target:
-</strong>
-
-The assessment should ideally be completable
-within approximately 45–55 minutes, while
-retaining a 60-minute maximum.
-
+<strong>Primary analysis rule:</strong>
+Do not combine the 133 possible points into one primary outcome.
+Analyze PSP and CU separately. SMR is supporting evidence.
 </div>
 
 </div>
-
-</section>
-<section class="card">
-
-<h2 class="card-title">
-8. Scoring Rules
-</h2>
-
-<div class="content">
-
-<table>
-
-<tr>
-<th>Scoring Issue</th>
-<th>Rule</th>
-</tr>
-
-<tr>
-<td>Selected response</td>
-<td>
-Correct = 1; incorrect or blank = 0.
-</td>
-</tr>
-
-<tr>
-<td>CU short response</td>
-<td>
-3 = complete, accurate, clear explanation;<br>
-2 = generally correct but incomplete;<br>
-1 = limited evidence;<br>
-0 = incorrect, irrelevant, or blank.
-</td>
-</tr>
-
-<tr>
-<td>Correct setup + arithmetic error</td>
-<td>
-Retain substantial credit when the rubric
-evidence supports it.
-</td>
-</tr>
-
-<tr>
-<td>Repeated rate-conversion error</td>
-<td>
-Do not double-penalize the same underlying
-error through every downstream criterion.
-</td>
-</tr>
-
-<tr>
-<td>Wrong formula</td>
-<td>
-Model points may be lost, but consistent
-subsequent work may still receive appropriate
-partial credit.
-</td>
-</tr>
-
-<tr>
-<td>Carry-forward error</td>
-<td>
-Do not repeatedly penalize the same inherited
-error.
-</td>
-</tr>
-
-<tr>
-<td>Blank</td>
-<td>
-0.
-</td>
-</tr>
-
-<tr>
-<td>Final answer only</td>
-<td>
-Award only the evidence-supported points when
-the task requires a complete solution.
-</td>
-</tr>
-
-</table>
-
-</div>
-
 </section>
 
 
-<section class="card">
+<!-- STEP 8 -->
 
-<h2 class="card-title">
-9. Spreadsheet-Based Instruction Safeguards
-</h2>
+<section class="card step" id="s8">
+
+<div class="stephead">
+<div class="num">8</div>
+<div>
+<span class="badge">SCORING</span>
+<h2>Scoring System</h2>
+</div>
+</div>
 
 <div class="content">
 
-<div class="grid">
+<h3>Conceptual Understanding</h3>
 
-<div class="panel">
-
-<h3>
-Required Mathematical Reasoning
-</h3>
-
-<ol>
-
-<li>Understand the financial situation.</li>
-
-<li>Identify mathematical variables.</li>
-
-<li>Determine payment frequency.</li>
-
-<li>Determine periodic interest rate.</li>
-
-<li>Determine number of periods.</li>
-
-<li>Select FV, PV, or PMT.</li>
-
-<li>Map mathematical variables into the spreadsheet.</li>
-
-<li>Generate the result.</li>
-
-<li>Check reasonableness.</li>
-
-<li>Interpret the financial meaning.</li>
-
-</ol>
-
-</div>
-
-
-<div class="panel">
-
-<h3>
-Standard Spreadsheet Table
-</h3>
-
-<table>
-
+<div class="table-wrap">
+<table class="table-medium">
 <tr>
-<th>Input / Variable</th>
-<th>Value</th>
+<th>Score</th>
+<th>Meaning</th>
 </tr>
-
 <tr>
-<td>PMT</td>
-<td>________</td>
+<td>3</td>
+<td>Complete, accurate, and clear</td>
 </tr>
-
 <tr>
-<td>Annual Interest Rate</td>
-<td>________</td>
+<td>2</td>
+<td>Generally correct but incomplete</td>
 </tr>
-
 <tr>
-<td>Payment Frequency</td>
-<td>________</td>
+<td>1</td>
+<td>Limited understanding</td>
 </tr>
-
 <tr>
-<td>Periodic Interest Rate i</td>
-<td>________</td>
+<td>0</td>
+<td>Incorrect, irrelevant, or blank</td>
 </tr>
-
-<tr>
-<td>Time</td>
-<td>________</td>
-</tr>
-
-<tr>
-<td>Number of Periods n</td>
-<td>________</td>
-</tr>
-
-<tr>
-<td>Financial Application</td>
-<td>FV / PV / PMT</td>
-</tr>
-
-<tr>
-<td>Calculated Result</td>
-<td>________</td>
-</tr>
-
-<tr>
-<td>Interpretation</td>
-<td>________</td>
-</tr>
-
 </table>
-
 </div>
 
-</div>
-
-
-<div class="warning">
-
-<strong>
-Do NOT:
-</strong>
+<h3>Problem-Solving Performance</h3>
 
 <ul>
+<li>Relevant information</li>
+<li>PMT identification</li>
+<li>Periodic interest rate</li>
+<li>Number of periods</li>
+<li>Appropriate model</li>
+<li>Substitution</li>
+<li>Computation</li>
+<li>Interpretation</li>
+</ul>
 
-<li>
-Use spreadsheet typing speed as the outcome.
-</li>
+<h3>Partial-Credit Rules</h3>
 
-<li>
-Measure spreadsheet formatting ability.
-</li>
-
-<li>
-Give learners a pre-filled answer-producing
-spreadsheet that bypasses mathematical reasoning.
-</li>
-
-<li>
-Turn the treatment into a generic ICT lesson.
-</li>
-
+<ul>
+<li>Correct setup with arithmetic error retains substantial credit.</li>
+<li>Do not double-penalize the same downstream rate-conversion error.</li>
+<li>Wrong formula loses model points, but consistent later work may earn partial credit.</li>
+<li>A final answer without required reasoning receives only evidence-supported points.</li>
+<li>Blank responses receive zero.</li>
+<li>Carry-forward errors are not repeatedly penalized.</li>
 </ul>
 
 </div>
-
-</div>
-
 </section>
 
 
-<section class="card">
+<!-- STEP 9 -->
 
-<h2 class="card-title">
-10. Treatment Parallelism
-</h2>
+<section class="card step" id="s9">
+
+<div class="stephead">
+<div class="num">9</div>
+<div>
+<span class="badge">ETHICS</span>
+<h2>Permission, Ethics, and Data Protection</h2>
+</div>
+</div>
 
 <div class="content">
 
-<table>
+<h3>Required safeguards</h3>
 
+<label class="check">
+<input type="checkbox"> Research approval/endorsement documented
+</label>
+
+<label class="check">
+<input type="checkbox"> School Head permission obtained
+</label>
+
+<label class="check">
+<input type="checkbox"> Required division/research-office requirements checked
+</label>
+
+<label class="check">
+<input type="checkbox"> Parent/guardian consent completed where required
+</label>
+
+<label class="check">
+<input type="checkbox"> Learner assent completed where required
+</label>
+
+<label class="check">
+<input type="checkbox"> Confidentiality procedures established
+</label>
+
+<label class="check">
+<input type="checkbox"> Research IDs used instead of names in analysis files
+</label>
+
+<label class="check">
+<input type="checkbox"> Data stored securely
+</label>
+
+<h3>Teacher–Researcher Dual Role</h3>
+
+<p>
+Participation, assessment, and research procedures should not create
+unfair academic consequences. The researcher should avoid coercion,
+protect confidentiality, and separate research records from unnecessary
+identifying information.
+</p>
+
+<div class="warning callout">
+Do not invent official school/division forms. Use the current requirements
+communicated by the authorized office.
+</div>
+
+</div>
+</section>
+
+
+<!-- STEP 10 -->
+
+<section class="card step" id="s10">
+
+<div class="stephead">
+<div class="num">10</div>
+<div>
+<span class="badge">VALIDATION</span>
+<h2>Expert Validation</h2>
+</div>
+</div>
+
+<div class="content">
+
+<h3>Recommended Expert Panel</h3>
+
+<ul>
+<li>Mathematics teacher</li>
+<li>Master Teacher</li>
+<li>Research teacher/coordinator</li>
+<li>ICT/digital learning teacher</li>
+<li>Assessment/curriculum expert</li>
+</ul>
+
+<p>
+Ideal panel size: 3–5 qualified reviewers.
+</p>
+
+<h3>Validation Criteria</h3>
+
+<div class="table-wrap">
+<table class="table-medium">
+<tr>
+<th>Code</th>
+<th>Criterion</th>
+</tr>
+<tr><td>R</td><td>Relevance</td></tr>
+<tr><td>A</td><td>Accuracy</td></tr>
+<tr><td>C</td><td>Clarity</td></tr>
+<tr><td>AP</td><td>Alignment with purpose</td></tr>
+<tr><td>AC</td><td>Appropriateness for learners</td></tr>
+<tr><td>S</td><td>Suitability</td></tr>
+</table>
+</div>
+
+<h3>Four-Point Rating</h3>
+
+<ol>
+<li>Not Appropriate</li>
+<li>Needs Major Revision</li>
+<li>Appropriate with Minor Revision</li>
+<li>Highly Appropriate</li>
+</ol>
+
+<div class="formula-box">
+<div class="formula">
+I-CVI = Number of Experts Rating 3 or 4 / Total Number of Experts
+</div>
+</div>
+
+<p>
+For five experts, an I-CVI of 1.00 is strong; .80 is generally acceptable;
+lower values require review. Comments and technical errors override
+mechanical reliance on the numeric value.
+</p>
+
+<div class="warning callout">
+Validity is not the same as reliability. A later pilot/reliability process
+may be required.
+</div>
+
+</div>
+</section>
+
+
+<!-- STEP 11 -->
+
+<section class="card step" id="s11">
+
+<div class="stephead">
+<div class="num">11</div>
+<div>
+<span class="badge">RANDOMIZATION</span>
+<h2>Random Assignment and Counterbalancing</h2>
+</div>
+</div>
+
+<div class="content">
+
+<h3>Procedure</h3>
+
+<ol>
+<li>Assign each eligible learner a research ID.</li>
+<li>Generate random values.</li>
+<li>Sort the random values.</li>
+<li>Assign learners sequentially to the planned groups.</li>
+<li>Record the allocation.</li>
+<li>Do not rerandomize because of outcome data.</li>
+<li>Document withdrawals or changes in the status log.</li>
+</ol>
+
+<div class="callout">
+The randomization record must be created before outcome analysis.
+</div>
+
+<h3>Required Audit Trail</h3>
+
+<ul>
+<li>Research ID</li>
+<li>Random value</li>
+<li>Assigned group</li>
+<li>Sequence</li>
+<li>Form allocation</li>
+<li>Status</li>
+<li>Date/time of change</li>
+<li>Reason for documented change</li>
+</ul>
+
+</div>
+</section>
+
+
+<!-- STEP 12 -->
+
+<section class="card step" id="s12">
+
+<div class="stephead">
+<div class="num">12</div>
+<div>
+<span class="badge">PRETEST</span>
+<h2>Formal Pretest</h2>
+</div>
+</div>
+
+<div class="content">
+
+<p>
+The formal pretest establishes the baseline before the counterbalanced
+instructional conditions.
+</p>
+
+<h3>Administration Rule</h3>
+
+<ul>
+<li>Use Form P.</li>
+<li>Use the same fixed testing time for all learners.</li>
+<li>Recommended maximum: 60 minutes.</li>
+<li>Record attendance and administration conditions.</li>
+<li>Do not fabricate missing responses.</li>
+<li>Score according to the approved scoring guide.</li>
+</ul>
+
+<div class="evidence callout">
+The pretest is primarily descriptive baseline evidence. It should not
+automatically be treated as a covariate unless the analytical design
+explicitly supports that decision.
+</div>
+
+</div>
+</section>
+
+
+<!-- STEP 13 -->
+
+<section class="card step" id="s13">
+
+<div class="stephead">
+<div class="num">13</div>
+<div>
+<span class="badge">INTERVENTION</span>
+<h2>Counterbalanced Instruction and Assessment</h2>
+</div>
+</div>
+
+<div class="content">
+
+<h3>Formula-Based Instruction</h3>
+
+<ol>
+<li>Understand the situation.</li>
+<li>Identify variables.</li>
+<li>Determine payment/interest periods.</li>
+<li>Select the appropriate formula.</li>
+<li>Substitute.</li>
+<li>Calculate.</li>
+<li>Check.</li>
+<li>Interpret.</li>
+</ol>
+
+<h3>Spreadsheet-Based Instruction</h3>
+
+<ol>
+<li>Identify financial information.</li>
+<li>Identify mathematical variables.</li>
+<li>Determine payment period.</li>
+<li>Determine corresponding interest period.</li>
+<li>Set up spreadsheet.</li>
+<li>Enter mathematical relationships.</li>
+<li>Generate result.</li>
+<li>Check reasonableness.</li>
+<li>Interpret.</li>
+</ol>
+
+<h3>Standard Spreadsheet Structure</h3>
+
+<div class="table-wrap">
+<table class="table-medium">
+<tr><th>Input / Variable</th><th>Value</th></tr>
+<tr><td>PMT</td><td></td></tr>
+<tr><td>Annual Interest Rate r</td><td></td></tr>
+<tr><td>Payment Frequency m</td><td></td></tr>
+<tr><td>Periodic Interest Rate i</td><td></td></tr>
+<tr><td>Time t</td><td></td></tr>
+<tr><td>Number of Periods n</td><td></td></tr>
+<tr><td>Financial Application</td><td>FV / PV / PMT</td></tr>
+<tr><td>Calculated Result</td><td></td></tr>
+<tr><td>Interpretation</td><td></td></tr>
+</table>
+</div>
+
+<h3>Parallel Conditions</h3>
+
+<div class="table-wrap">
+<table class="table-wide">
 <tr>
 <th>Element</th>
 <th>Formula-Based</th>
@@ -2014,6 +1427,12 @@ Turn the treatment into a generic ICT lesson.
 </tr>
 
 <tr>
+<td>Concepts</td>
+<td>Same</td>
+<td>Same</td>
+</tr>
+
+<tr>
 <td>Examples</td>
 <td>Comparable</td>
 <td>Comparable</td>
@@ -2026,13 +1445,13 @@ Turn the treatment into a generic ICT lesson.
 </tr>
 
 <tr>
-<td>Practice quantity</td>
+<td>Practice problems</td>
 <td>Same</td>
 <td>Same</td>
 </tr>
 
 <tr>
-<td>Instructional time</td>
+<td>Time</td>
 <td>Same</td>
 <td>Same</td>
 </tr>
@@ -2050,3801 +1469,792 @@ Turn the treatment into a generic ICT lesson.
 </tr>
 
 <tr>
-<td>Variables</td>
-<td>Identify</td>
-<td>Identify</td>
-</tr>
-
-<tr>
-<td>Periodic rate</td>
-<td>Determine</td>
-<td>Determine</td>
-</tr>
-
-<tr>
-<td>n</td>
-<td>Determine</td>
-<td>Determine</td>
-</tr>
-
-<tr>
-<td>Model</td>
-<td>Select</td>
-<td>Select</td>
-</tr>
-
-<tr>
-<td>Checking</td>
-<td>Required</td>
-<td>Required</td>
-</tr>
-
-<tr>
-<td>Interpretation</td>
-<td>Required</td>
-<td>Required</td>
-</tr>
-
-<tr>
 <td>Main computational approach</td>
-<td>Written formula</td>
+<td>Formula / written</td>
 <td>Spreadsheet</td>
 </tr>
 
 </table>
-
 </div>
 
-</section>
-<section class="card" id="steps">
+<h3>Treatment Fidelity</h3>
 
-<h2 class="card-title">
-11. The Complete 14-Step Research Procedure
-</h2>
-
-<div class="content">
-
-<div class="progress">
-
-<a href="#step01">01</a>
-<a href="#step02">02</a>
-<a href="#step03">03</a>
-<a href="#step04">04</a>
-<a href="#step05">05</a>
-<a href="#step06">06</a>
-<a href="#step07">07</a>
-<a href="#step08">08</a>
-<a href="#step09">09</a>
-<a href="#step10">10</a>
-<a href="#step11">11</a>
-<a href="#step12">12</a>
-<a href="#step13">13</a>
-<a href="#step14">14</a>
+<label class="check"><input type="checkbox"> Same objective</label>
+<label class="check"><input type="checkbox"> Same content</label>
+<label class="check"><input type="checkbox"> Same duration</label>
+<label class="check"><input type="checkbox"> Comparable examples</label>
+<label class="check"><input type="checkbox"> Comparable difficulty</label>
+<label class="check"><input type="checkbox"> Variables identified</label>
+<label class="check"><input type="checkbox"> Periodic rate determined</label>
+<label class="check"><input type="checkbox"> Number of periods determined</label>
+<label class="check"><input type="checkbox"> Model selected</label>
+<label class="check"><input type="checkbox"> Calculation performed</label>
+<label class="check"><input type="checkbox"> Answer checked</label>
+<label class="check"><input type="checkbox"> Result interpreted</label>
 
 </div>
-
-</div>
-
 </section>
 
 
-<!-- STEP 1 -->
+<!-- STEP 14 -->
 
-<section class="card step" id="step01">
+<section class="card step" id="s14">
 
-<div class="step-header">
-
-<div class="step-number">
-01
-</div>
-
+<div class="stephead">
+<div class="num">14</div>
 <div>
-
-<span class="badge">
-STEP 01
-</span>
-
-<h2>
-Classroom Observation & Context
-</h2>
-
+<span class="badge">ANALYSIS</span>
+<h2>Analysis, Reflection, and Action Plan</h2>
 </div>
-
 </div>
 
 <div class="content">
+
+<h3>Primary Data</h3>
+
+<ul>
+<li>Pretest baseline</li>
+<li>Formula-condition scores</li>
+<li>Spreadsheet-condition scores</li>
+<li>Treatment fidelity</li>
+</ul>
+
+<h3>Descriptive Statistics</h3>
+
+<ul>
+<li>N</li>
+<li>Mean</li>
+<li>Median</li>
+<li>Standard deviation</li>
+<li>Minimum</li>
+<li>Maximum</li>
+</ul>
+
+<h3>Paired Difference</h3>
+
+<div class="formula-box">
+<div class="formula">
+D<sub>i</sub> = Spreadsheet<sub>i</sub> − Formula<sub>i</sub>
+</div>
+</div>
+
+<h3>Primary Statistical Test</h3>
 
 <p>
-<strong>Purpose:</strong>
-Start with a real classroom learning concern.
+Use a paired-samples t-test when the paired-difference assumptions are
+reasonably satisfied.
 </p>
+
+<p>
+If assumptions are not reasonably satisfied, use the Wilcoxon signed-rank
+test.
+</p>
+
+<h3>Effect Size</h3>
+
+<div class="formula-box">
+<div class="formula">
+Cohen's d<sub>z</sub> = Mean Difference / SD of Paired Differences
+</div>
+</div>
+
+<p>
+For a Wilcoxon analysis, report an appropriate matched-pairs
+rank-biserial effect size.
+</p>
+
+<h3>Additional Diagnostics</h3>
+
+<ul>
+<li>Formula-first vs spreadsheet-first groups</li>
+<li>Period 1 vs Period 2</li>
+<li>Form A vs Form B</li>
+<li>Fidelity/deviation records</li>
+</ul>
+
+<h3>Interpretation Scenarios</h3>
 
 <div class="grid">
 
 <div class="panel">
-
-<h3>
-Procedure
-</h3>
-
-<ol>
-
-<li>
-Record what learners were actually doing.
-</li>
-
-<li>
-Identify the mathematical topic involved.
-</li>
-
-<li>
-Document the learning difficulty.
-</li>
-
-<li>
-Separate observation from interpretation.
-</li>
-
-<li>
-Explain why the concern matters.
-</li>
-
-</ol>
-
-</div>
-
-<div class="panel assumption">
-
-<h3>
-🟡 Planning Assumption
-</h3>
-
+<h3>Scenario A</h3>
 <p>
-The exemplar began from observed difficulty
-with ordinary-annuity formulas and apparent
-spreadsheet success.
+Spreadsheet condition is higher for PSP and CU.
 </p>
-
 </div>
-
-<div class="panel warning">
-
-<h3>
-Important Reminder
-</h3>
-
-<p>
-Earlier informal classroom experiences do not
-automatically become formal research data.
-</p>
-
-</div>
-
-<div class="panel evidence">
-
-<h3>
-Completion Evidence
-</h3>
-
-<p>
-Observation notes, work samples, diagnostic
-evidence, or other actual classroom records.
-</p>
-
-<label class="check">
-<input type="checkbox">
-Verified with actual evidence.
-</label>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- STEP 2 -->
-
-<section class="card step" id="step02">
-
-<div class="step-header">
-
-<div class="step-number">
-02
-</div>
-
-<div>
-
-<span class="badge">
-STEP 02
-</span>
-
-<h2>
-Research Problem & Research Gap
-</h2>
-
-</div>
-
-</div>
-
-<div class="content">
-
-<p>
-<strong>Purpose:</strong>
-Turn the observation into an answerable research
-problem.
-</p>
-
-<div class="grid">
 
 <div class="panel">
-
-<h3>
-Procedure
-</h3>
-
-<ol>
-
-<li>
-State the classroom problem precisely.
-</li>
-
-<li>
-Identify what remains uncertain.
-</li>
-
-<li>
-Explain why the uncertainty matters.
-</li>
-
-<li>
-Write the classroom-specific research gap.
-</li>
-
-</ol>
-
-</div>
-
-<div class="panel assumption">
-
-<h3>
-🟡 Exemplar Gap
-</h3>
-
+<h3>Scenario B</h3>
 <p>
-Does obtaining a correct spreadsheet answer
-demonstrate genuine conceptual understanding?
+PSP is higher while CU is similar.
 </p>
-
 </div>
 
-<div class="panel warning">
-
-<h3>
-Important Reminder
-</h3>
-
+<div class="panel">
+<h3>Scenario C</h3>
 <p>
-A research gap does not necessarily mean that
-nobody has ever studied the topic. A specific
-unanswered classroom instructional question
-can be a valid action-research gap.
+PSP is higher while CU is lower.
 </p>
-
 </div>
 
-</div>
-
-</div>
-
-</section>
-
-
-<!-- STEP 3 -->
-
-<section class="card step" id="step03">
-
-<div class="step-header">
-
-<div class="step-number">
-03
-</div>
-
-<div>
-
-<span class="badge">
-STEP 03
-</span>
-
-<h2>
-Research Questions & Hypotheses
-</h2>
-
-</div>
-
-</div>
-
-<div class="content">
-
-<h3>
-Main Research Question
-</h3>
-
-<div class="callout">
-
-How do formula-based and spreadsheet-based
-instructional approaches differ in developing
-students' problem-solving performance and
-conceptual understanding in financial applications
-of ordinary annuities?
-
-</div>
-
-<h3>
-Specific Questions
-</h3>
-
-<ol>
-
-<li>
-What is the level of students' problem-solving
-performance and conceptual understanding of
-ordinary annuities before the instructional
-intervention?
-</li>
-
-<li>
-What is the level of students' problem-solving
-performance following formula-based instruction?
-</li>
-
-<li>
-What is the level of students' problem-solving
-performance following spreadsheet-based instruction?
-</li>
-
-<li>
-Is there a significant difference in students'
-problem-solving performance between the two
-instructional approaches?
-</li>
-
-<li>
-Is there a significant difference in students'
-conceptual understanding between the two
-instructional approaches?
-</li>
-
-<li>
-What instructional implications can be drawn
-from the findings?
-</li>
-
-</ol>
-
-<div class="warning">
-
-<strong>
-Do not assume spreadsheet instruction is better.
-</strong>
-
-The study is designed to determine the observed
-difference rather than predetermine the winner.
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- STEP 4 -->
-
-<section class="card step" id="step04">
-
-<div class="step-header">
-
-<div class="step-number">
-04
-</div>
-
-<div>
-
-<span class="badge">
-STEP 04
-</span>
-
-<h2>
-Variables & Constructs
-</h2>
-
-</div>
-
-</div>
-
-<div class="content">
-
-<table>
-
-<tr>
-<th>Variable / Construct</th>
-<th>Role</th>
-<th>Measure</th>
-</tr>
-
-<tr>
-<td>Formula-Based Instruction</td>
-<td>Instructional condition</td>
-<td>Condition</td>
-</tr>
-
-<tr>
-<td>Spreadsheet-Based Instruction</td>
-<td>Instructional condition</td>
-<td>Condition</td>
-</tr>
-
-<tr>
-<td>Problem-Solving Performance</td>
-<td>Primary outcome</td>
-<td>PSP score / percentage</td>
-</tr>
-
-<tr>
-<td>Conceptual Understanding</td>
-<td>Primary outcome</td>
-<td>CU score / percentage</td>
-</tr>
-
-<tr>
-<td>Spreadsheet–Mathematics Reasoning</td>
-<td>Supporting evidence</td>
-<td>SMR score / percentage</td>
-</tr>
-
-</table>
-
-<div class="callout">
-
-<strong>
-Maximum Scores:
-</strong>
-
-CU = 16 |
-PSP = 105 |
-SMR = 12
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- STEP 5 -->
-
-<section class="card step" id="step05">
-
-<div class="step-header">
-
-<div class="step-number">
-05
-</div>
-
-<div>
-
-<span class="badge">
-STEP 05
-</span>
-
-<h2>
-Research Design
-</h2>
-
-</div>
-
-</div>
-
-<div class="content">
-
+<div class="panel">
+<h3>Scenario D</h3>
 <p>
-Use the counterbalanced within-subject design
-described earlier.
+Formula condition is higher for PSP and CU.
 </p>
-
-<div class="warning">
-
-Do not assign learners based on achievement,
-gender, seating position, teacher preference,
-or expected performance.
-
 </div>
 
-<div class="callout">
-
-<strong>
-Design principle:
-</strong>
-
-Every learner receives both instructional
-approaches, while instructional order and
-Form A/B order are counterbalanced.
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- STEP 6 -->
-
-<section class="card step" id="step06">
-
-<div class="step-header">
-
-<div class="step-number">
-06
-</div>
-
-<div>
-
-<span class="badge">
-STEP 06
-</span>
-
-<h2>
-Table of Specifications & Assessment Blueprint
-</h2>
-
-</div>
-
-</div>
-
-<div class="content">
-
+<div class="panel">
+<h3>Scenario E</h3>
 <p>
-The TOS must connect:
+There is no meaningful difference.
 </p>
+</div>
+
+</div>
+
+<h3>Reflection Cycle</h3>
 
 <div class="workflow">
 
-<span class="node">Content</span>
-<span class="arrow">→</span>
+<div class="node">Plan</div>
+<div class="arrow">→</div>
+<div class="node">Act</div>
+<div class="arrow">→</div>
+<div class="node">Observe</div>
+<div class="arrow">→</div>
+<div class="node">Analyze</div>
+<div class="arrow">→</div>
+<div class="node">Reflect</div>
+<div class="arrow">→</div>
+<div class="node">Action Plan</div>
+<div class="arrow">→</div>
+<div class="node">Improved Practice</div>
 
-<span class="node">Construct</span>
-<span class="arrow">→</span>
+</div>
 
-<span class="node">Cognitive Demand</span>
-<span class="arrow">→</span>
+<h3>Reflection Questions</h3>
 
-<span class="node">Task</span>
-<span class="arrow">→</span>
+<ol>
+<li>What did the data show?</li>
+<li>What did students appear to understand?</li>
+<li>Where did students make errors?</li>
+<li>Did correct spreadsheet outputs correspond with mathematical reasoning?</li>
+<li>What did the teacher learn?</li>
+<li>What should be changed in future instruction?</li>
+</ol>
 
-<span class="node">Score</span>
+</div>
+</section>
+
+
+<!-- RESEARCHER QUALITY CONTROL -->
+
+<div class="card">
+
+<h2>Research Quality-Control System</h2>
+
+<div class="content">
+
+<div class="callout">
+<strong>Mandatory audit workflow:</strong>
+</div>
+
+<div class="workflow">
+
+<div class="node">DRAFT</div>
+<div class="arrow">→</div>
+
+<div class="node">EXPERT AUDIT</div>
+<div class="arrow">→</div>
+
+<div class="node">ERROR LOG</div>
+<div class="arrow">→</div>
+
+<div class="node">CORRECTION</div>
+<div class="arrow">→</div>
+
+<div class="node">SECOND AUDIT</div>
+<div class="arrow">→</div>
+
+<div class="node">FINAL TECHNICAL CHECK</div>
+<div class="arrow">→</div>
+
+<div class="node">WORD / PDF / HTML</div>
+
+</div>
+
+<h3>Final Technical Check</h3>
+
+<label class="check"><input type="checkbox"> Research questions align with variables</label>
+<label class="check"><input type="checkbox"> Variables align with instruments</label>
+<label class="check"><input type="checkbox"> Instruments align with TOS</label>
+<label class="check"><input type="checkbox"> TOS aligns with scoring</label>
+<label class="check"><input type="checkbox"> Scoring aligns with analysis</label>
+<label class="check"><input type="checkbox"> Formula calculations verified</label>
+<label class="check"><input type="checkbox"> Forms A/B are structurally comparable</label>
+<label class="check"><input type="checkbox"> Randomization documented</label>
+<label class="check"><input type="checkbox"> Consent/assent requirements addressed</label>
+<label class="check"><input type="checkbox"> No research data fabricated</label>
+<label class="check"><input type="checkbox"> Deviations documented</label>
+<label class="check"><input type="checkbox"> Mobile display checked</label>
+<label class="check"><input type="checkbox"> Print layout checked</label>
+
+</div>
+</div>
+
+
+<!-- FORMS -->
+
+<div class="card">
+
+<h2>Assessment Forms P / A / B</h2>
+
+<div class="content">
+
+<h3>Form P — Pretest</h3>
+
+<p>
+Baseline assessment before the formal instructional conditions.
+Use the approved Form P item set and scoring guide.
+</p>
+
+<h3>Form A — Condition Assessment</h3>
+
+<p>
+Parallel assessment form covering FV, PV, required periodic payment,
+conceptual understanding, problem solving, and spreadsheet–mathematics
+reasoning.
+</p>
+
+<h3>Form B — Parallel Condition Assessment</h3>
+
+<p>
+Parallel assessment form matched to Form A in construct coverage,
+difficulty intention, scoring structure, and cognitive demand.
+</p>
+
+<div class="callout">
+<strong>Administration time:</strong>
+60 minutes maximum per assessment.
+Do not administer two full assessment forms as a single testing session.
+</div>
+
+</div>
+</div>
+
+
+<!-- TEMPLATE LIBRARY -->
+
+<section class="card" id="templates">
+
+<div class="card">
+<h2>34-Template Research Library</h2>
+</div>
+
+<div class="content">
+
+<p>
+Use these templates as reusable components. Each template should be
+reviewed and adapted to the actual approved study rather than treated
+as an automatically valid official form.
+</p>
+
+<div class="grid">
+
+<div class="panel template">
+<h3>01. Research Concept Note</h3>
+<p>Problem, context, gap, purpose, and initial research direction.</p>
+</div>
+
+<div class="panel template">
+<h3>02. Research Problem Statement</h3>
+<p>Classroom problem and evidence-based rationale.</p>
+</div>
+
+<div class="panel template">
+<h3>03. Research Questions</h3>
+<p>Main and specific questions.</p>
+</div>
+
+<div class="panel template">
+<h3>04. Hypotheses</h3>
+<p>Null and alternative hypotheses.</p>
+</div>
+
+<div class="panel template">
+<h3>05. Conceptual Framework</h3>
+<p>Instructional approach → outcomes → reflection → action.</p>
+</div>
+
+<div class="panel template">
+<h3>06. Variable Matrix</h3>
+<p>Variables, definitions, indicators, and measurement.</p>
+</div>
+
+<div class="panel template">
+<h3>07. Operational Definitions</h3>
+<p>Precise working definitions for PSP, CU, and SMR.</p>
+</div>
+
+<div class="panel template">
+<h3>08. TOS</h3>
+<p>Construct, content, cognitive demand, and item distribution.</p>
+</div>
+
+<div class="panel template">
+<h3>09. Assessment Blueprint</h3>
+<p>Task-level assessment structure.</p>
+</div>
+
+<div class="panel template">
+<h3>10. Form P</h3>
+<p>Formal baseline assessment.</p>
+</div>
+
+<div class="panel template">
+<h3>11. Form A</h3>
+<p>First parallel assessment form.</p>
+</div>
+
+<div class="panel template">
+<h3>12. Form B</h3>
+<p>Second parallel assessment form.</p>
+</div>
+
+<div class="panel template">
+<h3>13. Answer Key</h3>
+<p>Controlled scoring reference.</p>
+</div>
+
+<div class="panel template">
+<h3>14. Scoring Rubric</h3>
+<p>PSP, CU, and SMR scoring criteria.</p>
+</div>
+
+<div class="panel template">
+<h3>15. Expert Validation Form</h3>
+<p>Four-point expert review instrument.</p>
+</div>
+
+<div class="panel template">
+<h3>16. I-CVI Summary</h3>
+<p>Item-level content validity calculation.</p>
+</div>
+
+<div class="panel template">
+<h3>17. Pilot/Cognitive Try-Out Record</h3>
+<p>Wording, timing, and usability observations.</p>
+</div>
+
+<div class="panel template">
+<h3>18. Permission Request</h3>
+<p>School research permission template.</p>
+</div>
+
+<div class="panel template">
+<h3>19. Participant Information Sheet</h3>
+<p>Study information for participants.</p>
+</div>
+
+<div class="panel template">
+<h3>20. Parent/Guardian Consent</h3>
+<p>Consent template subject to applicable requirements.</p>
+</div>
+
+<div class="panel template">
+<h3>21. Learner Assent</h3>
+<p>Age-appropriate assent documentation.</p>
+</div>
+
+<div class="panel template">
+<h3>22. Confidentiality Procedure</h3>
+<p>Privacy and secure data-handling protocol.</p>
+</div>
+
+<div class="panel template">
+<h3>23. Researcher Declaration</h3>
+<p>Integrity and responsible research statement.</p>
+</div>
+
+<div class="panel template">
+<h3>24. Random Assignment Record</h3>
+<p>Random values and group allocation.</p>
+</div>
+
+<div class="panel template">
+<h3>25. Counterbalancing Matrix</h3>
+<p>Sequence and assessment-form assignment.</p>
+</div>
+
+<div class="panel template">
+<h3>26. Pretest Administration Record</h3>
+<p>Date, attendance, conditions, and deviations.</p>
+</div>
+
+<div class="panel template">
+<h3>27. Intervention Implementation Record</h3>
+<p>Instructional implementation log.</p>
+</div>
+
+<div class="panel template">
+<h3>28. Treatment Fidelity Checklist</h3>
+<p>Parallelism and implementation fidelity.</p>
+</div>
+
+<div class="panel template">
+<h3>29. Assessment Administration Record</h3>
+<p>Condition, form, timing, and deviations.</p>
+</div>
+
+<div class="panel template">
+<h3>30. Deviation Log</h3>
+<p>Unexpected events and documented decisions.</p>
+</div>
+
+<div class="panel template">
+<h3>31. Data Analysis Workbook</h3>
+<p>Descriptive, paired, effect-size, and diagnostic analysis.</p>
+</div>
+
+<div class="panel template">
+<h3>32. Reflection Template</h3>
+<p>Evidence → interpretation → teacher learning.</p>
+</div>
+
+<div class="panel template">
+<h3>33. Action Plan</h3>
+<p>Evidence-based improvement of future instruction.</p>
+</div>
+
+<div class="panel template">
+<h3>34. Replication Record</h3>
+<p>Version, cohort, implementation, deviations, and replication decision.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- REPLICATION -->
+
+<div class="card">
+
+<h2>Replication and Reuse</h2>
+
+<div class="content">
+
+<h3>Three Layers</h3>
+
+<div class="grid">
+
+<div class="panel">
+<h3>Layer 1 — Research Protocol</h3>
+<p>
+Stable reusable methodology, instruments, scoring rules, and procedures.
+</p>
+</div>
+
+<div class="panel">
+<h3>Layer 2 — Learner Cohort</h3>
+<p>
+A newly established group of eligible learners for each implementation.
+</p>
+</div>
+
+<div class="panel">
+<h3>Layer 3 — Research Evidence</h3>
+<p>
+New data collected and analyzed for each implementation.
+</p>
+</div>
+
+</div>
+
+<div class="callout">
+Replication does not automatically establish generalizability.
+Differences in learners, setting, teacher, technology, and implementation
+must be documented.
+</div>
+
+<h3>Replication Checklist</h3>
+
+<label class="check"><input type="checkbox"> Protocol version recorded</label>
+<label class="check"><input type="checkbox"> Cohort documented</label>
+<label class="check"><input type="checkbox"> Eligibility documented</label>
+<label class="check"><input type="checkbox"> Randomization documented</label>
+<label class="check"><input type="checkbox"> Intervention fidelity recorded</label>
+<label class="check"><input type="checkbox"> Deviations recorded</label>
+<label class="check"><input type="checkbox"> New evidence separated from previous study</label>
+<label class="check"><input type="checkbox"> Replication decision documented</label>
+
+</div>
+</div>
+
+
+<!-- STATUS -->
+
+<section class="card" id="status">
+
+<h2>Research System Status</h2>
+
+<div class="content">
+
+<div class="table-wrap">
+<table class="table-medium">
+
+<tr>
+<th>Component</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>Research Problem</td>
+<td><span class="status">READY</span></td>
+</tr>
+
+<tr>
+<td>Research Questions</td>
+<td><span class="status">READY</span></td>
+</tr>
+
+<tr>
+<td>Research Design</td>
+<td><span class="status">READY</span></td>
+</tr>
+
+<tr>
+<td>Variables and Indicators</td>
+<td><span class="status">READY</span></td>
+</tr>
+
+<tr>
+<td>Assessment Blueprint</td>
+<td><span class="status">READY</span></td>
+</tr>
+
+<tr>
+<td>Scoring System</td>
+<td><span class="status">READY</span></td>
+</tr>
+
+<tr>
+<td>Expert Validation Framework</td>
+<td><span class="status">READY</span></td>
+</tr>
+
+<tr>
+<td>Ethics and Permission Package</td>
+<td><span class="status">READY</span></td>
+</tr>
+
+<tr>
+<td>Random Assignment Protocol</td>
+<td><span class="status">READY</span></td>
+</tr>
+
+<tr>
+<td>Formal Pretest Protocol</td>
+<td><span class="status">READY</span></td>
+</tr>
+
+<tr>
+<td>Counterbalanced Intervention</td>
+<td><span class="status">READY</span></td>
+</tr>
+
+<tr>
+<td>Analysis and Reflection</td>
+<td><span class="status">READY</span></td>
+</tr>
+
+<tr>
+<td>Replication Framework</td>
+<td><span class="status">READY</span></td>
+</tr>
+
+<tr>
+<td>Mobile Table Layout</td>
+<td><span class="status">READY</span></td>
+</tr>
+
+<tr>
+<td>Print Layout</td>
+<td><span class="status">READY</span></td>
+</tr>
+
+</table>
+</div>
+
+<div class="callout assumption">
+<strong>Important:</strong>
+"READY" means the research-system component is structurally prepared.
+It does not mean that institutional approval, participant consent,
+expert validation, or actual research data collection has already occurred.
+</div>
+
+</div>
+</section>
+
+
+<!-- ARCHIVE -->
+
+<div class="card">
+
+<h2>Research Evidence Archive Structure</h2>
+
+<div class="content">
+
+<pre>
+ACTION_RESEARCH/
+│
+├── 01_Proposal/
+├── 02_Permission_Ethics/
+├── 03_Expert_Validation/
+├── 04_Final_Instruments/
+├── 05_Random_Assignment/
+├── 06_Pretest/
+├── 07_Intervention/
+├── 08_Assessments/
+├── 09_Scoring/
+├── 10_Data/
+├── 11_Analysis/
+├── 12_Reflection/
+├── 13_Action_Plan/
+├── 14_Replication/
+│
+├── README/
+├── Audit_Reports/
+└── Version_History/
+</pre>
+
+</div>
+</div>
+
+
+<!-- FINAL -->
+
+<div class="card">
+
+<h2>Researcher Reminder</h2>
+
+<div class="content">
+
+<div class="callout">
+
+<strong>
+Do not let the technology become the research outcome.
+</strong>
+
+<p>
+The spreadsheet is an instructional approach. The primary question is
+what happens to students' mathematical problem-solving performance and
+conceptual understanding under the two instructional conditions.
+</p>
+
+</div>
+
+<div class="callout evidence">
+
+<strong>
+Research principle:
+</strong>
+
+<p>
+A correct spreadsheet output is evidence of a numerical result.
+It is not, by itself, sufficient evidence of conceptual understanding.
+</p>
 
 </div>
 
 <div class="callout">
 
-The instrument represents Future Value,
-Present Value, and Required Periodic Payment
-while separately measuring CU, PSP, and SMR.
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- STEP 7 -->
-
-<section class="card step" id="step07">
-
-<div class="step-header">
-
-<div class="step-number">
-07
-</div>
-
-<div>
-
-<span class="badge">
-STEP 07
-</span>
-
-<h2>
-Forms P, A & B and Scoring
-</h2>
-
-</div>
-
-</div>
-
-<div class="content">
-
-<div class="grid">
-
-<div class="panel">
-
-<h3>
-Form P
-</h3>
-
-<p>
-Formal baseline/pretest.
-</p>
-
-</div>
-
-<div class="panel">
-
-<h3>
-Form A
-</h3>
-
-<p>
-Parallel condition assessment.
-</p>
-
-</div>
-
-<div class="panel">
-
-<h3>
-Form B
-</h3>
-
-<p>
-Parallel condition assessment.
-</p>
-
-</div>
-
-</div>
-
-<div class="warning">
-
-Forms A and B are parallel forms, not two
-administrations of the exact same test.
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- STEP 8 -->
-
-<section class="card step" id="step08">
-
-<div class="step-header">
-
-<div class="step-number">
-08
-</div>
-
-<div>
-
-<span class="badge">
-STEP 08
-</span>
-
-<h2>
-Expert Validation
-</h2>
-
-</div>
-
-</div>
-
-<div class="content">
-
-<h3>
-Recommended Reviewers
-</h3>
-
-<p>
-Where feasible, use 3–5 qualified reviewers,
-ideally including mathematics, research,
-ICT/digital learning, and assessment expertise.
-</p>
-
-<h3>
-Rating Criteria
-</h3>
-
-<table>
-
-<tr>
-<th>Code</th>
-<th>Criterion</th>
-</tr>
-
-<tr>
-<td>R</td>
-<td>Relevance</td>
-</tr>
-
-<tr>
-<td>A</td>
-<td>Alignment</td>
-</tr>
-
-<tr>
-<td>C</td>
-<td>Clarity</td>
-</tr>
-
-<tr>
-<td>AP</td>
-<td>Appropriateness</td>
-</tr>
-
-<tr>
-<td>AC</td>
-<td>Accuracy</td>
-</tr>
-
-<tr>
-<td>S</td>
-<td>Scoring Suitability</td>
-</tr>
-
-</table>
-
-<p>
 <strong>
-4-point scale:
+Final research logic:
 </strong>
+
+<p>
+Observation → Problem → Gap → Questions → Variables → Design →
+Instruments → Data → Statistics → Conclusions → Reflection →
+Action Plan → Improved Practice
 </p>
 
-<ul>
-
-<li>
-1 = Not Appropriate
-</li>
-
-<li>
-2 = Needs Major Revision
-</li>
-
-<li>
-3 = Appropriate with Minor Revision
-</li>
-
-<li>
-4 = Highly Appropriate
-</li>
-
-</ul>
-
-<div class="formula">
-
-I-CVI =
-Experts rating 3 or 4 /
-Total number of experts
-
 </div>
 
-<div class="warning">
-
-Validity evidence is not the same as reliability.
-Expert validation does not by itself establish
-reliability.
-
+</div>
 </div>
 
 </div>
 
-</section>
-<!-- =========================================================
-     STEP 9 — PERMISSION, ETHICS & RESEARCH COMPLIANCE
-========================================================= -->
 
-<section id="step9" class="step-section">
-  <div class="step-header">
-    <span class="step-number">09</span>
-    <div>
-      <span class="eyebrow">COMPLIANCE GATE</span>
-      <h2>Permission, Ethics & Research Compliance</h2>
-      <p>
-        Before collecting formal research data, confirm that the study has
-        appropriate permission, participant protection, and documentation.
-      </p>
-    </div>
-  </div>
+<footer>
 
-  <div class="important-box">
-    <strong>IMPORTANT:</strong>
-    No learner should be treated as a research participant until the
-    required school/division/research approvals and consent/assent
-    requirements have been satisfied.
-  </div>
+<h2>Complete Reusable Action Research System</h2>
 
-  <h3>9.1 Purpose</h3>
+<p>
+Worked exemplar: Formula-Based vs Spreadsheet-Based Instruction in
+Ordinary Annuities
+</p>
 
-  <p>
-    This step establishes the ethical and administrative foundation of the
-    classroom-based action research. It separates ordinary classroom
-    teaching activities from the formal collection and use of research data.
-  </p>
+<p>
+Designed for classroom-based action research, methodological transparency,
+responsible data collection, evidence-based reflection, and continuous
+improvement of teaching practice.
+</p>
 
-  <h3>9.2 Required Compliance Documents</h3>
-
-  <div class="table-wrap">
-    <table>
-      <thead>
-        <tr>
-          <th>Document</th>
-          <th>Purpose</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Research Proposal</td>
-          <td>Defines the study, design, participants, intervention and analysis.</td>
-          <td>☐</td>
-        </tr>
-        <tr>
-          <td>Research Approval / Endorsement</td>
-          <td>Documents authorized approval or endorsement.</td>
-          <td>☐</td>
-        </tr>
-        <tr>
-          <td>School Head Permission</td>
-          <td>Authorizes implementation within the school.</td>
-          <td>☐</td>
-        </tr>
-        <tr>
-          <td>Division / Research Office Compliance</td>
-          <td>Confirms applicable division-level requirements.</td>
-          <td>☐</td>
-        </tr>
-        <tr>
-          <td>Participant Information Sheet</td>
-          <td>Explains the study in understandable language.</td>
-          <td>☐</td>
-        </tr>
-        <tr>
-          <td>Parent / Guardian Consent</td>
-          <td>Obtains required parental/guardian permission.</td>
-          <td>☐</td>
-        </tr>
-        <tr>
-          <td>Learner Assent</td>
-          <td>Documents learner agreement to participate.</td>
-          <td>☐</td>
-        </tr>
-        <tr>
-          <td>Confidentiality Procedure</td>
-          <td>Protects participant identity and research records.</td>
-          <td>☐</td>
-        </tr>
-        <tr>
-          <td>Researcher Declaration</td>
-          <td>Documents researcher responsibilities and integrity.</td>
-          <td>☐</td>
-        </tr>
-        <tr>
-          <td>Dual-Role Safeguard</td>
-          <td>Addresses teacher-researcher power relationship.</td>
-          <td>☐</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>9.3 Teacher-Researcher Dual-Role Safeguards</h3>
-
-  <div class="card-grid">
-    <div class="card">
-      <h4>Same Learning Opportunity</h4>
-      <p>
-        All learners receive the same curriculum content and comparable
-        instructional opportunities.
-      </p>
-    </div>
-
-    <div class="card">
-      <h4>Neutrality</h4>
-      <p>
-        The teacher-researcher should not communicate that one instructional
-        approach is expected to be superior.
-      </p>
-    </div>
-
-    <div class="card">
-      <h4>Confidentiality</h4>
-      <p>
-        Research IDs should be used in research files rather than learner
-        names whenever practical.
-      </p>
-    </div>
-
-    <div class="card">
-      <h4>No Research Penalty</h4>
-      <p>
-        Participation decisions should not unfairly affect classroom grades
-        or access to learning.
-      </p>
-    </div>
-  </div>
-
-  <h3>9.4 Data Protection Procedure</h3>
-
-  <ol class="procedure-list">
-    <li>Assign each learner a research ID.</li>
-    <li>Store the ID-to-name key separately from research datasets.</li>
-    <li>Use research IDs in spreadsheets and analysis files.</li>
-    <li>Restrict access to research records.</li>
-    <li>Do not include unnecessary personal information in analysis files.</li>
-    <li>Do not publish identifiable learner information.</li>
-    <li>Maintain a record of data access and corrections when appropriate.</li>
-    <li>Follow applicable school/division requirements for retention and disposal.</li>
-  </ol>
-
-  <div class="gate-box">
-    <h3>STEP 9 COMPLETION GATE</h3>
-    <label><input type="checkbox"> Required approval/permission confirmed</label>
-    <label><input type="checkbox"> Participant information provided</label>
-    <label><input type="checkbox"> Parent/guardian consent completed where required</label>
-    <label><input type="checkbox"> Learner assent completed where required</label>
-    <label><input type="checkbox"> Confidentiality procedure established</label>
-    <label><input type="checkbox"> Teacher-researcher safeguards established</label>
-    <label><input type="checkbox"> Researcher declaration completed</label>
-  </div>
-</section>
-
-
-<!-- =========================================================
-     STEP 10 — INSTRUMENT EXPERT VALIDATION
-========================================================= -->
-
-<section id="step10" class="step-section">
-  <div class="step-header">
-    <span class="step-number">10</span>
-    <div>
-      <span class="eyebrow">MEASUREMENT QUALITY</span>
-      <h2>Expert Validation of Research Instruments</h2>
-      <p>
-        Establish evidence that the assessment instruments appropriately
-        represent the intended constructs before formal administration.
-      </p>
-    </div>
-  </div>
-
-  <h3>10.1 Recommended Expert Panel</h3>
-
-  <p>
-    A practical expert panel may consist of approximately three to five
-    qualified reviewers.
-  </p>
-
-  <div class="card-grid">
-    <div class="card">
-      <h4>Mathematics Expert</h4>
-      <p>Checks mathematical accuracy and content alignment.</p>
-    </div>
-
-    <div class="card">
-      <h4>Research Expert</h4>
-      <p>Checks research-question, construct and methodology alignment.</p>
-    </div>
-
-    <div class="card">
-      <h4>ICT / Digital Learning Expert</h4>
-      <p>Checks spreadsheet-related tasks and digital usability.</p>
-    </div>
-
-    <div class="card">
-      <h4>Assessment / Curriculum Expert</h4>
-      <p>Checks assessment quality, cognitive demand and curriculum fit.</p>
-    </div>
-  </div>
-
-  <h3>10.2 Validation Criteria</h3>
-
-  <div class="table-wrap">
-    <table>
-      <thead>
-        <tr>
-          <th>Code</th>
-          <th>Criterion</th>
-          <th>Question for Reviewer</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>R</td>
-          <td>Relevance</td>
-          <td>Does the item measure something relevant to the study?</td>
-        </tr>
-        <tr>
-          <td>A</td>
-          <td>Alignment</td>
-          <td>Does it align with the intended construct and competency?</td>
-        </tr>
-        <tr>
-          <td>C</td>
-          <td>Clarity</td>
-          <td>Is the wording understandable and unambiguous?</td>
-        </tr>
-        <tr>
-          <td>AP</td>
-          <td>Appropriateness</td>
-          <td>Is it appropriate for Grade 11 learners?</td>
-        </tr>
-        <tr>
-          <td>AC</td>
-          <td>Accuracy</td>
-          <td>Are the mathematics, values and instructions correct?</td>
-        </tr>
-        <tr>
-          <td>S</td>
-          <td>Scoring Suitability</td>
-          <td>Can the response be scored consistently?</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>10.3 Four-Point Rating Scale</h3>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Rating</th>
-        <th>Meaning</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>Not Appropriate</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Needs Major Revision</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Appropriate with Minor Revision</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>Highly Appropriate</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h3>10.4 Item-Level Content Validity Index</h3>
-
-  <div class="formula">
-    I-CVI =
-    <span class="fraction">
-      <span>Number of experts rating the item 3 or 4</span>
-      <span>Number of experts</span>
-    </span>
-  </div>
-
-  <p>
-    With five experts, for example:
-  </p>
-
-  <ul>
-    <li><strong>1.00</strong> — strong evidence of agreement</li>
-    <li><strong>0.80</strong> — generally acceptable</li>
-    <li><strong>0.60</strong> — weak; review recommended</li>
-    <li><strong>0.40 or lower</strong> — poor agreement; major review needed</li>
-  </ul>
-
-  <div class="warning-box">
-    <strong>Expert judgment overrides blind numerical acceptance.</strong>
-    A mathematically incorrect item must be corrected even if its numerical
-    CVI happens to appear acceptable.
-  </div>
-
-  <h3>10.5 Important Distinction</h3>
-
-  <div class="two-column">
-    <div class="card">
-      <h4>Validity</h4>
-      <p>
-        Concerns whether the instrument appropriately represents what it is
-        intended to measure.
-      </p>
-    </div>
-
-    <div class="card">
-      <h4>Reliability</h4>
-      <p>
-        Concerns consistency of measurement. Reliability should not be claimed
-        merely because experts rated the instrument.
-      </p>
-    </div>
-  </div>
-
-  <h3>10.6 Mandatory Audit Sequence</h3>
-
-  <div class="audit-chain">
-    <span>DRAFT</span>
-    <span>→</span>
-    <span>EXPERT AUDIT</span>
-    <span>→</span>
-    <span>ERROR LOG</span>
-    <span>→</span>
-    <span>CORRECTION</span>
-    <span>→</span>
-    <span>SECOND AUDIT</span>
-    <span>→</span>
-    <span>FINAL TECHNICAL CHECK</span>
-  </div>
-
-  <div class="gate-box">
-    <h3>STEP 10 COMPLETION GATE</h3>
-    <label><input type="checkbox"> Expert panel identified</label>
-    <label><input type="checkbox"> Independent ratings collected</label>
-    <label><input type="checkbox"> Mathematical accuracy checked</label>
-    <label><input type="checkbox"> Item-level comments reviewed</label>
-    <label><input type="checkbox"> Required revisions completed</label>
-    <label><input type="checkbox"> Second audit completed</label>
-    <label><input type="checkbox"> Final technical check completed</label>
-  </div>
-</section>
-
-
-<!-- =========================================================
-     STEP 11 — RANDOM ASSIGNMENT
-========================================================= -->
-
-<section id="step11" class="step-section">
-  <div class="step-header">
-    <span class="step-number">11</span>
-    <div>
-      <span class="eyebrow">COUNTERBALANCING</span>
-      <h2>Random Assignment & Counterbalancing</h2>
-      <p>
-        Assign learners to instructional sequences without using outcome
-        information or teacher preference.
-      </p>
-    </div>
-  </div>
-
-  <h3>11.1 Study Design</h3>
-
-  <p>
-    The study uses a <strong>counterbalanced within-subject design</strong>.
-    Every learner experiences both instructional approaches.
-  </p>
-
-  <div class="design-flow">
-    <div>PRETEST</div>
-    <div>↓</div>
-    <div class="formula-condition">FORMULA-BASED</div>
-    <div>↓</div>
-    <div>ASSESSMENT</div>
-    <div>↓</div>
-    <div class="spreadsheet-condition">SPREADSHEET-BASED</div>
-    <div>↓</div>
-    <div>ASSESSMENT</div>
-  </div>
-
-  <p class="center">
-    The second sequence reverses the instructional order.
-  </p>
-
-  <h3>11.2 Four-Group Counterbalancing Matrix</h3>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Group</th>
-        <th>Approx. N</th>
-        <th>Period 1</th>
-        <th>Form 1</th>
-        <th>Period 2</th>
-        <th>Form 2</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>G1</td>
-        <td>9</td>
-        <td>Formula</td>
-        <td>A</td>
-        <td>Spreadsheet</td>
-        <td>B</td>
-      </tr>
-      <tr>
-        <td>G2</td>
-        <td>9</td>
-        <td>Formula</td>
-        <td>B</td>
-        <td>Spreadsheet</td>
-        <td>A</td>
-      </tr>
-      <tr>
-        <td>G3</td>
-        <td>8</td>
-        <td>Spreadsheet</td>
-        <td>A</td>
-        <td>Formula</td>
-        <td>B</td>
-      </tr>
-      <tr>
-        <td>G4</td>
-        <td>8</td>
-        <td>Spreadsheet</td>
-        <td>B</td>
-        <td>Formula</td>
-        <td>A</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="important-box">
-    <strong>Planning assumption:</strong>
-    The 34-learner allocation of 9/9/8/8 is a planning assumption based on
-    the intended cohort size. It is not evidence until actual learners are
-    enrolled and randomly assigned.
-  </div>
-
-  <h3>11.3 Randomization Rules</h3>
-
-  <ul>
-    <li>Use research IDs rather than learner names in the research workbook.</li>
-    <li>Randomize before outcome data are analyzed.</li>
-    <li>Do not assign learners based on achievement.</li>
-    <li>Do not assign based on gender, seating position or teacher preference.</li>
-    <li>Do not rerandomize because one group appears stronger.</li>
-    <li>Record the randomization method and date.</li>
-    <li>Preserve the original allocation record.</li>
-  </ul>
-
-  <h3>11.4 Randomization Audit Trail</h3>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Field</th>
-        <th>Entry</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Randomization Date</td>
-        <td>________________________</td>
-      </tr>
-      <tr>
-        <td>Number of Eligible Learners</td>
-        <td>________________________</td>
-      </tr>
-      <tr>
-        <td>Randomization Method</td>
-        <td>________________________</td>
-      </tr>
-      <tr>
-        <td>Sequence Allocation</td>
-        <td>G1 / G2 / G3 / G4</td>
-      </tr>
-      <tr>
-        <td>Researcher</td>
-        <td>________________________</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="warning-box">
-    <strong>Never fabricate the actual allocation.</strong>
-    The matrix above is the planned design. Actual learner allocation must
-    be generated and documented during implementation.
-  </div>
-
-  <div class="gate-box">
-    <h3>STEP 11 COMPLETION GATE</h3>
-    <label><input type="checkbox"> Eligible participant list finalized</label>
-    <label><input type="checkbox"> Research IDs assigned</label>
-    <label><input type="checkbox"> Randomization completed</label>
-    <label><input type="checkbox"> Sequence counts checked</label>
-    <label><input type="checkbox"> Form order balanced</label>
-    <label><input type="checkbox"> Randomization record preserved</label>
-  </div>
-</section>
-
-
-<!-- =========================================================
-     STEP 12 — FORMAL PRETEST
-========================================================= -->
-
-<section id="step12" class="step-section">
-  <div class="step-header">
-    <span class="step-number">12</span>
-    <div>
-      <span class="eyebrow">BASELINE</span>
-      <h2>Formal Pretest Administration</h2>
-      <p>
-        Establish a baseline description of learner performance before the
-        formal instructional-condition comparison.
-      </p>
-    </div>
-  </div>
-
-  <h3>12.1 Pretest Purpose</h3>
-
-  <p>
-    The pretest describes the learners' baseline level before the formal
-    intervention sequence. It is not automatically treated as a covariate
-    in the primary analysis.
-  </p>
-
-  <div class="important-box">
-    <strong>Important:</strong>
-    Earlier informal classroom scores that motivated the research problem
-    are not formal research data unless they were collected under the
-    approved research procedure.
-  </div>
-
-  <h3>12.2 Pretest Instrument</h3>
-
-  <p>
-    <strong>Form P</strong> is the designated baseline assessment.
-  </p>
-
-  <ul>
-    <li>Maximum administration time: <strong>60 minutes</strong></li>
-    <li>Same instructions for all participants</li>
-    <li>Same permitted resources</li>
-    <li>No outcome-driven assistance</li>
-    <li>Research IDs used in research records</li>
-  </ul>
-
-  <h3>12.3 Baseline Construct Coverage</h3>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Construct</th>
-        <th>Maximum Score</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Conceptual Understanding (CU)</td>
-        <td>16</td>
-      </tr>
-      <tr>
-        <td>Problem-Solving Performance (PSP)</td>
-        <td>105</td>
-      </tr>
-      <tr>
-        <td>Spreadsheet–Mathematics Reasoning (SMR)</td>
-        <td>12</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h3>12.4 Administration Record</h3>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Research ID</th>
-        <th>Present?</th>
-        <th>Start</th>
-        <th>End</th>
-        <th>Irregularity</th>
-        <th>Scoring Checked</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>R001</td><td>☐</td><td>______</td><td>______</td><td>______</td><td>☐</td>
-      </tr>
-      <tr>
-        <td>R002</td><td>☐</td><td>______</td><td>______</td><td>______</td><td>☐</td>
-      </tr>
-      <tr>
-        <td>R003</td><td>☐</td><td>______</td><td>______</td><td>______</td><td>☐</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h3>12.5 Scoring Quality Control</h3>
-
-  <ol>
-    <li>Score responses using the approved scoring guide.</li>
-    <li>Check calculations and scoring totals.</li>
-    <li>Conduct a second scoring check for constructed responses.</li>
-    <li>Document missing or irregular responses.</li>
-    <li>Do not modify scores to fit expected findings.</li>
-  </ol>
-
-  <div class="gate-box">
-    <h3>STEP 12 COMPLETION GATE</h3>
-    <label><input type="checkbox"> Form P administered under standard conditions</label>
-    <label><input type="checkbox"> Attendance recorded</label>
-    <label><input type="checkbox"> Irregularities documented</label>
-    <label><input type="checkbox"> Scores entered using research IDs</label>
-    <label><input type="checkbox"> Scoring second-check completed</label>
-    <label><input type="checkbox"> Baseline dataset quality checked</label>
-  </div>
-</section>
-
-
-<!-- =========================================================
-     STEP 13 — COUNTERBALANCED INSTRUCTION & ASSESSMENT
-========================================================= -->
-
-<section id="step13" class="step-section">
-  <div class="step-header">
-    <span class="step-number">13</span>
-    <div>
-      <span class="eyebrow">INTERVENTION</span>
-      <h2>Counterbalanced Instruction & Assessment</h2>
-      <p>
-        Implement both instructional approaches under comparable conditions
-        while preserving the mathematical content and assessment targets.
-      </p>
-    </div>
-  </div>
-
-  <h3>13.1 Core Principle</h3>
-
-  <div class="quote-box">
-    “The instructional approach changes; the mathematical learning target
-    does not.”
-  </div>
-
-  <h3>13.2 Treatment Parallelism</h3>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Element</th>
-        <th>Formula-Based</th>
-        <th>Spreadsheet-Based</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Learning objectives</td>
-        <td>Same</td>
-        <td>Same</td>
-      </tr>
-      <tr>
-        <td>Content</td>
-        <td>Same</td>
-        <td>Same</td>
-      </tr>
-      <tr>
-        <td>Mathematical concepts</td>
-        <td>Same</td>
-        <td>Same</td>
-      </tr>
-      <tr>
-        <td>Examples</td>
-        <td>Comparable</td>
-        <td>Comparable</td>
-      </tr>
-      <tr>
-        <td>Difficulty</td>
-        <td>Comparable</td>
-        <td>Comparable</td>
-      </tr>
-      <tr>
-        <td>Practice problems</td>
-        <td>Same number</td>
-        <td>Same number</td>
-      </tr>
-      <tr>
-        <td>Instructional time</td>
-        <td>Same</td>
-        <td>Same</td>
-      </tr>
-      <tr>
-        <td>Teacher</td>
-        <td>Same</td>
-        <td>Same</td>
-      </tr>
-      <tr>
-        <td>Classroom</td>
-        <td>Same</td>
-        <td>Same</td>
-      </tr>
-      <tr>
-        <td>Assessment targets</td>
-        <td>Same</td>
-        <td>Same</td>
-      </tr>
-      <tr>
-        <td>Main computational approach</td>
-        <td>Formula / written calculation</td>
-        <td>Spreadsheet</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h3>13.3 Formula-Based Instruction</h3>
-
-  <div class="process-flow">
-    <div>1. Understand situation</div>
-    <div>2. Identify variables</div>
-    <div>3. Determine payment period</div>
-    <div>4. Determine periodic rate</div>
-    <div>5. Determine number of periods</div>
-    <div>6. Select formula</div>
-    <div>7. Substitute and calculate</div>
-    <div>8. Check result</div>
-    <div>9. Interpret financial meaning</div>
-  </div>
-
-  <h3>13.4 Spreadsheet-Based Instruction</h3>
-
-  <div class="process-flow">
-    <div>1. Understand situation</div>
-    <div>2. Identify mathematical variables</div>
-    <div>3. Determine payment period</div>
-    <div>4. Determine corresponding interest period</div>
-    <div>5. Set up spreadsheet</div>
-    <div>6. Enter mathematical relationships</div>
-    <div>7. Generate result</div>
-    <div>8. Check reasonableness</div>
-    <div>9. Interpret financial meaning</div>
-  </div>
-
-  <h3>13.5 Standard Spreadsheet Input Table</h3>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Input / Variable</th>
-        <th>Value</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>Periodic Payment (PMT)</td><td></td></tr>
-      <tr><td>Annual Interest Rate (r)</td><td></td></tr>
-      <tr><td>Payment Frequency (m)</td><td></td></tr>
-      <tr><td>Periodic Interest Rate (i)</td><td></td></tr>
-      <tr><td>Time (t)</td><td></td></tr>
-      <tr><td>Number of Periods (n)</td><td></td></tr>
-      <tr><td>Financial Application</td><td>FV / PV / PMT</td></tr>
-      <tr><td>Calculated Result</td><td></td></tr>
-      <tr><td>Interpretation</td><td></td></tr>
-    </tbody>
-  </table>
-
-  <h3>13.6 Spreadsheet Safeguards</h3>
-
-  <div class="warning-box">
-    <strong>The spreadsheet must not become a black box.</strong>
-  </div>
-
-  <ul>
-    <li>Learners identify PMT before entering data.</li>
-    <li>Learners determine the periodic interest rate.</li>
-    <li>Learners determine the number of periods.</li>
-    <li>Learners identify the financial application.</li>
-    <li>Learners connect spreadsheet inputs to mathematical variables.</li>
-    <li>Learners check whether the output is reasonable.</li>
-    <li>Learners interpret the financial meaning of the output.</li>
-  </ul>
-
-  <p>
-    Do not assess spreadsheet formatting, typing speed, visual design or
-    generic computer proficiency as primary research outcomes.
-  </p>
-
-  <h3>13.7 Treatment Fidelity Checklist</h3>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Fidelity Indicator</th>
-        <th>Formula</th>
-        <th>Spreadsheet</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>Same objective</td><td>☐</td><td>☐</td></tr>
-      <tr><td>Same content</td><td>☐</td><td>☐</td></tr>
-      <tr><td>Same duration</td><td>☐</td><td>☐</td></tr>
-      <tr><td>Comparable examples</td><td>☐</td><td>☐</td></tr>
-      <tr><td>Comparable difficulty</td><td>☐</td><td>☐</td></tr>
-      <tr><td>Same number of practice problems</td><td>☐</td><td>☐</td></tr>
-      <tr><td>Variables identified</td><td>☐</td><td>☐</td></tr>
-      <tr><td>Periodic rate determined</td><td>☐</td><td>☐</td></tr>
-      <tr><td>Number of periods determined</td><td>☐</td><td>☐</td></tr>
-      <tr><td>Model selected</td><td>☐</td><td>☐</td></tr>
-      <tr><td>Calculation performed</td><td>☐</td><td>☐</td></tr>
-      <tr><td>Answer checked</td><td>☐</td><td>☐</td></tr>
-      <tr><td>Result interpreted</td><td>☐</td><td>☐</td></tr>
-      <tr><td>Error analysis included</td><td>☐</td><td>☐</td></tr>
-    </tbody>
-  </table>
-
-  <h3>13.8 Assessment Administration</h3>
-
-  <p>
-    Each formal assessment has a maximum administration time of
-    <strong>60 minutes</strong>. The forms should be designed so that the
-    expected completion time is approximately 45–55 minutes.
-  </p>
-
-  <div class="important-box">
-    <strong>Do not administer the same form repeatedly.</strong>
-    Counterbalancing uses Forms A and B to reduce direct practice effects.
-  </div>
-
-  <h3>13.9 Forms Used</h3>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Form</th>
-        <th>Purpose</th>
-        <th>Administration</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Form P</td>
-        <td>Baseline / Pretest</td>
-        <td>Before instructional sequence</td>
-      </tr>
-      <tr>
-        <td>Form A</td>
-        <td>Condition assessment</td>
-        <td>After one instructional condition</td>
-      </tr>
-      <tr>
-        <td>Form B</td>
-        <td>Condition assessment</td>
-        <td>After the other instructional condition</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h3>13.10 Carryover / Practice Effect</h3>
-
-  <p>
-    Because each learner receives both instructional conditions, carryover
-    and practice effects cannot be completely eliminated. Counterbalancing
-    reduces, but does not guarantee elimination of, order effects.
-  </p>
-
-  <p>
-    Therefore, conclusions should describe observed differences rather than
-    claiming that one approach universally causes superior learning.
-  </p>
-
-  <div class="gate-box">
-    <h3>STEP 13 COMPLETION GATE</h3>
-    <label><input type="checkbox"> Instructional sequence implemented</label>
-    <label><input type="checkbox"> Treatment parallelism documented</label>
-    <label><input type="checkbox"> Fidelity checklist completed</label>
-    <label><input type="checkbox"> Deviations documented</label>
-    <label><input type="checkbox"> Assessment timing recorded</label>
-    <label><input type="checkbox"> Form order documented</label>
-    <label><input type="checkbox"> Condition scores entered</label>
-  </div>
-</section>
-
-
-<!-- =========================================================
-     STEP 14 — ANALYSIS, REFLECTION & ACTION PLAN
-========================================================= -->
-
-<section id="step14" class="step-section">
-  <div class="step-header">
-    <span class="step-number">14</span>
-    <div>
-      <span class="eyebrow">EVIDENCE → ACTION</span>
-      <h2>Analysis, Reflection & Action Plan</h2>
-      <p>
-        Convert the collected evidence into defensible findings, teacher
-        reflection and an evidence-based improvement plan.
-      </p>
-    </div>
-  </div>
-
-  <h3>14.1 Primary Research Outcomes</h3>
-
-  <div class="card-grid">
-    <div class="card primary-card">
-      <h4>Problem-Solving Performance</h4>
-      <p>
-        Primary outcome measuring students' ability to understand a financial
-        problem, identify information and variables, select an appropriate
-        mathematical model, perform calculations and interpret the result.
-      </p>
-    </div>
-
-    <div class="card primary-card">
-      <h4>Conceptual Understanding</h4>
-      <p>
-        Primary outcome measuring students' understanding of meanings,
-        relationships, timing, variables, rates, formulas and financial
-        interpretation.
-      </p>
-    </div>
-
-    <div class="card supporting-card">
-      <h4>Spreadsheet–Mathematics Reasoning</h4>
-      <p>
-        Supporting evidence concerning the learner's ability to connect
-        spreadsheet inputs and outputs to mathematical reasoning.
-      </p>
-    </div>
-  </div>
-
-  <h3>14.2 Score Ceilings</h3>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Outcome</th>
-        <th>Maximum</th>
-        <th>Percentage</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>CU</td>
-        <td>16</td>
-        <td>CU ÷ 16 × 100</td>
-      </tr>
-      <tr>
-        <td>PSP</td>
-        <td>105</td>
-        <td>PSP ÷ 105 × 100</td>
-      </tr>
-      <tr>
-        <td>SMR</td>
-        <td>12</td>
-        <td>SMR ÷ 12 × 100</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="warning-box">
-    <strong>Do not use the combined 133-point score as the primary research
-    outcome.</strong>
-    CU, PSP and SMR represent different constructs and should remain
-    analytically distinct.
-  </div>
-
-  <h3>14.3 Descriptive Statistics</h3>
-
-  <p>
-    For each condition and primary outcome, calculate:
-  </p>
-
-  <ul>
-    <li>N</li>
-    <li>Mean</li>
-    <li>Median</li>
-    <li>Standard deviation</li>
-    <li>Minimum</li>
-    <li>Maximum</li>
-  </ul>
-
-  <h3>14.4 Within-Learner Difference</h3>
-
-  <div class="formula">
-    D<sub>i</sub> = Spreadsheet<sub>i</sub> − Formula<sub>i</sub>
-  </div>
-
-  <p>
-    Calculate the difference separately for PSP and CU.
-  </p>
-
-  <p>
-    A positive mean difference indicates that the spreadsheet condition
-    produced a higher observed score in the dataset; it does not by itself
-    prove causation.
-  </p>
-
-  <h3>14.5 Primary Statistical Test</h3>
-
-  <div class="two-column">
-    <div class="card">
-      <h4>Paired-Samples t-Test</h4>
-      <p>
-        Use when the paired differences are reasonably suitable for the
-        assumptions of the test.
-      </p>
-    </div>
-
-    <div class="card">
-      <h4>Wilcoxon Signed-Rank Test</h4>
-      <p>
-        Use as the nonparametric alternative when the assumptions for the
-        paired t-test are not reasonably met.
-      </p>
-    </div>
-  </div>
-
-  <h3>14.6 Effect Size</h3>
-
-  <div class="formula">
-    d<sub>z</sub> =
-    <span class="fraction">
-      <span>Mean paired difference</span>
-      <span>SD of paired differences</span>
-    </span>
-  </div>
-
-  <p>
-    For a Wilcoxon analysis, a matched-pairs rank-biserial correlation may
-    be reported as an effect-size measure.
-  </p>
-
-  <h3>14.7 Confidence Interval</h3>
-
-  <p>
-    Where appropriate, report a confidence interval for the mean paired
-    difference to communicate the precision of the observed estimate.
-  </p>
-
-  <h3>14.8 Pretest Analysis</h3>
-
-  <p>
-    Form P should primarily provide a descriptive baseline. It should not
-    automatically be inserted as a covariate simply because it exists.
-  </p>
-
-  <p>
-    If baseline imbalance or other issues require a more complex analysis,
-    the researcher should document the methodological reason before changing
-    the analysis plan.
-  </p>
-
-  <h3>14.9 Sequence / Order Diagnostic</h3>
-
-  <p>
-    Compare results descriptively between:
-  </p>
-
-  <ul>
-    <li>Formula-first learners</li>
-    <li>Spreadsheet-first learners</li>
-    <li>Period 1</li>
-    <li>Period 2</li>
-    <li>Form A</li>
-    <li>Form B</li>
-  </ul>
-
-  <p>
-    These checks help identify possible order, practice or form effects.
-    Avoid constructing a complicated statistical model unless the dataset
-    and research question justify it.
-  </p>
-
-  <h3>14.10 Interpretation Scenarios</h3>
-
-  <div class="scenario-grid">
-
-    <div class="scenario">
-      <h4>A — Spreadsheet Higher in PSP and CU</h4>
-      <p>
-        The spreadsheet condition shows higher observed performance in both
-        primary outcomes. The finding may suggest that the approach was
-        associated with stronger performance under the study conditions.
-      </p>
-    </div>
-
-    <div class="scenario">
-      <h4>B — Spreadsheet Higher PSP, Similar CU</h4>
-      <p>
-        Learners may have demonstrated more efficient problem-solving without
-        a clear difference in conceptual understanding.
-      </p>
-    </div>
-
-    <div class="scenario">
-      <h4>C — Spreadsheet Higher PSP, Lower CU</h4>
-      <p>
-        The finding may indicate that learners can obtain computational
-        results efficiently without demonstrating equivalent conceptual
-        understanding.
-      </p>
-    </div>
-
-    <div class="scenario">
-      <h4>D — Formula Higher PSP and CU</h4>
-      <p>
-        The observed data may favor formula-based instruction under the
-        particular study conditions.
-      </p>
-    </div>
-
-    <div class="scenario">
-      <h4>E — No Meaningful Difference</h4>
-      <p>
-        The two instructional conditions may have produced similar observed
-        outcomes under the implementation conditions.
-      </p>
-    </div>
-
-  </div>
-
-  <div class="important-box">
-    <strong>Never decide the interpretation before seeing the data.</strong>
-    These scenarios are guides for interpreting possible findings, not
-    predetermined conclusions.
-  </div>
-
-  <h3>14.11 Reflection Questions</h3>
-
-  <div class="reflection-card">
-    <label>1. What did I observe in my classroom?</label>
-    <textarea placeholder="Teacher reflection..."></textarea>
-
-    <label>2. What does the formal evidence show?</label>
-    <textarea placeholder="Evidence-based interpretation..."></textarea>
-
-    <label>3. What did I learn as a teacher?</label>
-    <textarea placeholder="Professional learning..."></textarea>
-
-    <label>4. What should I change in future instruction?</label>
-    <textarea placeholder="Instructional change..."></textarea>
-  </div>
-
-  <h3>14.12 Action Plan Framework</h3>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Finding</th>
-        <th>Instructional Need</th>
-        <th>Action</th>
-        <th>Responsible Person</th>
-        <th>Timeline</th>
-        <th>Evidence</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h3>14.13 Action Research Cycle</h3>
-
-  <div class="cycle">
-    <span>PLAN</span>
-    <span>→</span>
-    <span>ACT</span>
-    <span>→</span>
-    <span>OBSERVE</span>
-    <span>→</span>
-    <span>ANALYZE</span>
-    <span>→</span>
-    <span>REFLECT</span>
-    <span>→</span>
-    <span>ACTION PLAN</span>
-    <span>→</span>
-    <span>IMPROVED PRACTICE</span>
-  </div>
-
-  <div class="gate-box">
-    <h3>STEP 14 COMPLETION GATE</h3>
-    <label><input type="checkbox"> Data quality checked</label>
-    <label><input type="checkbox"> Descriptive statistics completed</label>
-    <label><input type="checkbox"> Paired differences calculated</label>
-    <label><input type="checkbox"> Appropriate inferential test selected</label>
-    <label><input type="checkbox"> Effect size calculated where appropriate</label>
-    <label><input type="checkbox"> Sequence/order diagnostics reviewed</label>
-    <label><input type="checkbox"> Fidelity considered</label>
-    <label><input type="checkbox"> Findings interpreted without overclaiming</label>
-    <label><input type="checkbox"> Teacher reflection completed</label>
-    <label><input type="checkbox"> Evidence-based action plan completed</label>
-  </div>
-</section>
-
-
-<!-- =========================================================
-     FINANCIAL MATHEMATICS REFERENCE
-========================================================= -->
-
-<section id="financial-reference" class="reference-section">
-  <div class="section-title">
-    <span class="eyebrow">CONTENT REFERENCE</span>
-    <h2>Financial Applications of Ordinary Annuities</h2>
-  </div>
-
-  <p>
-    The research instruments are anchored in the Grade 11 General Mathematics
-    financial-series content used for the study.
-  </p>
-
-  <h3>Future Value of an Ordinary Annuity</h3>
-
-  <div class="formula large">
-    FV = PMT
-    <span class="bracket">
-      ((1 + i)<sup>n</sup> − 1) / i
-    </span>
-  </div>
-
-  <p>
-    Used to calculate the accumulated value of equal periodic payments made
-    at the end of each period.
-  </p>
-
-  <h3>Present Value of an Ordinary Annuity</h3>
-
-  <div class="formula large">
-    PV = PMT
-    <span class="bracket">
-      [1 − (1 + i)<sup>−n</sup>] / i
-    </span>
-  </div>
-
-  <p>
-    Used to determine the present value supported by equal periodic payments.
-  </p>
-
-  <h3>Required Periodic Payment</h3>
-
-  <div class="formula large">
-    PMT = PV
-    <span class="bracket">
-      i / [1 − (1 + i)<sup>−n</sup>]
-    </span>
-  </div>
-
-  <p>
-    Used to determine the payment needed to settle a present amount over a
-    specified number of periods.
-  </p>
-
-  <h3>Period Matching Rule</h3>
-
-  <div class="important-box">
-    <strong>Rate and number of periods must correspond to the payment period.</strong>
-  </div>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Quantity</th>
-        <th>Meaning</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>r</td>
-        <td>Annual interest rate</td>
-      </tr>
-      <tr>
-        <td>m</td>
-        <td>Number of payment/compounding periods per year</td>
-      </tr>
-      <tr>
-        <td>i</td>
-        <td>Periodic interest rate = r / m</td>
-      </tr>
-      <tr>
-        <td>t</td>
-        <td>Time in years</td>
-      </tr>
-      <tr>
-        <td>n</td>
-        <td>Number of periods = mt</td>
-      </tr>
-      <tr>
-        <td>PMT</td>
-        <td>Periodic payment</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-
-<!-- =========================================================
-     ASSESSMENT BLUEPRINT
-========================================================= -->
-
-<section id="assessment-blueprint" class="reference-section">
-  <div class="section-title">
-    <span class="eyebrow">MEASUREMENT ARCHITECTURE</span>
-    <h2>Assessment Blueprint</h2>
-  </div>
-
-  <table class="compact-table">
-    <thead>
-      <tr>
-        <th>Task</th>
-        <th>Construct</th>
-        <th>Content</th>
-        <th>Cognitive Demand</th>
-        <th>Format</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>1</td><td>CU</td><td>Financial series</td><td>Understand</td><td>MCQ</td></tr>
-      <tr><td>2</td><td>CU</td><td>Time value of money</td><td>Understand</td><td>MCQ</td></tr>
-      <tr><td>3</td><td>CU</td><td>Ordinary annuity</td><td>Understand</td><td>MCQ</td></tr>
-      <tr><td>4</td><td>CU</td><td>Payment timing</td><td>Understand</td><td>MCQ</td></tr>
-      <tr><td>5</td><td>CU</td><td>Payment timing/application</td><td>Analyze</td><td>Short response</td></tr>
-      <tr><td>6</td><td>CU</td><td>Future value meaning</td><td>Understand</td><td>MCQ</td></tr>
-      <tr><td>7</td><td>PSP</td><td>Future value</td><td>Apply</td><td>Structured problem</td></tr>
-      <tr><td>8</td><td>PSP</td><td>Future value</td><td>Apply</td><td>Structured problem</td></tr>
-      <tr><td>9</td><td>CU</td><td>FV variables/relationships</td><td>Analyze</td><td>Short response</td></tr>
-      <tr><td>10</td><td>PSP</td><td>FV interpretation</td><td>Analyze</td><td>Structured response</td></tr>
-      <tr><td>11</td><td>CU</td><td>Present value meaning</td><td>Understand</td><td>MCQ</td></tr>
-      <tr><td>12</td><td>PSP</td><td>Present value</td><td>Apply</td><td>Structured problem</td></tr>
-      <tr><td>13</td><td>PSP</td><td>Present value</td><td>Apply</td><td>Structured problem</td></tr>
-      <tr><td>14</td><td>CU</td><td>PV relationships</td><td>Analyze</td><td>Short response</td></tr>
-      <tr><td>15</td><td>PSP</td><td>PV interpretation</td><td>Analyze</td><td>Structured response</td></tr>
-      <tr><td>16</td><td>CU</td><td>Required payment</td><td>Understand</td><td>MCQ</td></tr>
-      <tr><td>17</td><td>PSP</td><td>Required periodic payment</td><td>Apply</td><td>Structured problem</td></tr>
-      <tr><td>18</td><td>PSP</td><td>Payment interpretation</td><td>Analyze</td><td>Structured response</td></tr>
-      <tr><td>19</td><td>SMR</td><td>Spreadsheet–math connection</td><td>Analyze</td><td>Performance task</td></tr>
-      <tr><td>20</td><td>SMR</td><td>Evaluation/reasoning</td><td>Analyze</td><td>Performance task</td></tr>
-    </tbody>
-  </table>
-
-  <h3>Construct Mapping</h3>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Construct</th>
-        <th>Tasks</th>
-        <th>Maximum</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>CU</td>
-        <td>1, 2, 3, 4, 5, 6, 9, 11, 14, 16</td>
-        <td>16</td>
-      </tr>
-      <tr>
-        <td>PSP</td>
-        <td>7, 8, 10, 12, 13, 15, 17, 18</td>
-        <td>105</td>
-      </tr>
-      <tr>
-        <td>SMR</td>
-        <td>19, 20</td>
-        <td>12</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-
-<!-- =========================================================
-     FORMS P / A / B
-========================================================= -->
-
-<section id="forms" class="reference-section">
-  <div class="section-title">
-    <span class="eyebrow">INSTRUMENT FAMILY</span>
-    <h2>Forms P, A and B</h2>
-  </div>
-
-  <div class="form-card">
-    <h3>FORM P — PRETEST</h3>
-
-    <p>
-      Form P serves as the baseline assessment before the formal instructional
-      sequence.
-    </p>
-
-    <ul>
-      <li>60-minute maximum administration</li>
-      <li>CU maximum = 16</li>
-      <li>PSP maximum = 105</li>
-      <li>SMR maximum = 12</li>
-      <li>Use as baseline evidence, not automatically as a covariate</li>
-    </ul>
-
-    <h4>Numerical Reference Values</h4>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Item</th>
-          <th>Correct / Expected Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>P7</td><td>₱138,113.88</td></tr>
-        <tr><td>P8</td><td>₱92,495.11</td></tr>
-        <tr><td>P9</td><td>PMT = 10,500; i = .007; n = 24</td></tr>
-        <tr><td>P10</td><td>FV ≈ ₱92,002; difference ≈ ₱5,602</td></tr>
-        <tr><td>P12</td><td>₱227,357.32</td></tr>
-        <tr><td>P13</td><td>₱178,428.79</td></tr>
-        <tr><td>P17</td><td>≈ ₱21,721.84</td></tr>
-        <tr><td>P20</td><td>i = .0066667; n = 36</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="form-card">
-    <h3>FORM A — CONDITION ASSESSMENT</h3>
-
-    <h4>Selected-Response Content</h4>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Task</th>
-          <th>Focus</th>
-          <th>Correct</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>1</td><td>Regular financial payment series</td><td>B</td></tr>
-        <tr><td>2</td><td>Time value of money</td><td>B</td></tr>
-        <tr><td>3</td><td>Ordinary annuity</td><td>B</td></tr>
-        <tr><td>4</td><td>End-of-month payment</td><td>A</td></tr>
-        <tr><td>6</td><td>Future value meaning</td><td>C</td></tr>
-        <tr><td>11</td><td>Present value meaning</td><td>B</td></tr>
-        <tr><td>16</td><td>Required payment meaning</td><td>C</td></tr>
-      </tbody>
-    </table>
-
-    <h4>Numerical Reference Values</h4>
-
-    <table>
-      <tbody>
-        <tr><td>A7</td><td>₱97,778.62</td></tr>
-        <tr><td>A8</td><td>₱101,158.22</td></tr>
-        <tr><td>A12</td><td>₱203,827.84</td></tr>
-        <tr><td>A13</td><td>₱221,883.24</td></tr>
-        <tr><td>A17</td><td>≈ ₱28,209.23</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="form-card">
-    <h3>FORM B — CONDITION ASSESSMENT</h3>
-
-    <h4>Selected-Response Content</h4>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Task</th>
-          <th>Focus</th>
-          <th>Correct</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>1</td><td>Equal amount at regular intervals</td><td>B</td></tr>
-        <tr><td>2</td><td>Timing/value relationship</td><td>A</td></tr>
-        <tr><td>3</td><td>Ordinary annuity</td><td>B</td></tr>
-        <tr><td>4</td><td>End-of-quarter payment</td><td>A</td></tr>
-        <tr><td>6</td><td>Future value meaning</td><td>C</td></tr>
-        <tr><td>11</td><td>Present value meaning</td><td>B</td></tr>
-        <tr><td>16</td><td>Required payment meaning</td><td>C</td></tr>
-      </tbody>
-    </table>
-
-    <h4>Numerical Reference Values</h4>
-
-    <table>
-      <tbody>
-        <tr><td>B7</td><td>₱149,592.04</td></tr>
-        <tr><td>B8</td><td>₱89,378.31</td></tr>
-        <tr><td>B12</td><td>₱239,575.61</td></tr>
-        <tr><td>B13</td><td>₱240,944.04</td></tr>
-        <tr><td>B17</td><td>≈ ₱26,750.14</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-
-<!-- =========================================================
-     SCORING SYSTEM
-========================================================= -->
-
-<section id="scoring" class="reference-section">
-  <div class="section-title">
-    <span class="eyebrow">SCORING CONTROL</span>
-    <h2>Scoring Architecture</h2>
-  </div>
-
-  <h3>Selected Response</h3>
-
-  <p>
-    Tasks 1, 2, 3, 4, 6, 11 and 16:
-  </p>
-
-  <div class="score-rule">
-    Correct = 1 point<br>
-    Incorrect / blank = 0 points
-  </div>
-
-  <h3>Conceptual Understanding Short Responses</h3>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Score</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>3</td><td>Complete, accurate and clear explanation</td></tr>
-      <tr><td>2</td><td>Generally correct but incomplete</td></tr>
-      <tr><td>1</td><td>Limited understanding</td></tr>
-      <tr><td>0</td><td>Incorrect, irrelevant or blank</td></tr>
-    </tbody>
-  </table>
-
-  <h3>Partial Credit Rules</h3>
-
-  <ul>
-    <li>
-      Correct setup with arithmetic error retains substantial credit.
-    </li>
-    <li>
-      Wrong formula loses model points, but consistent subsequent work can
-      receive appropriate partial credit.
-    </li>
-    <li>
-      Do not double-penalize the same rate-conversion error repeatedly.
-    </li>
-    <li>
-      Carry-forward errors should not automatically be penalized at every
-      downstream criterion.
-    </li>
-    <li>
-      Blank responses receive zero.
-    </li>
-    <li>
-      If only a final answer is shown when a complete solution is required,
-      award only points supported by visible evidence.
-    </li>
-  </ul>
-</section>
-
-
-<!-- =========================================================
-     PSP RUBRIC
-========================================================= -->
-
-<section id="psp-rubric" class="reference-section">
-  <div class="section-title">
-    <span class="eyebrow">PRIMARY OUTCOME</span>
-    <h2>Problem-Solving Performance Rubric</h2>
-  </div>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Task</th>
-        <th>Maximum</th>
-        <th>Scoring Components</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>7</td>
-        <td>15</td>
-        <td>
-          Given information 2; periodic i 2; n 2; model 2;
-          substitution/procedure 3; computation 2; interpretation 2
-        </td>
-      </tr>
-      <tr>
-        <td>8</td>
-        <td>18</td>
-        <td>
-          Relevant information 2; PMT 2; periodic i 3; n 2;
-          model 2; substitution/procedure 3; computation 2; interpretation 2
-        </td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>6</td>
-        <td>
-          Total deposits 1; FV 1; accumulated interest 2;
-          difference 1; financial interpretation 1
-        </td>
-      </tr>
-      <tr>
-        <td>12</td>
-        <td>15</td>
-        <td>
-          Relevant information 2; periodic i 2; n 2; PV model 2;
-          substitution/procedure 3; computation 2; interpretation 2
-        </td>
-      </tr>
-      <tr>
-        <td>13</td>
-        <td>18</td>
-        <td>
-          Relevant information 2; PMT 2; periodic rate 3; n 2;
-          PV model 2; substitution/procedure 3; computation 2; interpretation 2
-        </td>
-      </tr>
-      <tr>
-        <td>15</td>
-        <td>6</td>
-        <td>
-          What PV represents 2; why PV differs from total future payments 2;
-          time value/interest 1; financial interpretation 1
-        </td>
-      </tr>
-      <tr>
-        <td>17</td>
-        <td>18</td>
-        <td>
-          Relevant information 2; PV 2; periodic i 3; n 2;
-          PMT model 2; substitution/procedure 3; computation 2; interpretation 2
-        </td>
-      </tr>
-      <tr>
-        <td>18</td>
-        <td>9</td>
-        <td>
-          Interpretation of periodic payment 2; shorter term 2;
-          effect on payment 2; mathematical explanation 2;
-          financial interpretation 1
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-
-<!-- =========================================================
-     CU RUBRIC
-========================================================= -->
-
-<section id="cu-rubric" class="reference-section">
-  <div class="section-title">
-    <span class="eyebrow">PRIMARY OUTCOME</span>
-    <h2>Conceptual Understanding Rubric</h2>
-  </div>
-
-  <h3>Task 5 — Payment Timing</h3>
-
-  <ul>
-    <li>1 point — identifies ordinary annuity / end-of-period payment</li>
-    <li>1 point — explains that timing affects accumulation or discounting</li>
-    <li>1 point — connects timing to financial value</li>
-  </ul>
-
-  <h3>Task 9 — Variables and Period Matching</h3>
-
-  <ul>
-    <li>1 point — identifies PMT, i and n</li>
-    <li>1 point — explains that i corresponds to payment/compounding period</li>
-    <li>1 point — explains that inconsistent periods produce an incorrect result</li>
-  </ul>
-
-  <h3>Task 14 — Present Value and Interest Rate</h3>
-
-  <ul>
-    <li>1 point — correct direction of PV change as rate increases</li>
-    <li>1 point — mathematically reasonable explanation</li>
-    <li>1 point — connects fixed PMT/n to time value of money</li>
-  </ul>
-</section>
-
-
-<!-- =========================================================
-     SMR RUBRIC
-========================================================= -->
-
-<section id="smr-rubric" class="reference-section">
-  <div class="section-title">
-    <span class="eyebrow">SUPPORTING OUTCOME</span>
-    <h2>Spreadsheet–Mathematics Reasoning Rubric</h2>
-  </div>
-
-  <h3>Task 19 — Mathematical Mapping</h3>
-
-  <ul>
-    <li>1 — PMT correctly identified</li>
-    <li>1 — periodic i correctly identified</li>
-    <li>1 — n correctly identified</li>
-    <li>1 — financial application correctly identified</li>
-    <li>1 — variable-to-spreadsheet mapping demonstrated</li>
-    <li>1 — reasonableness check demonstrated</li>
-  </ul>
-
-  <h3>Task 20 — Error Evaluation</h3>
-
-  <ul>
-    <li>1 — identifies annual rate incorrectly used as periodic rate</li>
-    <li>1 — identifies years incorrectly used as n</li>
-    <li>1 — gives correct i</li>
-    <li>1 — gives correct n</li>
-    <li>1 — explains correspondence between periods</li>
-    <li>1 — explains why original setup produces an incorrect result</li>
-  </ul>
-</section>
-
-
-<!-- =========================================================
-     RESEARCH QUESTIONS & HYPOTHESES
-========================================================= -->
-
-<section id="research-questions" class="reference-section">
-  <div class="section-title">
-    <span class="eyebrow">RESEARCH LOGIC</span>
-    <h2>Research Questions & Hypotheses</h2>
-  </div>
-
-  <h3>Main Research Question</h3>
-
-  <div class="quote-box">
-    How do formula-based and spreadsheet-based instructional approaches
-    differ in developing students' problem-solving performance and conceptual
-    understanding in financial applications of ordinary annuities?
-  </div>
-
-  <h3>Specific Questions</h3>
-
-  <ol>
-    <li>
-      What is the level of students' problem-solving performance and
-      conceptual understanding of ordinary annuities before the instructional
-      intervention?
-    </li>
-    <li>
-      What is the level of students' problem-solving performance following
-      formula-based instruction?
-    </li>
-    <li>
-      What is the level of students' problem-solving performance following
-      spreadsheet-based instruction?
-    </li>
-    <li>
-      Is there a significant difference in students' problem-solving
-      performance between formula-based and spreadsheet-based instruction?
-    </li>
-    <li>
-      Is there a significant difference in students' conceptual understanding
-      between formula-based and spreadsheet-based instruction?
-    </li>
-    <li>
-      What instructional implications can be drawn from the findings for
-      teaching ordinary annuities?
-    </li>
-  </ol>
-
-  <h3>Hypotheses</h3>
-
-  <div class="hypothesis">
-    <strong>H₀₁:</strong>
-    There is no significant difference in students' problem-solving
-    performance between formula-based and spreadsheet-based instruction in
-    solving ordinary annuity problems.
-  </div>
-
-  <div class="hypothesis">
-    <strong>H₁₁:</strong>
-    There is a significant difference in students' problem-solving
-    performance between formula-based and spreadsheet-based instruction.
-  </div>
-
-  <div class="hypothesis">
-    <strong>H₀₂:</strong>
-    There is no significant difference in students' conceptual understanding
-    between formula-based and spreadsheet-based instruction in ordinary
-    annuities.
-  </div>
-
-  <div class="hypothesis">
-    <strong>H₁₂:</strong>
-    There is a significant difference in students' conceptual understanding
-    between formula-based and spreadsheet-based instruction.
-  </div>
-
-  <div class="warning-box">
-    <strong>Do not assume that spreadsheet-based instruction is better.</strong>
-    The research must remain open to either direction of the findings.
-  </div>
-</section>
-
-
-<!-- =========================================================
-     CONCEPTUAL FRAMEWORK
-========================================================= -->
-
-<section id="framework" class="reference-section">
-  <div class="section-title">
-    <span class="eyebrow">CONCEPTUAL MODEL</span>
-    <h2>Conceptual Framework</h2>
-  </div>
-
-  <div class="framework-diagram">
-
-    <div class="framework-box input">
-      <h3>Instructional Approach</h3>
-      <p>Formula-Based</p>
-      <p>Spreadsheet-Based</p>
-    </div>
-
-    <div class="arrow">↓</div>
-
-    <div class="framework-box outcome">
-      <h3>Student Outcomes</h3>
-      <p>Problem-Solving Performance</p>
-      <p>Conceptual Understanding</p>
-    </div>
-
-    <div class="arrow">↓</div>
-
-    <div class="framework-box reflection">
-      <h3>Reflection</h3>
-      <p>Teacher interpretation of evidence</p>
-    </div>
-
-    <div class="arrow">↓</div>
-
-    <div class="framework-box action">
-      <h3>Action Plan</h3>
-      <p>Improved instructional practice</p>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- =========================================================
-     REPLICATION FRAMEWORK
-========================================================= -->
-
-<section id="replication" class="reference-section">
-  <div class="section-title">
-    <span class="eyebrow">REUSE & REPLICATION</span>
-    <h2>Reusable Research Protocol</h2>
-  </div>
-
-  <p>
-    The system is designed to be reusable. However, reuse does not mean that
-    the next implementation automatically reproduces the same participants,
-    scores or findings.
-  </p>
-
-  <h3>Three-Layer Model</h3>
-
-  <div class="card-grid">
-    <div class="card">
-      <h4>Layer 1 — Research Protocol</h4>
-      <p>
-        Stable methodological architecture: research questions, constructs,
-        instruments, procedures, scoring and analysis rules.
-      </p>
-    </div>
-
-    <div class="card">
-      <h4>Layer 2 — Learner Cohort</h4>
-      <p>
-        Re-established for each implementation: participants, research IDs,
-        attendance, random assignment and contextual conditions.
-      </p>
-    </div>
-
-    <div class="card">
-      <h4>Layer 3 — Research Evidence</h4>
-      <p>
-        Newly generated data, scores, fidelity records, analysis and findings.
-      </p>
-    </div>
-  </div>
-
-  <h3>Stable Elements</h3>
-
-  <ul>
-    <li>Research problem logic</li>
-    <li>Research questions</li>
-    <li>Construct definitions</li>
-    <li>Assessment blueprint</li>
-    <li>Scoring rules</li>
-    <li>Instructional parallelism</li>
-    <li>Counterbalanced structure</li>
-    <li>Analysis framework</li>
-    <li>Reflection framework</li>
-  </ul>
-
-  <h3>Elements Recreated Each Implementation</h3>
-
-  <ul>
-    <li>Participant list</li>
-    <li>Research IDs</li>
-    <li>Random assignment</li>
-    <li>Attendance</li>
-    <li>Actual scores</li>
-    <li>Fidelity records</li>
-    <li>Deviations</li>
-    <li>Statistical results</li>
-    <li>Reflection</li>
-    <li>Action plan</li>
-  </ul>
-
-  <div class="important-box">
-    <strong>Replication is not automatic generalization.</strong>
-    A successful replication provides additional evidence under another
-    implementation context; it does not automatically establish universal
-    effectiveness.
-  </div>
-
-  <h3>Replication Record</h3>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Field</th>
-        <th>Current Implementation</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>Protocol Version</td><td>v2.0</td></tr>
-      <tr><td>Cohort</td><td>To be established</td></tr>
-      <tr><td>School Context</td><td>To be documented</td></tr>
-      <tr><td>Implementation Date</td><td>To be documented</td></tr>
-      <tr><td>Participant Count</td><td>To be documented</td></tr>
-      <tr><td>Randomization Record</td><td>To be attached</td></tr>
-      <tr><td>Fidelity Record</td><td>To be attached</td></tr>
-      <tr><td>Deviation Record</td><td>To be attached</td></tr>
-      <tr><td>Analysis Version</td><td>To be documented</td></tr>
-    </tbody>
-  </table>
-
-  <h3>Replication Decision Rule</h3>
-
-  <p>
-    Before declaring a replication successful, verify:
-  </p>
-
-  <ol>
-    <li>The same core research questions were retained.</li>
-    <li>The same constructs were measured.</li>
-    <li>The instrument versions are documented.</li>
-    <li>The implementation procedure was sufficiently comparable.</li>
-    <li>Any deviations were documented.</li>
-    <li>The analysis was conducted according to the planned rules.</li>
-    <li>Differences in context are explicitly reported.</li>
-  </ol>
-</section>
-
-
-<!-- =========================================================
-     ASSUMPTION SYSTEM
-========================================================= -->
-
-<section id="assumptions" class="reference-section">
-  <div class="section-title">
-    <span class="eyebrow">GUIDANCE FOR FUTURE IMPLEMENTATION</span>
-    <h2>Assumption System</h2>
-  </div>
-
-  <p>
-    Assumptions are planning guides. They must never be silently converted
-    into research evidence.
-  </p>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Planning Assumption</th>
-        <th>Why It Is Used</th>
-        <th>What Must Be Verified Later</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>34 learners</td>
-        <td>Current intended cohort size</td>
-        <td>Actual eligible enrollment</td>
-      </tr>
-      <tr>
-        <td>9/9/8/8 groups</td>
-        <td>Balanced sequence allocation</td>
-        <td>Actual randomized allocation</td>
-      </tr>
-      <tr>
-        <td>60-minute assessment</td>
-        <td>Common administration limit</td>
-        <td>Actual timing and completion behavior</td>
-      </tr>
-      <tr>
-        <td>Forms A/B comparable</td>
-        <td>Reduce direct practice effect</td>
-        <td>Expert review and empirical observations</td>
-      </tr>
-      <tr>
-        <td>Paired t-test suitable</td>
-        <td>Planned primary analysis</td>
-        <td>Actual paired-difference assumptions</td>
-      </tr>
-      <tr>
-        <td>Spreadsheet improves efficiency</td>
-        <td>Classroom curiosity only</td>
-        <td>Actual evidence</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="warning-box">
-    <strong>Rule:</strong>
-    If an assumption is not verified by actual evidence, label it as an
-    assumption rather than presenting it as a finding.
-  </div>
-</section>
-
-
-<!-- =========================================================
-     34-TEMPLATE LIBRARY
-========================================================= -->
-
-<section id="templates" class="reference-section">
-  <div class="section-title">
-    <span class="eyebrow">DOCUMENT SYSTEM</span>
-    <h2>34-Template Research Library</h2>
-  </div>
-
-  <p>
-    The following templates form the reusable documentation architecture.
-    They are designed to prevent important research decisions from remaining
-    undocumented.
-  </p>
-
-  <div class="template-grid">
-
-    <div class="template-item">01. Research Problem & Observation Record</div>
-    <div class="template-item">02. Research Gap Analysis</div>
-    <div class="template-item">03. Research Questions & Hypotheses</div>
-    <div class="template-item">04. Variable & Construct Matrix</div>
-    <div class="template-item">05. Conceptual Framework</div>
-    <div class="template-item">06. Assessment Blueprint / TOS</div>
-    <div class="template-item">07. Instrument Draft</div>
-    <div class="template-item">08. Scoring Rubric</div>
-    <div class="template-item">09. Expert Validation Form</div>
-    <div class="template-item">10. Expert Validation Summary</div>
-    <div class="template-item">11. Permission & Ethics Package</div>
-    <div class="template-item">12. Researcher Declaration</div>
-    <div class="template-item">13. Confidentiality Procedure</div>
-    <div class="template-item">14. Participant Information Sheet</div>
-    <div class="template-item">15. Parent / Guardian Consent</div>
-    <div class="template-item">16. Learner Assent</div>
-    <div class="template-item">17. Random Assignment Protocol</div>
-    <div class="template-item">18. Randomization Record</div>
-    <div class="template-item">19. Counterbalancing Matrix</div>
-    <div class="template-item">20. Pretest Administration Record</div>
-    <div class="template-item">21. Pretest Scoring Record</div>
-    <div class="template-item">22. Instructional Implementation Protocol</div>
-    <div class="template-item">23. Implementation Record</div>
-    <div class="template-item">24. Treatment Fidelity Record</div>
-    <div class="template-item">25. Assessment Administration Record</div>
-    <div class="template-item">26. Deviation Log</div>
-    <div class="template-item">27. Data Dictionary</div>
-    <div class="template-item">28. Data Entry Workbook</div>
-    <div class="template-item">29. Statistical Analysis Record</div>
-    <div class="template-item">30. Results Interpretation Template</div>
-    <div class="template-item">31. Teacher Reflection Record</div>
-    <div class="template-item">32. Action Plan</div>
-    <div class="template-item">33. Replication Record</div>
-    <div class="template-item">34. Final Research Audit Trail</div>
-
-  </div>
-</section>
-
-
-<!-- =========================================================
-     DATA ARCHIVE
-========================================================= -->
-
-<section id="archive" class="reference-section">
-  <div class="section-title">
-    <span class="eyebrow">RESEARCH RECORD MANAGEMENT</span>
-    <h2>Recommended Digital Archive</h2>
-  </div>
-
-  <div class="folder-tree">
-<pre>
-ACTION_RESEARCH_ORDINARY_ANNUITIES/
-│
-├── 00_PROJECT_CONTROL/
-│   ├── README
-│   ├── Version_Log
-│   └── Research_Status
-│
-├── 01_PROPOSAL/
-│   ├── Research_Proposal
-│   ├── Research_Questions
-│   ├── Hypotheses
-│   └── Conceptual_Framework
-│
-├── 02_INSTRUMENTS/
-│   ├── Form_P
-│   ├── Form_A
-│   ├── Form_B
-│   ├── TOS
-│   └── Scoring_Rubrics
-│
-├── 03_VALIDATION/
-│   ├── Expert_Forms
-│   ├── Expert_Comments
-│   ├── CVI_Analysis
-│   └── Revision_Log
-│
-├── 04_ETHICS_PERMISSION/
-│   ├── Approvals
-│   ├── Consent
-│   ├── Assent
-│   └── Data_Protection
-│
-├── 05_RANDOMIZATION/
-│   ├── Participant_List
-│   ├── Randomization_Record
-│   └── Counterbalancing_Matrix
-│
-├── 06_PRETEST/
-│   ├── Administration
-│   ├── Scoring
-│   └── Data_QC
-│
-├── 07_IMPLEMENTATION/
-│   ├── Formula
-│   ├── Spreadsheet
-│   ├── Fidelity
-│   └── Deviations
-│
-├── 08_ASSESSMENT/
-│   ├── Form_A
-│   ├── Form_B
-│   └── Administration_Records
-│
-├── 09_DATA/
-│   ├── Raw_Data
-│   ├── Clean_Data
-│   └── Data_Dictionary
-│
-├── 10_ANALYSIS/
-│   ├── Descriptive
-│   ├── Inferential
-│   ├── Effect_Size
-│   └── Order_Diagnostics
-│
-├── 11_REFLECTION/
-│   ├── Findings
-│   ├── Teacher_Reflection
-│   └── Action_Plan
-│
-├── 12_REPLICATION/
-│   ├── Replication_Record
-│   └── Context_Notes
-│
-└── 13_FINAL_REPORT/
-    ├── Final_Research_Report
-    ├── Appendices
-    └── Final_Audit
-</pre>
-  </div>
-</section>
-
-
-<!-- =========================================================
-     RESEARCH INTEGRITY RULES
-========================================================= -->
-
-<section id="integrity" class="reference-section">
-  <div class="section-title">
-    <span class="eyebrow">NON-NEGOTIABLE</span>
-    <h2>Research Integrity Rules</h2>
-  </div>
-
-  <div class="integrity-list">
-
-    <div>
-      <strong>01 — Never fabricate data.</strong>
-      <p>
-        Planning assumptions may guide implementation, but they cannot be
-        presented as actual learner results.
-      </p>
-    </div>
-
-    <div>
-      <strong>02 — Never fabricate approvals.</strong>
-      <p>
-        An approval template is not evidence that approval has been granted.
-      </p>
-    </div>
-
-    <div>
-      <strong>03 — Never change the analysis because the result is inconvenient.</strong>
-      <p>
-        Any legitimate methodological change must have a documented reason.
-      </p>
-    </div>
-
-    <div>
-      <strong>04 — Preserve the original data.</strong>
-      <p>
-        Cleaning should create a documented clean dataset rather than
-        silently replacing the original.
-      </p>
-    </div>
-
-    <div>
-      <strong>05 — Separate constructs.</strong>
-      <p>
-        CU, PSP and SMR should not be collapsed into a single primary score.
-      </p>
-    </div>
-
-    <div>
-      <strong>06 — Do not overclaim causation.</strong>
-      <p>
-        Interpret findings within the actual classroom conditions and
-        acknowledge carryover, order and implementation limitations.
-      </p>
-    </div>
-
-    <div>
-      <strong>07 — Document deviations.</strong>
-      <p>
-        A deviation is not automatically a failure; undocumented deviation
-        is the bigger methodological problem.
-      </p>
-    </div>
-
-    <div>
-      <strong>08 — Protect learner identity.</strong>
-      <p>
-        Use research IDs and avoid unnecessary personally identifying
-        information.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- =========================================================
-     FINAL TECHNICAL CHECK
-========================================================= -->
-
-<section id="final-qc" class="reference-section final-section">
-  <div class="section-title">
-    <span class="eyebrow">FINAL GATE</span>
-    <h2>Final Research Quality-Control Checklist</h2>
-  </div>
-
-  <div class="qc-grid">
-
-    <label>
-      <input type="checkbox">
-      Research problem clearly derives from classroom observation
-    </label>
-
-    <label>
-      <input type="checkbox">
-      Research gap is explicitly stated
-    </label>
-
-    <label>
-      <input type="checkbox">
-      Research questions match the variables
-    </label>
-
-    <label>
-      <input type="checkbox">
-      Conceptual framework matches the research design
-    </label>
-
-    <label>
-      <input type="checkbox">
-      PSP and CU remain separate primary outcomes
-    </label>
-
-    <label>
-      <input type="checkbox">
-      SMR remains a supporting outcome
-    </label>
-
-    <label>
-      <input type="checkbox">
-      TOS represents FV, PV and PMT applications
-    </label>
-
-    <label>
-      <input type="checkbox">
-      Form P/A/B versions are controlled
-    </label>
-
-    <label>
-      <input type="checkbox">
-      Numerical answers have been technically checked
-    </label>
-
-    <label>
-      <input type="checkbox">
-      Scoring rules are explicit
-    </label>
-
-    <label>
-      <input type="checkbox">
-      Partial-credit rules are documented
-    </label>
-
-    <label>
-      <input type="checkbox">
-      Expert validation completed
-    </label>
-
-    <label>
-      <input type="checkbox">
-      Ethics and permission requirements completed
-    </label>
-
-    <label>
-      <input type="checkbox">
-      Randomization record completed
-    </label>
-
-    <label>
-      <input type="checkbox">
-      Formal pretest completed
-    </label>
-
-    <label>
-      <input type="checkbox">
-      Treatment fidelity documented
-    </label>
-
-    <label>
-      <input type="checkbox">
-      Deviations documented
-    </label>
-
-    <label>
-      <input type="checkbox">
-      Data quality checked
-    </label>
-
-    <label>
-      <input type="checkbox">
-      Appropriate statistical test selected
-    </label>
-
-    <label>
-      <input type="checkbox">
-      Effect size considered
-    </label>
-
-    <label>
-      <input type="checkbox">
-      Order/form effects reviewed
-    </label>
-
-    <label>
-      <input type="checkbox">
-      Findings interpreted cautiously
-    </label>
-
-    <label>
-      <input type="checkbox">
-      Reflection completed
-    </label>
-
-    <label>
-      <input type="checkbox">
-      Action plan follows the evidence
-    </label>
-
-    <label>
-      <input type="checkbox">
-      Replication record prepared
-    </label>
-
-    <label>
-      <input type="checkbox">
-      Final research archive completed
-    </label>
-
-  </div>
-
-  <div class="final-status">
-    <div class="status-icon">✓</div>
-    <div>
-      <h3>RESEARCH SYSTEM STATUS</h3>
-      <p>
-        <strong>READY FOR IMPLEMENTATION</strong>
-      </p>
-      <p>
-        The protocol, instruments, scoring architecture, counterbalanced
-        design, analysis plan and documentation system are prepared.
-        Actual learner evidence remains to be generated through formal
-        implementation.
-      </p>
-    </div>
-  </div>
-</section>
-
-
-<!-- =========================================================
-     RESEARCHER'S QUICK GUIDE
-========================================================= -->
-
-<section id="quick-guide" class="reference-section">
-  <div class="section-title">
-    <span class="eyebrow">ONE-PAGE MEMORY GUIDE</span>
-    <h2>What I Must Remember as the Researcher</h2>
-  </div>
-
-  <div class="quick-guide">
-
-    <div class="quick-step">
-      <span>1</span>
-      <strong>Observe</strong>
-      <p>What classroom problem am I seeing?</p>
-    </div>
-
-    <div class="quick-step">
-      <span>2</span>
-      <strong>Question</strong>
-      <p>What do I genuinely need to know?</p>
-    </div>
-
-    <div class="quick-step">
-      <span>3</span>
-      <strong>Define</strong>
-      <p>What exactly will I measure?</p>
-    </div>
-
-    <div class="quick-step">
-      <span>4</span>
-      <strong>Design</strong>
-      <p>How will I compare the instructional approaches fairly?</p>
-    </div>
-
-    <div class="quick-step">
-      <span>5</span>
-      <strong>Validate</strong>
-      <p>Are my instruments accurate and appropriate?</p>
-    </div>
-
-    <div class="quick-step">
-      <span>6</span>
-      <strong>Protect</strong>
-      <p>Are permission, consent and confidentiality in place?</p>
-    </div>
-
-    <div class="quick-step">
-      <span>7</span>
-      <strong>Randomize</strong>
-      <p>Have I assigned sequences without bias?</p>
-    </div>
-
-    <div class="quick-step">
-      <span>8</span>
-      <strong>Pretest</strong>
-      <p>What is the formal baseline?</p>
-    </div>
-
-    <div class="quick-step">
-      <span>9</span>
-      <strong>Implement</strong>
-      <p>Did I keep the two conditions comparable?</p>
-    </div>
-
-    <div class="quick-step">
-      <span>10</span>
-      <strong>Measure</strong>
-      <p>What happened under each instructional condition?</p>
-    </div>
-
-    <div class="quick-step">
-      <span>11</span>
-      <strong>Analyze</strong>
-      <p>What do the paired data actually show?</p>
-    </div>
-
-    <div class="quick-step">
-      <span>12</span>
-      <strong>Reflect</strong>
-      <p>What did I learn as a teacher?</p>
-    </div>
-
-    <div class="quick-step">
-      <span>13</span>
-      <strong>Act</strong>
-      <p>What instructional improvement follows from the evidence?</p>
-    </div>
-
-    <div class="quick-step">
-      <span>14</span>
-      <strong>Replicate</strong>
-      <p>Can the protocol be reused while generating new evidence?</p>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- =========================================================
-     VERSION CONTROL
-========================================================= -->
-
-<section id="version-control" class="reference-section">
-  <div class="section-title">
-    <span class="eyebrow">DOCUMENT CONTROL</span>
-    <h2>Version Control</h2>
-  </div>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Version</th>
-        <th>Status</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>v1.0</td>
-        <td>Superseded</td>
-        <td>Initial generic reusable researcher manual.</td>
-      </tr>
-      <tr>
-        <td>v2.0</td>
-        <td>Current</td>
-        <td>
-          Corrected manual incorporating the actual planned ordinary-annuity
-          research architecture, instruments, scoring, intervention,
-          analysis and replication system.
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h3>Required Change Log</h3>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>Version</th>
-        <th>Change</th>
-        <th>Reason</th>
-        <th>Approved By</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-
-<!-- =========================================================
-     FOOTER
-========================================================= -->
-
-<footer class="site-footer">
-
-  <div class="footer-brand">
-    <strong>Reusable Classroom Action Research System</strong>
-    <span>Ordinary Annuities • Formula-Based vs Spreadsheet-Based Instruction</span>
-  </div>
-
-  <div class="footer-meta">
-    <span>Protocol Version: v2.0</span>
-    <span>Research Design: Counterbalanced Within-Subject</span>
-    <span>Status: Ready for Implementation</span>
-  </div>
-
-  <p class="footer-note">
-    This system is a research-planning and documentation framework.
-    Actual findings must be generated from formally collected evidence.
-  </p>
+<p class="small">
+Version 2.1 — Mobile Ready
+</p>
 
 </footer>
 
 
-<!-- =========================================================
-     JAVASCRIPT
-========================================================= -->
-
 <script>
 
-/* =========================================================
-   SEARCH
-========================================================= */
+/* =====================================================
+   SHOW / COLLAPSE RESEARCH STEPS
+   ===================================================== */
 
-function searchManual() {
+function showSteps(show){
 
-  const input = document.getElementById("manualSearch");
-  const query = input.value.toLowerCase().trim();
+  document.querySelectorAll(".step .content").forEach(function(content){
 
-  const sections = document.querySelectorAll(
-    "section, .step-section, .reference-section"
-  );
-
-  if (!query) {
-
-    sections.forEach(section => {
-      section.style.display = "";
-    });
-
-    return;
-  }
-
-  sections.forEach(section => {
-
-    const text = section.innerText.toLowerCase();
-
-    if (text.includes(query)) {
-      section.style.display = "";
-    } else {
-      section.style.display = "none";
+    if(show){
+      content.classList.remove("hidden");
+    }else{
+      content.classList.add("hidden");
     }
 
   });
 
 }
 
+/* =====================================================
+   KEEP STEP HEADERS CLICKABLE
+   ===================================================== */
 
-/* =========================================================
-   BACK TO TOP
-========================================================= */
+document.querySelectorAll(".stephead").forEach(function(header){
 
-const backToTop = document.getElementById("backToTop");
+  header.style.cursor="pointer";
 
-window.addEventListener("scroll", function() {
+  header.addEventListener("click",function(){
 
-  if (window.scrollY > 500) {
-    backToTop.classList.add("show");
-  } else {
-    backToTop.classList.remove("show");
-  }
+    const step=this.closest(".step");
 
-});
+    if(!step)return;
 
-function scrollToTop() {
+    const content=step.querySelector(".content");
 
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-
-}
-
-
-/* =========================================================
-   DARK / LIGHT MODE
-========================================================= */
-
-function toggleTheme() {
-
-  document.body.classList.toggle("dark-mode");
-
-  const isDark =
-    document.body.classList.contains("dark-mode");
-
-  localStorage.setItem(
-    "researchManualTheme",
-    isDark ? "dark" : "light"
-  );
-
-}
-
-
-/* =========================================================
-   RESTORE THEME
-========================================================= */
-
-(function restoreTheme() {
-
-  const savedTheme =
-    localStorage.getItem("researchManualTheme");
-
-  if (savedTheme === "dark") {
-    document.body.classList.add("dark-mode");
-  }
-
-})();
-
-
-/* =========================================================
-   CHECKLIST PERSISTENCE
-========================================================= */
-
-const checkboxes =
-  document.querySelectorAll(
-    'input[type="checkbox"]'
-  );
-
-checkboxes.forEach((checkbox, index) => {
-
-  const key =
-    "researchManualCheck_" + index;
-
-  const saved =
-    localStorage.getItem(key);
-
-  if (saved === "true") {
-    checkbox.checked = true;
-  }
-
-  checkbox.addEventListener("change", function() {
-
-    localStorage.setItem(
-      key,
-      checkbox.checked
-    );
-
-  });
-
-});
-
-
-/* =========================================================
-   TEXTAREA PERSISTENCE
-========================================================= */
-
-const textareas =
-  document.querySelectorAll("textarea");
-
-textareas.forEach((textarea, index) => {
-
-  const key =
-    "researchManualTextarea_" + index;
-
-  const saved =
-    localStorage.getItem(key);
-
-  if (saved !== null) {
-    textarea.value = saved;
-  }
-
-  textarea.addEventListener("input", function() {
-
-    localStorage.setItem(
-      key,
-      textarea.value
-    );
-
-  });
-
-});
-
-
-/* =========================================================
-   PRINT
-========================================================= */
-
-function printManual() {
-
-  window.print();
-
-}
-
-
-/* =========================================================
-   PROGRESS INDICATOR
-========================================================= */
-
-function updateProgress() {
-
-  const all =
-    document.querySelectorAll(
-      'input[type="checkbox"]'
-    );
-
-  const checked =
-    document.querySelectorAll(
-      'input[type="checkbox"]:checked'
-    );
-
-  const total =
-    all.length;
-
-  const completed =
-    checked.length;
-
-  const percentage =
-    total === 0
-      ? 0
-      : Math.round(
-          (completed / total) * 100
-        );
-
-  const progress =
-    document.getElementById(
-      "progressText"
-    );
-
-  if (progress) {
-
-    progress.textContent =
-      percentage + "% Complete";
-
-  }
-
-}
-
-checkboxes.forEach(cb => {
-
-  cb.addEventListener(
-    "change",
-    updateProgress
-  );
-
-});
-
-updateProgress();
-
-
-/* =========================================================
-   COLLAPSIBLE CARDS
-========================================================= */
-
-document
-  .querySelectorAll(".collapsible-title")
-  .forEach(title => {
-
-    title.addEventListener(
-      "click",
-      function() {
-
-        const content =
-          this.nextElementSibling;
-
-        if (!content) return;
-
-        content.classList.toggle(
-          "collapsed"
-        );
-
-      }
-    );
-
-  });
-
-
-/* =========================================================
-   ACTIVE NAVIGATION
-========================================================= */
-
-const navLinks =
-  document.querySelectorAll(
-    ".side-nav a"
-  );
-
-const observableSections =
-  document.querySelectorAll(
-    "section[id]"
-  );
-
-const observer =
-  new IntersectionObserver(
-    entries => {
-
-      entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
-
-          navLinks.forEach(link => {
-
-            link.classList.remove(
-              "active"
-            );
-
-            if (
-              link.getAttribute(
-                "href"
-              ) === "#" + entry.target.id
-            ) {
-
-              link.classList.add(
-                "active"
-              );
-
-            }
-
-          });
-
-        }
-
-      });
-
-    },
-    {
-      threshold: 0.2
+    if(content){
+      content.classList.toggle("hidden");
     }
-  );
 
-observableSections.forEach(section => {
-
-  observer.observe(section);
+  });
 
 });
-
-
-/* =========================================================
-   CLEAR SAVED PROGRESS
-========================================================= */
-
-function clearSavedProgress() {
-
-  const confirmed =
-    confirm(
-      "Clear saved checklist and reflection entries?"
-    );
-
-  if (!confirmed) return;
-
-  Object.keys(localStorage)
-    .filter(key =>
-      key.startsWith(
-        "researchManualCheck_"
-      ) ||
-      key.startsWith(
-        "researchManualTextarea_"
-      )
-    )
-    .forEach(key =>
-      localStorage.removeItem(key)
-    );
-
-  location.reload();
-
-}
 
 </script>
-
-
-<!-- =========================================================
-     END OF DOCUMENT
-========================================================= -->
 
 </body>
 </html>

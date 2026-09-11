@@ -454,6 +454,98 @@ footer a{
     padding:0;
   }
 }
+/* =====================================================
+   ONEDRIVE RESOURCE VAULT
+   ===================================================== */
+
+.onedrive-card {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #eef6ff, #ffffff);
+  border: 1px solid #cbddec;
+  box-shadow: 0 5px 18px rgba(30,60,90,.08);
+}
+
+.onedrive-card-inner {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.onedrive-icon {
+  width: 58px;
+  height: 58px;
+  min-width: 58px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: #ffffff;
+  border: 1px solid #d5e2ee;
+  font-size: 30px;
+}
+
+.onedrive-content {
+  flex: 1;
+}
+
+.onedrive-content h3 {
+  margin: 0 0 4px;
+  color: var(--navy);
+  font-size: 20px;
+}
+
+.onedrive-content p {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.onedrive-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--navy);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 9px;
+  font-weight: 800;
+  transition: .2s ease;
+}
+
+.onedrive-button:hover {
+  background: var(--blue);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+@media(max-width:600px){
+
+  .onedrive-card-inner {
+    align-items: flex-start;
+  }
+
+  .onedrive-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    font-size: 25px;
+  }
+
+  .onedrive-content h3 {
+    font-size: 17px;
+  }
+
+  .onedrive-content p {
+    font-size: 13px;
+  }
+
+  .onedrive-button {
+    width: 100%;
+    justify-content: center;
+  }
+}  
 </style>
 </head>
 

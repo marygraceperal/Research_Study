@@ -1,0 +1,1539 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>My Complete Action Research Task Roadmap</title>
+
+<style>
+:root{
+  --navy:#123b5d;
+  --blue:#1f6f9f;
+  --teal:#2a8c8c;
+  --gold:#d5a93a;
+  --green:#3f7d58;
+  --bg:#f4f8fb;
+  --card:#ffffff;
+  --text:#243746;
+  --muted:#617584;
+  --line:#d9e4eb;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:linear-gradient(
+    180deg,
+    #eef6fa 0%,
+    #f8fbfc 100%
+  );
+  color:var(--text);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:16px;
+  line-height:1.6;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:22px 14px 55px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  background:linear-gradient(
+    135deg,
+    var(--navy),
+    var(--blue)
+  );
+  color:#fff;
+  padding:32px 24px;
+  border-radius:22px;
+  box-shadow:0 12px 30px rgba(18,59,93,.16);
+}
+
+.hero h1{
+  margin:0 0 10px;
+  font-size:clamp(1.7rem,4vw,2.6rem);
+  line-height:1.15;
+}
+
+.hero p{
+  margin:8px 0;
+}
+
+.badge{
+  display:inline-block;
+  padding:5px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.16);
+  font-size:.84rem;
+  margin-bottom:10px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:23px;
+  margin:18px 0;
+  box-shadow:0 5px 18px rgba(30,70,90,.06);
+}
+
+h2{
+  color:var(--navy);
+  margin-top:0;
+}
+
+h3{
+  color:var(--blue);
+}
+
+.callout{
+  border-left:5px solid var(--gold);
+  background:#fffaf0;
+  padding:15px 17px;
+  border-radius:10px;
+  margin:15px 0;
+}
+
+.core{
+  border-left-color:var(--teal);
+  background:#eef9f8;
+}
+
+.warning{
+  border-left-color:#c47b31;
+  background:#fff7ed;
+}
+
+/* =========================
+   TABLES
+   Mobile tables scroll
+   horizontally instead
+   of breaking words
+========================= */
+
+.table-wrap{
+  width:100%;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  margin:14px 0;
+}
+
+table{
+  border-collapse:collapse;
+  width:100%;
+  min-width:760px;
+}
+
+th,
+td{
+  border:1px solid var(--line);
+  padding:9px 11px;
+  text-align:left;
+  vertical-align:top;
+
+  /* Prevent ugly word-by-word wrapping */
+  word-break:normal;
+  overflow-wrap:normal;
+  hyphens:none;
+}
+
+th{
+  background:var(--navy);
+  color:#fff;
+}
+
+tr:nth-child(even) td{
+  background:#f8fbfd;
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.status-ready{
+  font-weight:700;
+  color:var(--green);
+}
+
+.status-next{
+  font-weight:700;
+  color:#b56a19;
+}
+
+.status-later{
+  color:#777;
+  font-weight:700;
+}
+
+/* =========================
+   FLOW
+========================= */
+
+.flow{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  align-items:center;
+}
+
+.flow span{
+  background:#edf5f8;
+  border:1px solid var(--line);
+  padding:7px 11px;
+  border-radius:9px;
+  font-weight:700;
+}
+
+.arrow{
+  color:var(--blue);
+}
+
+/* =========================
+   FORMULAS
+========================= */
+
+.formula{
+  display:block;
+  white-space:nowrap;
+  overflow-x:auto;
+  background:#f1f7fa;
+  border:1px solid var(--line);
+  border-radius:9px;
+  padding:11px;
+  font:1.05rem "Times New Roman",serif;
+}
+
+/* =========================
+   FINAL SECTION
+========================= */
+
+.final{
+  background:linear-gradient(
+    135deg,
+    #edf8f4,
+    #f8fcfa
+  );
+  border:1px solid #c9e4d6;
+}
+
+footer{
+  text-align:center;
+  color:var(--muted);
+  font-size:.9rem;
+  padding-top:20px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+  .container{
+    padding:12px 9px 40px;
+  }
+
+  .hero{
+    padding:25px 18px;
+    border-radius:17px;
+  }
+
+  .card{
+    padding:17px;
+    border-radius:15px;
+  }
+
+  .hero h1{
+    font-size:1.8rem;
+  }
+
+  .flow{
+    display:block;
+  }
+
+  .flow span{
+    display:block;
+    margin:6px 0;
+  }
+
+  .arrow{
+    display:block;
+    text-align:center;
+    transform:rotate(90deg);
+  }
+
+  th,
+  td{
+    padding:9px 10px;
+  }
+}
+</style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero">
+
+<span class="badge">
+Grade 11 General Mathematics • Classroom-Based Action Research
+</span>
+
+<h1>
+My Complete Research Task Roadmap
+</h1>
+
+<p>
+<strong>Study:</strong>
+Comparing Formula-Based and Spreadsheet-Based Instruction in Students'
+Problem-Solving Performance and Conceptual Understanding of Ordinary Annuities
+</p>
+
+<p>
+A practical roadmap from identifying the classroom problem to implementation,
+analysis, reflection, final reporting, archiving, and replication.
+</p>
+
+</header>
+
+
+<!-- =========================
+     HEART OF RESEARCH
+========================= -->
+
+<section class="card">
+
+<h2>🎯 The Heart of the Research</h2>
+
+<p>
+<strong>Main research question:</strong>
+</p>
+
+<div class="callout core">
+
+Do students demonstrate different levels of problem-solving performance
+and conceptual understanding when ordinary annuities are taught through
+formula-based instruction versus spreadsheet-based instruction?
+
+</div>
+
+<p>
+<strong>Central idea:</strong>
+A student getting the correct answer from a spreadsheet does not automatically
+mean the student understands the mathematics behind the answer.
+</p>
+
+</section>
+
+
+<!-- =========================
+     RESEARCH JOURNEY
+========================= -->
+
+<section class="card">
+
+<h2>🗺️ Complete Research Journey</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Step</th>
+<th>Your Task</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>01</td>
+<td>Establish the classroom problem and context</td>
+<td class="status-ready">Prepared</td>
+</tr>
+
+<tr>
+<td>02</td>
+<td>Review literature and establish the research gap</td>
+<td class="status-ready">Prepared</td>
+</tr>
+
+<tr>
+<td>03</td>
+<td>Finalize research questions, hypotheses, variables, and constructs</td>
+<td class="status-ready">Prepared</td>
+</tr>
+
+<tr>
+<td>04</td>
+<td>Finalize framework and research design</td>
+<td class="status-ready">Prepared</td>
+</tr>
+
+<tr>
+<td>05</td>
+<td>Finalize the two instructional approaches</td>
+<td class="status-ready">Prepared</td>
+</tr>
+
+<tr>
+<td>06</td>
+<td>Develop the assessment instruments</td>
+<td class="status-ready">Prepared</td>
+</tr>
+
+<tr>
+<td>07</td>
+<td>Finalize TOS, scoring, and rubrics</td>
+<td class="status-ready">Prepared</td>
+</tr>
+
+<tr>
+<td>08</td>
+<td>Have experts validate the instruments</td>
+<td class="status-next">
+Actual validation still needed
+</td>
+</tr>
+
+<tr>
+<td>09</td>
+<td>Secure permission, ethics, consent, and assent</td>
+<td class="status-next">
+Actual approvals still needed
+</td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>Conduct final instrument release check</td>
+<td class="status-next">
+Depends on Steps 8–9
+</td>
+</tr>
+
+<tr>
+<td>11</td>
+<td>Randomly assign learners to sequences</td>
+<td class="status-next">
+During implementation
+</td>
+</tr>
+
+<tr>
+<td>12</td>
+<td>Conduct the formal pretest</td>
+<td class="status-next">
+With actual learners
+</td>
+</tr>
+
+<tr>
+<td>13</td>
+<td>Conduct formula/spreadsheet instruction and assessments</td>
+<td class="status-next">
+Main fieldwork
+</td>
+</tr>
+
+<tr>
+<td>14</td>
+<td>Analyze results, reflect, and create action plan</td>
+<td class="status-later">
+After data collection
+</td>
+</tr>
+
+<tr>
+<td>15</td>
+<td>Write the final research report</td>
+<td class="status-later">
+After analysis
+</td>
+</tr>
+
+<tr>
+<td>16</td>
+<td>Archive research data and records</td>
+<td class="status-later">
+Research closure
+</td>
+</tr>
+
+<tr>
+<td>17</td>
+<td>Prepare replication and sustainability record</td>
+<td class="status-later">
+Final stage
+</td>
+</tr>
+
+</table>
+
+</div>
+
+<p>
+<strong>Important:</strong>
+The research documents are largely prepared, but actual implementation,
+validation, approvals, and real learner data are still required.
+</p>
+
+</section>
+
+
+<!-- =========================
+     PHASE 1
+========================= -->
+
+<section class="card">
+
+<h2>🔬 PHASE 1 — Finalize the Research Proposal</h2>
+
+<ol>
+
+<li>Research title</li>
+<li>Background and classroom context</li>
+<li>Classroom problem</li>
+<li>Research gap</li>
+<li>Research questions</li>
+<li>Hypotheses</li>
+<li>Conceptual framework</li>
+<li>Research design</li>
+<li>Participants</li>
+<li>Intervention procedures</li>
+<li>Instruments</li>
+<li>Data analysis plan</li>
+<li>Ethical safeguards</li>
+<li>References and appendices</li>
+
+</ol>
+
+<div class="callout">
+
+<strong>Methodological backbone:</strong>
+Classroom-Based Action Research using a Counterbalanced Within-Subject Design.
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PHASE 2
+========================= -->
+
+<section class="card">
+
+<h2>🛡️ PHASE 2 — Secure Research Clearance</h2>
+
+<p>
+Because you are both <strong>teacher and researcher</strong>,
+protect learners and follow the applicable school/division/research-office
+requirements.
+</p>
+
+<ul>
+
+<li>☐ School/research-office permission as required</li>
+<li>☐ Parent/guardian consent</li>
+<li>☐ Learner assent</li>
+<li>☐ Participant information</li>
+<li>☐ Confidentiality procedures</li>
+<li>☐ Research IDs rather than names in the analytical dataset</li>
+<li>☐ Researcher declaration</li>
+<li>☐ Teacher-researcher dual-role safeguards</li>
+<li>☐ Data-protection procedure</li>
+
+</ul>
+
+<div class="callout warning">
+
+<strong>Data boundary:</strong>
+Earlier informal classroom experiences may explain why the problem was noticed,
+but they should not be presented as formal research data unless collected
+under the approved protocol.
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PHASE 3
+========================= -->
+
+<section class="card">
+
+<h2>📐 PHASE 3 — Validate the Instruments</h2>
+
+<p>
+Experts review <strong>Form P</strong>,
+<strong>Form A</strong>, and <strong>Form B</strong>
+for:
+</p>
+
+<ul>
+
+<li>Relevance</li>
+<li>Accuracy</li>
+<li>Clarity</li>
+<li>Grade-level appropriateness</li>
+<li>Alignment</li>
+<li>Assessment suitability</li>
+
+</ul>
+
+<div class="formula">
+
+I-CVI = Number of experts rating 3 or 4 ÷ Total number of experts
+
+</div>
+
+<p>
+Consider numerical validity evidence together with expert comments
+and mathematical/construct review.
+A mathematical error or serious construct mismatch must be corrected
+even if a numerical validity index looks acceptable.
+</p>
+
+</section>
+
+
+<!-- =========================
+     PHASE 4
+========================= -->
+
+<section class="card">
+
+<h2>🔐 PHASE 4 — Final Instrument Release Gate</h2>
+
+<ul>
+
+<li>☐ FV, PV, and PMT mathematics independently checked</li>
+
+<li>☐ Periodic rate and number-of-period calculations checked</li>
+
+<li>☐ Numerical answers verified</li>
+
+<li>☐ PSP/CU/SMR construct mapping checked</li>
+
+<li>☐ TOS and rubrics aligned</li>
+
+<li>☐ Form A/B equivalence reviewed</li>
+
+<li>☐ Spreadsheet tasks assess mathematical reasoning rather than generic computer skill</li>
+
+<li>☐ Administration time standardized at 60 minutes</li>
+
+<li>☐ Ethics/permission gates completed</li>
+
+<li>☐ Version number locked before release</li>
+
+</ul>
+
+<p>
+<strong>Release rule:</strong>
+Do not release the final instrument while a critical gate remains unresolved.
+</p>
+
+</section>
+
+
+<!-- =========================
+     PHASE 5
+========================= -->
+
+<section class="card">
+
+<h2>🎲 PHASE 5 — Random Assignment</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Group</th>
+<th>Learners</th>
+<th>First Approach</th>
+<th>First Form</th>
+<th>Second Approach</th>
+<th>Second Form</th>
+</tr>
+
+<tr>
+<td>G1</td>
+<td>9</td>
+<td>Formula</td>
+<td>A</td>
+<td>Spreadsheet</td>
+<td>B</td>
+</tr>
+
+<tr>
+<td>G2</td>
+<td>9</td>
+<td>Formula</td>
+<td>B</td>
+<td>Spreadsheet</td>
+<td>A</td>
+</tr>
+
+<tr>
+<td>G3</td>
+<td>8</td>
+<td>Spreadsheet</td>
+<td>A</td>
+<td>Formula</td>
+<td>B</td>
+</tr>
+
+<tr>
+<td>G4</td>
+<td>8</td>
+<td>Spreadsheet</td>
+<td>B</td>
+<td>Formula</td>
+<td>A</td>
+</tr>
+
+</table>
+
+</div>
+
+<p>
+Assignment should be random and not based on ability, grades, gender,
+seating, behavior, or teacher preference.
+Do not rerandomize because of learner performance.
+</p>
+
+</section>
+
+
+<!-- =========================
+     PHASE 6
+========================= -->
+
+<section class="card">
+
+<h2>📝 PHASE 6 — Formal Pretest</h2>
+
+<p>
+Administer <strong>Form P</strong> before the formal instructional comparison.
+The pretest establishes baseline evidence.
+</p>
+
+<ul>
+
+<li>Research ID</li>
+<li>Form P score</li>
+<li>PSP evidence</li>
+<li>CU evidence</li>
+<li>SMR evidence where applicable</li>
+<li>Administration record</li>
+
+</ul>
+
+</section>
+
+
+<!-- =========================
+     PHASE 7
+========================= -->
+
+<section class="card">
+
+<h2>👩‍🏫 PHASE 7 — Teach the First Condition</h2>
+
+<h3>Formula-Based Instruction</h3>
+
+<div class="flow">
+
+<span>Understand</span>
+<b class="arrow">→</b>
+
+<span>Identify</span>
+<b class="arrow">→</b>
+
+<span>Convert rate</span>
+<b class="arrow">→</b>
+
+<span>Determine periods</span>
+<b class="arrow">→</b>
+
+<span>Select formula</span>
+<b class="arrow">→</b>
+
+<span>Substitute</span>
+<b class="arrow">→</b>
+
+<span>Calculate</span>
+<b class="arrow">→</b>
+
+<span>Check</span>
+<b class="arrow">→</b>
+
+<span>Interpret</span>
+
+</div>
+
+
+<h3>Spreadsheet-Based Instruction</h3>
+
+<div class="flow">
+
+<span>Understand</span>
+<b class="arrow">→</b>
+
+<span>Identify</span>
+<b class="arrow">→</b>
+
+<span>Convert rate</span>
+<b class="arrow">→</b>
+
+<span>Determine periods</span>
+<b class="arrow">→</b>
+
+<span>Map variables</span>
+<b class="arrow">→</b>
+
+<span>Set up spreadsheet</span>
+<b class="arrow">→</b>
+
+<span>Calculate</span>
+<b class="arrow">→</b>
+
+<span>Check</span>
+<b class="arrow">→</b>
+
+<span>Interpret</span>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PHASE 8
+========================= -->
+
+<section class="card">
+
+<h2>⚖️ PHASE 8 — Keep the Two Conditions Fair</h2>
+
+<p>
+The two conditions should have the same:
+</p>
+
+<ul>
+
+<li>Learning objectives</li>
+<li>Mathematical content</li>
+<li>Examples or comparable examples</li>
+<li>Difficulty</li>
+<li>Practice opportunities</li>
+<li>Teacher</li>
+<li>Classroom</li>
+<li>Instructional duration</li>
+<li>Assessment targets</li>
+
+</ul>
+
+<div class="callout core">
+
+<strong>Key principle:</strong>
+The main planned difference should be the instructional/computational approach—
+not extra time, easier content, or additional teacher assistance.
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PHASE 9
+========================= -->
+
+<section class="card">
+
+<h2>🧮 PHASE 9 — First Assessment</h2>
+
+<p>
+After the first instructional condition, administer the assigned
+parallel assessment.
+</p>
+
+<h3>Primary Outcome: Problem-Solving Performance (PSP)</h3>
+
+<div class="formula">
+PSP% = PSP score ÷ 105 × 100
+</div>
+
+<h3>Primary Outcome: Conceptual Understanding (CU)</h3>
+
+<div class="formula">
+CU% = CU score ÷ 16 × 100
+</div>
+
+<h3>Supporting Evidence: Spreadsheet–Mathematics Reasoning (SMR)</h3>
+
+<div class="formula">
+SMR% = SMR score ÷ 12 × 100
+</div>
+
+<div class="callout warning">
+
+<strong>
+Do not use a combined 133-point score as the primary outcome.
+</strong>
+
+PSP and CU answer different research questions.
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PHASE 10
+========================= -->
+
+<section class="card">
+
+<h2>🔄 PHASE 10 — Teach the Second Condition</h2>
+
+<div class="flow">
+
+<span>Pretest</span>
+<b class="arrow">→</b>
+
+<span>Condition 1</span>
+<b class="arrow">→</b>
+
+<span>Assessment</span>
+<b class="arrow">→</b>
+
+<span>Condition 2</span>
+<b class="arrow">→</b>
+
+<span>Assessment</span>
+
+</div>
+
+<p>
+Counterbalancing reduces the possibility that the observed difference
+is simply caused by which approach or form came first.
+Practice/carryover effects can still occur and must be acknowledged
+as a limitation.
+</p>
+
+</section>
+
+
+<!-- =========================
+     PHASE 11
+========================= -->
+
+<section class="card">
+
+<h2>📋 PHASE 11 — Second Assessment</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Research ID</th>
+<th>Pretest</th>
+<th>Formula PSP</th>
+<th>Formula CU</th>
+<th>Spreadsheet PSP</th>
+<th>Spreadsheet CU</th>
+</tr>
+
+<tr>
+<td>R001</td>
+<td>Actual data</td>
+<td>Actual data</td>
+<td>Actual data</td>
+<td>Actual data</td>
+<td>Actual data</td>
+</tr>
+
+<tr>
+<td>R002</td>
+<td>Actual data</td>
+<td>Actual data</td>
+<td>Actual data</td>
+<td>Actual data</td>
+<td>Actual data</td>
+</tr>
+
+<tr>
+<td>R003</td>
+<td>Actual data</td>
+<td>Actual data</td>
+<td>Actual data</td>
+<td>Actual data</td>
+<td>Actual data</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="callout core">
+
+The main comparison is
+<strong>
+each learner's Spreadsheet result versus that same learner's Formula result
+</strong>,
+not simply one class versus another.
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PHASE 12
+========================= -->
+
+<section class="card">
+
+<h2>📊 PHASE 12 — Analyze the Actual Data</h2>
+
+<p>
+For PSP and CU separately, calculate:
+</p>
+
+<ul>
+
+<li>N</li>
+<li>Mean</li>
+<li>Median</li>
+<li>Standard deviation</li>
+<li>Minimum</li>
+<li>Maximum</li>
+
+</ul>
+
+<h3>Paired Difference</h3>
+
+<div class="formula">
+Dᵢ = Spreadsheetᵢ − Formulaᵢ
+</div>
+
+<ul>
+
+<li>
+<strong>Paired-samples t-test</strong>
+if assumptions for the paired difference are reasonably met.
+</li>
+
+<li>
+<strong>Wilcoxon signed-rank test</strong>
+if the paired-difference distribution is unsuitable for the paired t-test.
+</li>
+
+</ul>
+
+<h3>Effect Size</h3>
+
+<div class="formula">
+Cohen's dᵧ = mean paired difference ÷ SD of paired differences
+</div>
+
+<p>
+For Wilcoxon analysis, use an appropriate matched-pairs
+rank-based effect-size measure.
+</p>
+
+<h3>Additional Diagnostics</h3>
+
+<ul>
+
+<li>Formula-first vs Spreadsheet-first</li>
+<li>Period 1 vs Period 2</li>
+<li>Form A vs Form B</li>
+<li>Treatment fidelity</li>
+<li>Recorded deviations</li>
+
+</ul>
+
+</section>
+
+
+<!-- =========================
+     PHASE 13
+========================= -->
+
+<section class="card">
+
+<h2>🧠 PHASE 13 — Interpret the Findings Carefully</h2>
+
+<p>
+If spreadsheet scores are higher, do not automatically conclude
+that spreadsheet instruction is superior.
+</p>
+
+<ol>
+
+<li>
+<strong>PSP:</strong>
+Did students solve problems better?
+</li>
+
+<li>
+<strong>CU:</strong>
+Did students demonstrate greater conceptual understanding?
+</li>
+
+<li>
+<strong>SMR:</strong>
+Could students connect spreadsheet operations to mathematical variables
+and relationships?
+</li>
+
+</ol>
+
+<div class="callout">
+
+Possible findings include:
+
+<ul>
+
+<li>Higher PSP and CU under spreadsheet instruction</li>
+
+<li>Higher PSP with similar CU</li>
+
+<li>Higher PSP with lower CU</li>
+
+<li>Stronger formula-based performance</li>
+
+<li>No meaningful difference</li>
+
+</ul>
+
+<strong>
+Any of these can be legitimate findings.
+</strong>
+
+</div>
+
+<p>
+Your purpose is not to prove that spreadsheets are better.
+Your purpose is to determine what happens under the two instructional conditions.
+</p>
+
+</section>
+
+
+<!-- =========================
+     PHASE 14
+========================= -->
+
+<section class="card">
+
+<h2>🪞 PHASE 14 — Reflect as a Teacher</h2>
+
+<h3>1. What did I observe?</h3>
+
+<p>
+Record meaningful classroom observations, learner difficulties,
+strategies, misconceptions, and implementation issues.
+</p>
+
+<h3>2. What did the data show?</h3>
+
+<p>
+Connect observations to actual PSP, CU, SMR, fidelity,
+and statistical findings.
+</p>
+
+<h3>3. What did I learn as a teacher?</h3>
+
+<p>
+Examine whether your original assumptions were supported,
+partly supported, or challenged.
+</p>
+
+<h3>4. What should I change?</h3>
+
+<p>
+Use the evidence to determine the next instructional action.
+</p>
+
+</section>
+
+
+<!-- =========================
+     PHASE 15
+========================= -->
+
+<section class="card">
+
+<h2>🚀 PHASE 15 — Evidence-Based Action Plan</h2>
+
+<p>
+The action plan must respond directly to the findings.
+If learners produce spreadsheet outputs accurately but struggle
+to explain the mathematics, a future routine might emphasize:
+</p>
+
+<div class="flow">
+
+<span>Explain</span>
+<b class="arrow">→</b>
+
+<span>Model</span>
+<b class="arrow">→</b>
+
+<span>Spreadsheet</span>
+<b class="arrow">→</b>
+
+<span>Verify</span>
+<b class="arrow">→</b>
+
+<span>Interpret</span>
+
+</div>
+
+<p>
+The actual action plan should be based on real findings,
+not predetermined before results are known.
+</p>
+
+</section>
+
+
+<!-- =========================
+     PHASE 16
+========================= -->
+
+<section class="card">
+
+<h2>📘 PHASE 16 — Final Research Report</h2>
+
+<ol>
+
+<li>Abstract</li>
+<li>Introduction</li>
+<li>Context and rationale</li>
+<li>Research problem and gap</li>
+<li>Research questions and hypotheses</li>
+<li>Review of related literature</li>
+<li>Conceptual framework</li>
+<li>Methodology</li>
+<li>Participants and design</li>
+<li>Intervention procedures</li>
+<li>Instruments and validation</li>
+<li>Data collection</li>
+<li>Statistical analysis</li>
+<li>Results</li>
+<li>Discussion</li>
+<li>Conclusions</li>
+<li>Teacher reflection</li>
+<li>Action plan</li>
+<li>Recommendations</li>
+<li>Limitations</li>
+<li>References</li>
+<li>Appendices</li>
+
+</ol>
+
+<div class="callout warning">
+
+<strong>Integrity rule:</strong>
+Results must contain actual learner data and verified calculations.
+Never insert invented results, statistics, approvals,
+validation results, reliability evidence, or implementation dates.
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PHASE 17
+========================= -->
+
+<section class="card">
+
+<h2>🗄️ PHASE 17 — Archive the Research</h2>
+
+<h3>Research Data</h3>
+
+<ul>
+
+<li>Raw learner responses</li>
+<li>Scored data</li>
+<li>Cleaned data</li>
+<li>Derived data</li>
+
+</ul>
+
+<h3>Research Records</h3>
+
+<ul>
+
+<li>Consent/assent documentation</li>
+<li>Randomization record</li>
+<li>Administration records</li>
+<li>Treatment-fidelity records</li>
+<li>Deviation logs</li>
+<li>Expert-validation records</li>
+<li>Analysis records</li>
+
+</ul>
+
+<h3>Research Products</h3>
+
+<ul>
+
+<li>Final instruments</li>
+<li>Final research report</li>
+<li>Action plan</li>
+<li>Audit records</li>
+
+</ul>
+
+<div class="callout core">
+
+Preserve raw data separately from cleaned/derived data.
+Use research IDs in analytical datasets and protect identifiable
+information according to applicable requirements.
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     REPLICATION
+========================= -->
+
+<section class="card">
+
+<h2>🔁 PHASE 18 — Replication and Next Cycle</h2>
+
+<div class="flow">
+
+<span>PLAN</span>
+<b class="arrow">→</b>
+
+<span>ACT</span>
+<b class="arrow">→</b>
+
+<span>OBSERVE</span>
+<b class="arrow">→</b>
+
+<span>ANALYZE</span>
+<b class="arrow">→</b>
+
+<span>REFLECT</span>
+<b class="arrow">→</b>
+
+<span>IMPROVE</span>
+<b class="arrow">→</b>
+
+<span>REPEAT</span>
+
+</div>
+
+<p>
+Keep stable the research questions, constructs, instructional conditions,
+assessment architecture, scoring rules, analysis plan, fidelity controls,
+and ethical safeguards.
+</p>
+
+<p>
+Recreate the learner cohort, IDs, randomization, dates, responses,
+scores, fidelity evidence, deviations, and analysis for a new cycle.
+</p>
+
+</section>
+
+
+<!-- =========================
+     YOUR ROLE / MY ROLE
+========================= -->
+
+<section class="card">
+
+<h2>👩‍🔬 Your Role vs. My Role</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Your Role as Researcher</th>
+<th>How I Can Support You</th>
+</tr>
+
+<tr>
+<td>Teach the lessons</td>
+<td>Research mentor and methodology guide</td>
+</tr>
+
+<tr>
+<td>Administer assessments</td>
+<td>Assessment and psychometrics reviewer</td>
+</tr>
+
+<tr>
+<td>Collect real responses</td>
+<td>Data-analysis and statistical support</td>
+</tr>
+
+<tr>
+<td>Maintain ethical safeguards</td>
+<td>Research ethics and data-protection review</td>
+</tr>
+
+<tr>
+<td>Record deviations and fidelity</td>
+<td>Methodology and evidence-integrity audit</td>
+</tr>
+
+<tr>
+<td>Preserve actual data</td>
+<td>Documentation and archive structure</td>
+</tr>
+
+<tr>
+<td>Reflect on teaching</td>
+<td>Action-research reflection mentor</td>
+</tr>
+
+<tr>
+<td>Make final professional decisions</td>
+<td>Challenge weak assumptions and explain alternatives</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     QUALITY CONTROL
+========================= -->
+
+<section class="card">
+
+<h2>🔎 Research Quality-Control Workflow</h2>
+
+<div class="flow">
+
+<span>DRAFT</span>
+<b class="arrow">→</b>
+
+<span>EXPERT AUDIT</span>
+<b class="arrow">→</b>
+
+<span>ERROR LOG</span>
+<b class="arrow">→</b>
+
+<span>CORRECTION</span>
+<b class="arrow">→</b>
+
+<span>SECOND AUDIT</span>
+<b class="arrow">→</b>
+
+<span>FINAL TECHNICAL CHECK</span>
+<b class="arrow">→</b>
+
+<span>WORD / PDF / HTML</span>
+
+</div>
+
+<p>
+Apply this whenever a research document, instrument, form, workbook,
+or major research artifact is created or revised.
+</p>
+
+</section>
+
+
+<!-- =========================
+     FINAL SUMMARY
+========================= -->
+
+<section class="card final">
+
+<h2>🌱 The Simplest Way to Remember the Whole Research</h2>
+
+<p>
+
+<strong>
+Find the classroom problem
+→ establish the gap
+→ design a fair comparison
+→ validate the instruments
+→ get permission
+→ randomly assign learners
+→ pretest
+→ teach both approaches
+→ assess both
+→ compare PSP and CU
+→ interpret carefully
+→ reflect
+→ improve your teaching
+→ report
+→ archive
+→ replicate.
+</strong>
+
+</p>
+
+<div class="callout core">
+
+<strong>The central research responsibility:</strong>
+
+<br><br>
+
+Determine honestly what changes in students'
+problem-solving performance and conceptual understanding
+when ordinary annuities are taught through formula-based instruction
+versus spreadsheet-based instruction.
+
+</div>
+
+</section>
+
+
+<footer>
+
+Action Research Task Roadmap • Ordinary Annuities • Grade 11 General Mathematics
+
+</footer>
+
+</div>
+
+</body>
+</html>
